@@ -35,7 +35,7 @@ MERGED from com.android.support:support-v4:22.2.0:22:5
 		ADDED from AndroidManifest.xml:31:9
 	android:theme
 		ADDED from AndroidManifest.xml:33:9
-activity#com.example.android.bluetoothchat.MainActivity
+activity#com.example.android.passingsync.MainActivity
 ADDED from AndroidManifest.xml:35:9
 	android:label
 		ADDED from AndroidManifest.xml:38:13
@@ -53,7 +53,7 @@ category#android.intent.category.LAUNCHER
 ADDED from AndroidManifest.xml:41:17
 	android:name
 		ADDED from AndroidManifest.xml:41:27
-activity#com.example.android.bluetoothchat.DeviceListActivity
+activity#com.example.android.passingsync.DeviceListActivity
 ADDED from AndroidManifest.xml:45:9
 	android:label
 		ADDED from AndroidManifest.xml:48:13

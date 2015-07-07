@@ -14,7 +14,8 @@
  * limitations under the License.
  */
 
-package com.example.android.bluetoothchat;
+package com.example.android.passingsync;
+
 
 import android.app.Activity;
 import android.bluetooth.BluetoothAdapter;
@@ -44,13 +45,11 @@ import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-
 /**
  * This fragment controls Bluetooth to communicate with other devices.
  */
 public class BluetoothChatFragment extends Fragment {
 
-    private static final String TAG = "BluetoothChatFragment";
 
     // Intent request codes
     private static final int REQUEST_CONNECT_DEVICE_SECURE = 1;
@@ -109,7 +108,7 @@ public class BluetoothChatFragment extends Fragment {
         super.onStart();
         // If BT is not on, request that it be enabled.
         // setupChat() will then be called during onActivityResult
-        if (mBluetoothAdapter!=null && !mBluetoothAdapter.isEnabled()) {
+        if (mBluetoothAdapter != null && !mBluetoothAdapter.isEnabled()) {
             Intent enableIntent = new Intent(BluetoothAdapter.ACTION_REQUEST_ENABLE);
             startActivityForResult(enableIntent, REQUEST_ENABLE_BT);
             // Otherwise, setup the chat session
@@ -248,7 +247,7 @@ public class BluetoothChatFragment extends Fragment {
      * @param resId a string resource ID
      */
     private void setStatus(int resId) {
-        final ActionBar actionBar = ((AppCompatActivity)getActivity()).getSupportActionBar();
+        final ActionBar actionBar = ((AppCompatActivity) getActivity()).getSupportActionBar();
         if (null == actionBar) {
             return;
         }
@@ -261,7 +260,7 @@ public class BluetoothChatFragment extends Fragment {
      * @param subTitle status
      */
     private void setStatus(CharSequence subTitle) {
-        final ActionBar actionBar = ((AppCompatActivity)getActivity()).getSupportActionBar();
+        final ActionBar actionBar = ((AppCompatActivity) getActivity()).getSupportActionBar();
         if (null == actionBar) {
             return;
         }
@@ -302,6 +301,9 @@ public class BluetoothChatFragment extends Fragment {
                     // construct a string from the valid bytes in the buffer
                     String readMessage = new String(readBuf, 0, msg.arg1);
                     mConversationArrayAdapter.add(mConnectedDeviceName + ":  " + readMessage);
+
+                    MediaPlayer mediaPlayer = MediaPlayer.create(getActivity(), R.raw.p7);
+                    mediaPlayer.start();
                     break;
                 case Constants.MESSAGE_DEVICE_NAME:
                     // save the connected device's name

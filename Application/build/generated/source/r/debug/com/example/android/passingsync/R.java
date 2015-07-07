@@ -5,7 +5,7 @@
  * should not be modified by hand.
  */
 
-package com.example.android.bluetoothchat;
+package com.example.android.passingsync;
 
 public final class R {
     public static final class anim {
@@ -1958,7 +1958,15 @@ containing a value of this type.
         public static final int bluetooth_chat=0x7f0d0000;
     }
     public static final class raw {
-        public static final int p7=0x7f050000;
+        public static final int p0=0x7f050000;
+        public static final int p10=0x7f050001;
+        public static final int p2=0x7f050002;
+        public static final int p4=0x7f050003;
+        public static final int p5=0x7f050004;
+        public static final int p6=0x7f050005;
+        public static final int p7=0x7f050006;
+        public static final int p8=0x7f050007;
+        public static final int p9=0x7f050008;
     }
     public static final class string {
         public static final int abc_action_bar_home_description=0x7f0b0000;
@@ -1987,18 +1995,16 @@ containing a value of this type.
         public static final int none_found=0x7f0b0017;
         public static final int none_paired=0x7f0b0018;
         public static final int not_connected=0x7f0b0019;
-        public static final int sample_hide_log=0x7f0b001a;
-        public static final int sample_show_log=0x7f0b001b;
-        public static final int scanning=0x7f0b001c;
-        public static final int secure_connect=0x7f0b001d;
-        public static final int select_device=0x7f0b001e;
-        public static final int send=0x7f0b001f;
-        public static final int status_bar_notification_info_overflow=0x7f0b0020;
-        public static final int title_connected_to=0x7f0b0021;
-        public static final int title_connecting=0x7f0b0022;
-        public static final int title_not_connected=0x7f0b0023;
-        public static final int title_other_devices=0x7f0b0024;
-        public static final int title_paired_devices=0x7f0b0025;
+        public static final int scanning=0x7f0b001a;
+        public static final int secure_connect=0x7f0b001b;
+        public static final int select_device=0x7f0b001c;
+        public static final int send=0x7f0b001d;
+        public static final int status_bar_notification_info_overflow=0x7f0b001e;
+        public static final int title_connected_to=0x7f0b001f;
+        public static final int title_connecting=0x7f0b0020;
+        public static final int title_not_connected=0x7f0b0021;
+        public static final int title_other_devices=0x7f0b0022;
+        public static final int title_paired_devices=0x7f0b0023;
     }
     public static final class style {
         public static final int AlertDialog_AppCompat=0x7f0c0000;
@@ -2310,33 +2316,33 @@ containing a value of this type.
            <colgroup align="left" />
            <colgroup align="left" />
            <tr><th>Attribute</th><th>Description</th></tr>
-           <tr><td><code>{@link #ActionBar_background com.example.android.bluetoothchat:background}</code></td><td></td></tr>
-           <tr><td><code>{@link #ActionBar_backgroundSplit com.example.android.bluetoothchat:backgroundSplit}</code></td><td></td></tr>
-           <tr><td><code>{@link #ActionBar_backgroundStacked com.example.android.bluetoothchat:backgroundStacked}</code></td><td></td></tr>
-           <tr><td><code>{@link #ActionBar_contentInsetEnd com.example.android.bluetoothchat:contentInsetEnd}</code></td><td></td></tr>
-           <tr><td><code>{@link #ActionBar_contentInsetLeft com.example.android.bluetoothchat:contentInsetLeft}</code></td><td></td></tr>
-           <tr><td><code>{@link #ActionBar_contentInsetRight com.example.android.bluetoothchat:contentInsetRight}</code></td><td></td></tr>
-           <tr><td><code>{@link #ActionBar_contentInsetStart com.example.android.bluetoothchat:contentInsetStart}</code></td><td></td></tr>
-           <tr><td><code>{@link #ActionBar_customNavigationLayout com.example.android.bluetoothchat:customNavigationLayout}</code></td><td></td></tr>
-           <tr><td><code>{@link #ActionBar_displayOptions com.example.android.bluetoothchat:displayOptions}</code></td><td></td></tr>
-           <tr><td><code>{@link #ActionBar_divider com.example.android.bluetoothchat:divider}</code></td><td></td></tr>
-           <tr><td><code>{@link #ActionBar_elevation com.example.android.bluetoothchat:elevation}</code></td><td></td></tr>
-           <tr><td><code>{@link #ActionBar_height com.example.android.bluetoothchat:height}</code></td><td></td></tr>
-           <tr><td><code>{@link #ActionBar_hideOnContentScroll com.example.android.bluetoothchat:hideOnContentScroll}</code></td><td></td></tr>
-           <tr><td><code>{@link #ActionBar_homeAsUpIndicator com.example.android.bluetoothchat:homeAsUpIndicator}</code></td><td></td></tr>
-           <tr><td><code>{@link #ActionBar_homeLayout com.example.android.bluetoothchat:homeLayout}</code></td><td></td></tr>
-           <tr><td><code>{@link #ActionBar_icon com.example.android.bluetoothchat:icon}</code></td><td></td></tr>
-           <tr><td><code>{@link #ActionBar_indeterminateProgressStyle com.example.android.bluetoothchat:indeterminateProgressStyle}</code></td><td></td></tr>
-           <tr><td><code>{@link #ActionBar_itemPadding com.example.android.bluetoothchat:itemPadding}</code></td><td></td></tr>
-           <tr><td><code>{@link #ActionBar_logo com.example.android.bluetoothchat:logo}</code></td><td></td></tr>
-           <tr><td><code>{@link #ActionBar_navigationMode com.example.android.bluetoothchat:navigationMode}</code></td><td></td></tr>
-           <tr><td><code>{@link #ActionBar_popupTheme com.example.android.bluetoothchat:popupTheme}</code></td><td></td></tr>
-           <tr><td><code>{@link #ActionBar_progressBarPadding com.example.android.bluetoothchat:progressBarPadding}</code></td><td></td></tr>
-           <tr><td><code>{@link #ActionBar_progressBarStyle com.example.android.bluetoothchat:progressBarStyle}</code></td><td></td></tr>
-           <tr><td><code>{@link #ActionBar_subtitle com.example.android.bluetoothchat:subtitle}</code></td><td></td></tr>
-           <tr><td><code>{@link #ActionBar_subtitleTextStyle com.example.android.bluetoothchat:subtitleTextStyle}</code></td><td></td></tr>
-           <tr><td><code>{@link #ActionBar_title com.example.android.bluetoothchat:title}</code></td><td></td></tr>
-           <tr><td><code>{@link #ActionBar_titleTextStyle com.example.android.bluetoothchat:titleTextStyle}</code></td><td></td></tr>
+           <tr><td><code>{@link #ActionBar_background com.example.android.passingsync:background}</code></td><td></td></tr>
+           <tr><td><code>{@link #ActionBar_backgroundSplit com.example.android.passingsync:backgroundSplit}</code></td><td></td></tr>
+           <tr><td><code>{@link #ActionBar_backgroundStacked com.example.android.passingsync:backgroundStacked}</code></td><td></td></tr>
+           <tr><td><code>{@link #ActionBar_contentInsetEnd com.example.android.passingsync:contentInsetEnd}</code></td><td></td></tr>
+           <tr><td><code>{@link #ActionBar_contentInsetLeft com.example.android.passingsync:contentInsetLeft}</code></td><td></td></tr>
+           <tr><td><code>{@link #ActionBar_contentInsetRight com.example.android.passingsync:contentInsetRight}</code></td><td></td></tr>
+           <tr><td><code>{@link #ActionBar_contentInsetStart com.example.android.passingsync:contentInsetStart}</code></td><td></td></tr>
+           <tr><td><code>{@link #ActionBar_customNavigationLayout com.example.android.passingsync:customNavigationLayout}</code></td><td></td></tr>
+           <tr><td><code>{@link #ActionBar_displayOptions com.example.android.passingsync:displayOptions}</code></td><td></td></tr>
+           <tr><td><code>{@link #ActionBar_divider com.example.android.passingsync:divider}</code></td><td></td></tr>
+           <tr><td><code>{@link #ActionBar_elevation com.example.android.passingsync:elevation}</code></td><td></td></tr>
+           <tr><td><code>{@link #ActionBar_height com.example.android.passingsync:height}</code></td><td></td></tr>
+           <tr><td><code>{@link #ActionBar_hideOnContentScroll com.example.android.passingsync:hideOnContentScroll}</code></td><td></td></tr>
+           <tr><td><code>{@link #ActionBar_homeAsUpIndicator com.example.android.passingsync:homeAsUpIndicator}</code></td><td></td></tr>
+           <tr><td><code>{@link #ActionBar_homeLayout com.example.android.passingsync:homeLayout}</code></td><td></td></tr>
+           <tr><td><code>{@link #ActionBar_icon com.example.android.passingsync:icon}</code></td><td></td></tr>
+           <tr><td><code>{@link #ActionBar_indeterminateProgressStyle com.example.android.passingsync:indeterminateProgressStyle}</code></td><td></td></tr>
+           <tr><td><code>{@link #ActionBar_itemPadding com.example.android.passingsync:itemPadding}</code></td><td></td></tr>
+           <tr><td><code>{@link #ActionBar_logo com.example.android.passingsync:logo}</code></td><td></td></tr>
+           <tr><td><code>{@link #ActionBar_navigationMode com.example.android.passingsync:navigationMode}</code></td><td></td></tr>
+           <tr><td><code>{@link #ActionBar_popupTheme com.example.android.passingsync:popupTheme}</code></td><td></td></tr>
+           <tr><td><code>{@link #ActionBar_progressBarPadding com.example.android.passingsync:progressBarPadding}</code></td><td></td></tr>
+           <tr><td><code>{@link #ActionBar_progressBarStyle com.example.android.passingsync:progressBarStyle}</code></td><td></td></tr>
+           <tr><td><code>{@link #ActionBar_subtitle com.example.android.passingsync:subtitle}</code></td><td></td></tr>
+           <tr><td><code>{@link #ActionBar_subtitleTextStyle com.example.android.passingsync:subtitleTextStyle}</code></td><td></td></tr>
+           <tr><td><code>{@link #ActionBar_title com.example.android.passingsync:title}</code></td><td></td></tr>
+           <tr><td><code>{@link #ActionBar_titleTextStyle com.example.android.passingsync:titleTextStyle}</code></td><td></td></tr>
            </table>
            @see #ActionBar_background
            @see #ActionBar_backgroundSplit
@@ -2376,17 +2382,17 @@ containing a value of this type.
             0x7f01001a, 0x7f01001b, 0x7f010096
         };
         /**
-          <p>This symbol is the offset where the {@link com.example.android.bluetoothchat.R.attr#background}
+          <p>This symbol is the offset where the {@link com.example.android.passingsync.R.attr#background}
           attribute's value can be found in the {@link #ActionBar} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.example.android.bluetoothchat:background
+          @attr name com.example.android.passingsync:background
         */
         public static final int ActionBar_background = 10;
         /**
-          <p>This symbol is the offset where the {@link com.example.android.bluetoothchat.R.attr#backgroundSplit}
+          <p>This symbol is the offset where the {@link com.example.android.passingsync.R.attr#backgroundSplit}
           attribute's value can be found in the {@link #ActionBar} array.
 
 
@@ -2394,11 +2400,11 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
 <p>May be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
 "<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
-          @attr name com.example.android.bluetoothchat:backgroundSplit
+          @attr name com.example.android.passingsync:backgroundSplit
         */
         public static final int ActionBar_backgroundSplit = 12;
         /**
-          <p>This symbol is the offset where the {@link com.example.android.bluetoothchat.R.attr#backgroundStacked}
+          <p>This symbol is the offset where the {@link com.example.android.passingsync.R.attr#backgroundStacked}
           attribute's value can be found in the {@link #ActionBar} array.
 
 
@@ -2406,11 +2412,11 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
 <p>May be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
 "<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
-          @attr name com.example.android.bluetoothchat:backgroundStacked
+          @attr name com.example.android.passingsync:backgroundStacked
         */
         public static final int ActionBar_backgroundStacked = 11;
         /**
-          <p>This symbol is the offset where the {@link com.example.android.bluetoothchat.R.attr#contentInsetEnd}
+          <p>This symbol is the offset where the {@link com.example.android.passingsync.R.attr#contentInsetEnd}
           attribute's value can be found in the {@link #ActionBar} array.
 
 
@@ -2422,11 +2428,11 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.example.android.bluetoothchat:contentInsetEnd
+          @attr name com.example.android.passingsync:contentInsetEnd
         */
         public static final int ActionBar_contentInsetEnd = 21;
         /**
-          <p>This symbol is the offset where the {@link com.example.android.bluetoothchat.R.attr#contentInsetLeft}
+          <p>This symbol is the offset where the {@link com.example.android.passingsync.R.attr#contentInsetLeft}
           attribute's value can be found in the {@link #ActionBar} array.
 
 
@@ -2438,11 +2444,11 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.example.android.bluetoothchat:contentInsetLeft
+          @attr name com.example.android.passingsync:contentInsetLeft
         */
         public static final int ActionBar_contentInsetLeft = 22;
         /**
-          <p>This symbol is the offset where the {@link com.example.android.bluetoothchat.R.attr#contentInsetRight}
+          <p>This symbol is the offset where the {@link com.example.android.passingsync.R.attr#contentInsetRight}
           attribute's value can be found in the {@link #ActionBar} array.
 
 
@@ -2454,11 +2460,11 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.example.android.bluetoothchat:contentInsetRight
+          @attr name com.example.android.passingsync:contentInsetRight
         */
         public static final int ActionBar_contentInsetRight = 23;
         /**
-          <p>This symbol is the offset where the {@link com.example.android.bluetoothchat.R.attr#contentInsetStart}
+          <p>This symbol is the offset where the {@link com.example.android.passingsync.R.attr#contentInsetStart}
           attribute's value can be found in the {@link #ActionBar} array.
 
 
@@ -2470,21 +2476,21 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.example.android.bluetoothchat:contentInsetStart
+          @attr name com.example.android.passingsync:contentInsetStart
         */
         public static final int ActionBar_contentInsetStart = 20;
         /**
-          <p>This symbol is the offset where the {@link com.example.android.bluetoothchat.R.attr#customNavigationLayout}
+          <p>This symbol is the offset where the {@link com.example.android.passingsync.R.attr#customNavigationLayout}
           attribute's value can be found in the {@link #ActionBar} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.example.android.bluetoothchat:customNavigationLayout
+          @attr name com.example.android.passingsync:customNavigationLayout
         */
         public static final int ActionBar_customNavigationLayout = 13;
         /**
-          <p>This symbol is the offset where the {@link com.example.android.bluetoothchat.R.attr#displayOptions}
+          <p>This symbol is the offset where the {@link com.example.android.passingsync.R.attr#displayOptions}
           attribute's value can be found in the {@link #ActionBar} array.
 
 
@@ -2502,21 +2508,21 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 <tr><td><code>showCustom</code></td><td>0x10</td><td></td></tr>
 <tr><td><code>disableHome</code></td><td>0x20</td><td></td></tr>
 </table>
-          @attr name com.example.android.bluetoothchat:displayOptions
+          @attr name com.example.android.passingsync:displayOptions
         */
         public static final int ActionBar_displayOptions = 3;
         /**
-          <p>This symbol is the offset where the {@link com.example.android.bluetoothchat.R.attr#divider}
+          <p>This symbol is the offset where the {@link com.example.android.passingsync.R.attr#divider}
           attribute's value can be found in the {@link #ActionBar} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.example.android.bluetoothchat:divider
+          @attr name com.example.android.passingsync:divider
         */
         public static final int ActionBar_divider = 9;
         /**
-          <p>This symbol is the offset where the {@link com.example.android.bluetoothchat.R.attr#elevation}
+          <p>This symbol is the offset where the {@link com.example.android.passingsync.R.attr#elevation}
           attribute's value can be found in the {@link #ActionBar} array.
 
 
@@ -2528,11 +2534,11 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.example.android.bluetoothchat:elevation
+          @attr name com.example.android.passingsync:elevation
         */
         public static final int ActionBar_elevation = 24;
         /**
-          <p>This symbol is the offset where the {@link com.example.android.bluetoothchat.R.attr#height}
+          <p>This symbol is the offset where the {@link com.example.android.passingsync.R.attr#height}
           attribute's value can be found in the {@link #ActionBar} array.
 
 
@@ -2544,11 +2550,11 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.example.android.bluetoothchat:height
+          @attr name com.example.android.passingsync:height
         */
         public static final int ActionBar_height = 0;
         /**
-          <p>This symbol is the offset where the {@link com.example.android.bluetoothchat.R.attr#hideOnContentScroll}
+          <p>This symbol is the offset where the {@link com.example.android.passingsync.R.attr#hideOnContentScroll}
           attribute's value can be found in the {@link #ActionBar} array.
 
 
@@ -2558,51 +2564,51 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.example.android.bluetoothchat:hideOnContentScroll
+          @attr name com.example.android.passingsync:hideOnContentScroll
         */
         public static final int ActionBar_hideOnContentScroll = 19;
         /**
-          <p>This symbol is the offset where the {@link com.example.android.bluetoothchat.R.attr#homeAsUpIndicator}
+          <p>This symbol is the offset where the {@link com.example.android.passingsync.R.attr#homeAsUpIndicator}
           attribute's value can be found in the {@link #ActionBar} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.example.android.bluetoothchat:homeAsUpIndicator
+          @attr name com.example.android.passingsync:homeAsUpIndicator
         */
         public static final int ActionBar_homeAsUpIndicator = 26;
         /**
-          <p>This symbol is the offset where the {@link com.example.android.bluetoothchat.R.attr#homeLayout}
+          <p>This symbol is the offset where the {@link com.example.android.passingsync.R.attr#homeLayout}
           attribute's value can be found in the {@link #ActionBar} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.example.android.bluetoothchat:homeLayout
+          @attr name com.example.android.passingsync:homeLayout
         */
         public static final int ActionBar_homeLayout = 14;
         /**
-          <p>This symbol is the offset where the {@link com.example.android.bluetoothchat.R.attr#icon}
+          <p>This symbol is the offset where the {@link com.example.android.passingsync.R.attr#icon}
           attribute's value can be found in the {@link #ActionBar} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.example.android.bluetoothchat:icon
+          @attr name com.example.android.passingsync:icon
         */
         public static final int ActionBar_icon = 7;
         /**
-          <p>This symbol is the offset where the {@link com.example.android.bluetoothchat.R.attr#indeterminateProgressStyle}
+          <p>This symbol is the offset where the {@link com.example.android.passingsync.R.attr#indeterminateProgressStyle}
           attribute's value can be found in the {@link #ActionBar} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.example.android.bluetoothchat:indeterminateProgressStyle
+          @attr name com.example.android.passingsync:indeterminateProgressStyle
         */
         public static final int ActionBar_indeterminateProgressStyle = 16;
         /**
-          <p>This symbol is the offset where the {@link com.example.android.bluetoothchat.R.attr#itemPadding}
+          <p>This symbol is the offset where the {@link com.example.android.passingsync.R.attr#itemPadding}
           attribute's value can be found in the {@link #ActionBar} array.
 
 
@@ -2614,21 +2620,21 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.example.android.bluetoothchat:itemPadding
+          @attr name com.example.android.passingsync:itemPadding
         */
         public static final int ActionBar_itemPadding = 18;
         /**
-          <p>This symbol is the offset where the {@link com.example.android.bluetoothchat.R.attr#logo}
+          <p>This symbol is the offset where the {@link com.example.android.passingsync.R.attr#logo}
           attribute's value can be found in the {@link #ActionBar} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.example.android.bluetoothchat:logo
+          @attr name com.example.android.passingsync:logo
         */
         public static final int ActionBar_logo = 8;
         /**
-          <p>This symbol is the offset where the {@link com.example.android.bluetoothchat.R.attr#navigationMode}
+          <p>This symbol is the offset where the {@link com.example.android.passingsync.R.attr#navigationMode}
           attribute's value can be found in the {@link #ActionBar} array.
 
 
@@ -2642,21 +2648,21 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 <tr><td><code>listMode</code></td><td>1</td><td></td></tr>
 <tr><td><code>tabMode</code></td><td>2</td><td></td></tr>
 </table>
-          @attr name com.example.android.bluetoothchat:navigationMode
+          @attr name com.example.android.passingsync:navigationMode
         */
         public static final int ActionBar_navigationMode = 2;
         /**
-          <p>This symbol is the offset where the {@link com.example.android.bluetoothchat.R.attr#popupTheme}
+          <p>This symbol is the offset where the {@link com.example.android.passingsync.R.attr#popupTheme}
           attribute's value can be found in the {@link #ActionBar} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.example.android.bluetoothchat:popupTheme
+          @attr name com.example.android.passingsync:popupTheme
         */
         public static final int ActionBar_popupTheme = 25;
         /**
-          <p>This symbol is the offset where the {@link com.example.android.bluetoothchat.R.attr#progressBarPadding}
+          <p>This symbol is the offset where the {@link com.example.android.passingsync.R.attr#progressBarPadding}
           attribute's value can be found in the {@link #ActionBar} array.
 
 
@@ -2668,21 +2674,21 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.example.android.bluetoothchat:progressBarPadding
+          @attr name com.example.android.passingsync:progressBarPadding
         */
         public static final int ActionBar_progressBarPadding = 17;
         /**
-          <p>This symbol is the offset where the {@link com.example.android.bluetoothchat.R.attr#progressBarStyle}
+          <p>This symbol is the offset where the {@link com.example.android.passingsync.R.attr#progressBarStyle}
           attribute's value can be found in the {@link #ActionBar} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.example.android.bluetoothchat:progressBarStyle
+          @attr name com.example.android.passingsync:progressBarStyle
         */
         public static final int ActionBar_progressBarStyle = 15;
         /**
-          <p>This symbol is the offset where the {@link com.example.android.bluetoothchat.R.attr#subtitle}
+          <p>This symbol is the offset where the {@link com.example.android.passingsync.R.attr#subtitle}
           attribute's value can be found in the {@link #ActionBar} array.
 
 
@@ -2692,21 +2698,21 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.example.android.bluetoothchat:subtitle
+          @attr name com.example.android.passingsync:subtitle
         */
         public static final int ActionBar_subtitle = 4;
         /**
-          <p>This symbol is the offset where the {@link com.example.android.bluetoothchat.R.attr#subtitleTextStyle}
+          <p>This symbol is the offset where the {@link com.example.android.passingsync.R.attr#subtitleTextStyle}
           attribute's value can be found in the {@link #ActionBar} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.example.android.bluetoothchat:subtitleTextStyle
+          @attr name com.example.android.passingsync:subtitleTextStyle
         */
         public static final int ActionBar_subtitleTextStyle = 6;
         /**
-          <p>This symbol is the offset where the {@link com.example.android.bluetoothchat.R.attr#title}
+          <p>This symbol is the offset where the {@link com.example.android.passingsync.R.attr#title}
           attribute's value can be found in the {@link #ActionBar} array.
 
 
@@ -2716,17 +2722,17 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.example.android.bluetoothchat:title
+          @attr name com.example.android.passingsync:title
         */
         public static final int ActionBar_title = 1;
         /**
-          <p>This symbol is the offset where the {@link com.example.android.bluetoothchat.R.attr#titleTextStyle}
+          <p>This symbol is the offset where the {@link com.example.android.passingsync.R.attr#titleTextStyle}
           attribute's value can be found in the {@link #ActionBar} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.example.android.bluetoothchat:titleTextStyle
+          @attr name com.example.android.passingsync:titleTextStyle
         */
         public static final int ActionBar_titleTextStyle = 5;
         /** Attributes that can be used with a ActionBarLayout.
@@ -2778,12 +2784,12 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
            <colgroup align="left" />
            <colgroup align="left" />
            <tr><th>Attribute</th><th>Description</th></tr>
-           <tr><td><code>{@link #ActionMode_background com.example.android.bluetoothchat:background}</code></td><td></td></tr>
-           <tr><td><code>{@link #ActionMode_backgroundSplit com.example.android.bluetoothchat:backgroundSplit}</code></td><td></td></tr>
-           <tr><td><code>{@link #ActionMode_closeItemLayout com.example.android.bluetoothchat:closeItemLayout}</code></td><td></td></tr>
-           <tr><td><code>{@link #ActionMode_height com.example.android.bluetoothchat:height}</code></td><td></td></tr>
-           <tr><td><code>{@link #ActionMode_subtitleTextStyle com.example.android.bluetoothchat:subtitleTextStyle}</code></td><td></td></tr>
-           <tr><td><code>{@link #ActionMode_titleTextStyle com.example.android.bluetoothchat:titleTextStyle}</code></td><td></td></tr>
+           <tr><td><code>{@link #ActionMode_background com.example.android.passingsync:background}</code></td><td></td></tr>
+           <tr><td><code>{@link #ActionMode_backgroundSplit com.example.android.passingsync:backgroundSplit}</code></td><td></td></tr>
+           <tr><td><code>{@link #ActionMode_closeItemLayout com.example.android.passingsync:closeItemLayout}</code></td><td></td></tr>
+           <tr><td><code>{@link #ActionMode_height com.example.android.passingsync:height}</code></td><td></td></tr>
+           <tr><td><code>{@link #ActionMode_subtitleTextStyle com.example.android.passingsync:subtitleTextStyle}</code></td><td></td></tr>
+           <tr><td><code>{@link #ActionMode_titleTextStyle com.example.android.passingsync:titleTextStyle}</code></td><td></td></tr>
            </table>
            @see #ActionMode_background
            @see #ActionMode_backgroundSplit
@@ -2797,17 +2803,17 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
             0x7f01000e, 0x7f01001c
         };
         /**
-          <p>This symbol is the offset where the {@link com.example.android.bluetoothchat.R.attr#background}
+          <p>This symbol is the offset where the {@link com.example.android.passingsync.R.attr#background}
           attribute's value can be found in the {@link #ActionMode} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.example.android.bluetoothchat:background
+          @attr name com.example.android.passingsync:background
         */
         public static final int ActionMode_background = 3;
         /**
-          <p>This symbol is the offset where the {@link com.example.android.bluetoothchat.R.attr#backgroundSplit}
+          <p>This symbol is the offset where the {@link com.example.android.passingsync.R.attr#backgroundSplit}
           attribute's value can be found in the {@link #ActionMode} array.
 
 
@@ -2815,21 +2821,21 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
 <p>May be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
 "<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
-          @attr name com.example.android.bluetoothchat:backgroundSplit
+          @attr name com.example.android.passingsync:backgroundSplit
         */
         public static final int ActionMode_backgroundSplit = 4;
         /**
-          <p>This symbol is the offset where the {@link com.example.android.bluetoothchat.R.attr#closeItemLayout}
+          <p>This symbol is the offset where the {@link com.example.android.passingsync.R.attr#closeItemLayout}
           attribute's value can be found in the {@link #ActionMode} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.example.android.bluetoothchat:closeItemLayout
+          @attr name com.example.android.passingsync:closeItemLayout
         */
         public static final int ActionMode_closeItemLayout = 5;
         /**
-          <p>This symbol is the offset where the {@link com.example.android.bluetoothchat.R.attr#height}
+          <p>This symbol is the offset where the {@link com.example.android.passingsync.R.attr#height}
           attribute's value can be found in the {@link #ActionMode} array.
 
 
@@ -2841,27 +2847,27 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.example.android.bluetoothchat:height
+          @attr name com.example.android.passingsync:height
         */
         public static final int ActionMode_height = 0;
         /**
-          <p>This symbol is the offset where the {@link com.example.android.bluetoothchat.R.attr#subtitleTextStyle}
+          <p>This symbol is the offset where the {@link com.example.android.passingsync.R.attr#subtitleTextStyle}
           attribute's value can be found in the {@link #ActionMode} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.example.android.bluetoothchat:subtitleTextStyle
+          @attr name com.example.android.passingsync:subtitleTextStyle
         */
         public static final int ActionMode_subtitleTextStyle = 2;
         /**
-          <p>This symbol is the offset where the {@link com.example.android.bluetoothchat.R.attr#titleTextStyle}
+          <p>This symbol is the offset where the {@link com.example.android.passingsync.R.attr#titleTextStyle}
           attribute's value can be found in the {@link #ActionMode} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.example.android.bluetoothchat:titleTextStyle
+          @attr name com.example.android.passingsync:titleTextStyle
         */
         public static final int ActionMode_titleTextStyle = 1;
         /** Attributes that can be used with a ActivityChooserView.
@@ -2870,8 +2876,8 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
            <colgroup align="left" />
            <colgroup align="left" />
            <tr><th>Attribute</th><th>Description</th></tr>
-           <tr><td><code>{@link #ActivityChooserView_expandActivityOverflowButtonDrawable com.example.android.bluetoothchat:expandActivityOverflowButtonDrawable}</code></td><td></td></tr>
-           <tr><td><code>{@link #ActivityChooserView_initialActivityCount com.example.android.bluetoothchat:initialActivityCount}</code></td><td></td></tr>
+           <tr><td><code>{@link #ActivityChooserView_expandActivityOverflowButtonDrawable com.example.android.passingsync:expandActivityOverflowButtonDrawable}</code></td><td></td></tr>
+           <tr><td><code>{@link #ActivityChooserView_initialActivityCount com.example.android.passingsync:initialActivityCount}</code></td><td></td></tr>
            </table>
            @see #ActivityChooserView_expandActivityOverflowButtonDrawable
            @see #ActivityChooserView_initialActivityCount
@@ -2880,17 +2886,17 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
             0x7f01001d, 0x7f01001e
         };
         /**
-          <p>This symbol is the offset where the {@link com.example.android.bluetoothchat.R.attr#expandActivityOverflowButtonDrawable}
+          <p>This symbol is the offset where the {@link com.example.android.passingsync.R.attr#expandActivityOverflowButtonDrawable}
           attribute's value can be found in the {@link #ActivityChooserView} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.example.android.bluetoothchat:expandActivityOverflowButtonDrawable
+          @attr name com.example.android.passingsync:expandActivityOverflowButtonDrawable
         */
         public static final int ActivityChooserView_expandActivityOverflowButtonDrawable = 1;
         /**
-          <p>This symbol is the offset where the {@link com.example.android.bluetoothchat.R.attr#initialActivityCount}
+          <p>This symbol is the offset where the {@link com.example.android.passingsync.R.attr#initialActivityCount}
           attribute's value can be found in the {@link #ActivityChooserView} array.
 
 
@@ -2900,7 +2906,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.example.android.bluetoothchat:initialActivityCount
+          @attr name com.example.android.passingsync:initialActivityCount
         */
         public static final int ActivityChooserView_initialActivityCount = 0;
         /** Attributes that can be used with a AlertDialog.
@@ -2910,11 +2916,11 @@ containing a value of this type.
            <colgroup align="left" />
            <tr><th>Attribute</th><th>Description</th></tr>
            <tr><td><code>{@link #AlertDialog_android_layout android:layout}</code></td><td></td></tr>
-           <tr><td><code>{@link #AlertDialog_buttonPanelSideLayout com.example.android.bluetoothchat:buttonPanelSideLayout}</code></td><td></td></tr>
-           <tr><td><code>{@link #AlertDialog_listItemLayout com.example.android.bluetoothchat:listItemLayout}</code></td><td></td></tr>
-           <tr><td><code>{@link #AlertDialog_listLayout com.example.android.bluetoothchat:listLayout}</code></td><td></td></tr>
-           <tr><td><code>{@link #AlertDialog_multiChoiceItemLayout com.example.android.bluetoothchat:multiChoiceItemLayout}</code></td><td></td></tr>
-           <tr><td><code>{@link #AlertDialog_singleChoiceItemLayout com.example.android.bluetoothchat:singleChoiceItemLayout}</code></td><td></td></tr>
+           <tr><td><code>{@link #AlertDialog_buttonPanelSideLayout com.example.android.passingsync:buttonPanelSideLayout}</code></td><td></td></tr>
+           <tr><td><code>{@link #AlertDialog_listItemLayout com.example.android.passingsync:listItemLayout}</code></td><td></td></tr>
+           <tr><td><code>{@link #AlertDialog_listLayout com.example.android.passingsync:listLayout}</code></td><td></td></tr>
+           <tr><td><code>{@link #AlertDialog_multiChoiceItemLayout com.example.android.passingsync:multiChoiceItemLayout}</code></td><td></td></tr>
+           <tr><td><code>{@link #AlertDialog_singleChoiceItemLayout com.example.android.passingsync:singleChoiceItemLayout}</code></td><td></td></tr>
            </table>
            @see #AlertDialog_android_layout
            @see #AlertDialog_buttonPanelSideLayout
@@ -2934,53 +2940,53 @@ containing a value of this type.
         */
         public static final int AlertDialog_android_layout = 0;
         /**
-          <p>This symbol is the offset where the {@link com.example.android.bluetoothchat.R.attr#buttonPanelSideLayout}
+          <p>This symbol is the offset where the {@link com.example.android.passingsync.R.attr#buttonPanelSideLayout}
           attribute's value can be found in the {@link #AlertDialog} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.example.android.bluetoothchat:buttonPanelSideLayout
+          @attr name com.example.android.passingsync:buttonPanelSideLayout
         */
         public static final int AlertDialog_buttonPanelSideLayout = 1;
         /**
-          <p>This symbol is the offset where the {@link com.example.android.bluetoothchat.R.attr#listItemLayout}
+          <p>This symbol is the offset where the {@link com.example.android.passingsync.R.attr#listItemLayout}
           attribute's value can be found in the {@link #AlertDialog} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.example.android.bluetoothchat:listItemLayout
+          @attr name com.example.android.passingsync:listItemLayout
         */
         public static final int AlertDialog_listItemLayout = 5;
         /**
-          <p>This symbol is the offset where the {@link com.example.android.bluetoothchat.R.attr#listLayout}
+          <p>This symbol is the offset where the {@link com.example.android.passingsync.R.attr#listLayout}
           attribute's value can be found in the {@link #AlertDialog} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.example.android.bluetoothchat:listLayout
+          @attr name com.example.android.passingsync:listLayout
         */
         public static final int AlertDialog_listLayout = 2;
         /**
-          <p>This symbol is the offset where the {@link com.example.android.bluetoothchat.R.attr#multiChoiceItemLayout}
+          <p>This symbol is the offset where the {@link com.example.android.passingsync.R.attr#multiChoiceItemLayout}
           attribute's value can be found in the {@link #AlertDialog} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.example.android.bluetoothchat:multiChoiceItemLayout
+          @attr name com.example.android.passingsync:multiChoiceItemLayout
         */
         public static final int AlertDialog_multiChoiceItemLayout = 3;
         /**
-          <p>This symbol is the offset where the {@link com.example.android.bluetoothchat.R.attr#singleChoiceItemLayout}
+          <p>This symbol is the offset where the {@link com.example.android.passingsync.R.attr#singleChoiceItemLayout}
           attribute's value can be found in the {@link #AlertDialog} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.example.android.bluetoothchat:singleChoiceItemLayout
+          @attr name com.example.android.passingsync:singleChoiceItemLayout
         */
         public static final int AlertDialog_singleChoiceItemLayout = 4;
         /** Attributes that can be used with a AppCompatTextView.
@@ -2990,7 +2996,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
            <colgroup align="left" />
            <tr><th>Attribute</th><th>Description</th></tr>
            <tr><td><code>{@link #AppCompatTextView_android_textAppearance android:textAppearance}</code></td><td></td></tr>
-           <tr><td><code>{@link #AppCompatTextView_textAllCaps com.example.android.bluetoothchat:textAllCaps}</code></td><td></td></tr>
+           <tr><td><code>{@link #AppCompatTextView_textAllCaps com.example.android.passingsync:textAllCaps}</code></td><td></td></tr>
            </table>
            @see #AppCompatTextView_android_textAppearance
            @see #AppCompatTextView_textAllCaps
@@ -3005,14 +3011,14 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         */
         public static final int AppCompatTextView_android_textAppearance = 0;
         /**
-          <p>This symbol is the offset where the {@link com.example.android.bluetoothchat.R.attr#textAllCaps}
+          <p>This symbol is the offset where the {@link com.example.android.passingsync.R.attr#textAllCaps}
           attribute's value can be found in the {@link #AppCompatTextView} array.
 
 
           <p>May be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
 <p>May be a boolean value, either "<code>true</code>" or "<code>false</code>".
-          @attr name com.example.android.bluetoothchat:textAllCaps
+          @attr name com.example.android.passingsync:textAllCaps
         */
         public static final int AppCompatTextView_textAllCaps = 1;
         /** Attributes that can be used with a CardView.
@@ -3021,17 +3027,17 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
            <colgroup align="left" />
            <colgroup align="left" />
            <tr><th>Attribute</th><th>Description</th></tr>
-           <tr><td><code>{@link #CardView_cardBackgroundColor com.example.android.bluetoothchat:cardBackgroundColor}</code></td><td></td></tr>
-           <tr><td><code>{@link #CardView_cardCornerRadius com.example.android.bluetoothchat:cardCornerRadius}</code></td><td></td></tr>
-           <tr><td><code>{@link #CardView_cardElevation com.example.android.bluetoothchat:cardElevation}</code></td><td></td></tr>
-           <tr><td><code>{@link #CardView_cardMaxElevation com.example.android.bluetoothchat:cardMaxElevation}</code></td><td></td></tr>
-           <tr><td><code>{@link #CardView_cardPreventCornerOverlap com.example.android.bluetoothchat:cardPreventCornerOverlap}</code></td><td></td></tr>
-           <tr><td><code>{@link #CardView_cardUseCompatPadding com.example.android.bluetoothchat:cardUseCompatPadding}</code></td><td></td></tr>
-           <tr><td><code>{@link #CardView_contentPadding com.example.android.bluetoothchat:contentPadding}</code></td><td></td></tr>
-           <tr><td><code>{@link #CardView_contentPaddingBottom com.example.android.bluetoothchat:contentPaddingBottom}</code></td><td></td></tr>
-           <tr><td><code>{@link #CardView_contentPaddingLeft com.example.android.bluetoothchat:contentPaddingLeft}</code></td><td></td></tr>
-           <tr><td><code>{@link #CardView_contentPaddingRight com.example.android.bluetoothchat:contentPaddingRight}</code></td><td></td></tr>
-           <tr><td><code>{@link #CardView_contentPaddingTop com.example.android.bluetoothchat:contentPaddingTop}</code></td><td></td></tr>
+           <tr><td><code>{@link #CardView_cardBackgroundColor com.example.android.passingsync:cardBackgroundColor}</code></td><td></td></tr>
+           <tr><td><code>{@link #CardView_cardCornerRadius com.example.android.passingsync:cardCornerRadius}</code></td><td></td></tr>
+           <tr><td><code>{@link #CardView_cardElevation com.example.android.passingsync:cardElevation}</code></td><td></td></tr>
+           <tr><td><code>{@link #CardView_cardMaxElevation com.example.android.passingsync:cardMaxElevation}</code></td><td></td></tr>
+           <tr><td><code>{@link #CardView_cardPreventCornerOverlap com.example.android.passingsync:cardPreventCornerOverlap}</code></td><td></td></tr>
+           <tr><td><code>{@link #CardView_cardUseCompatPadding com.example.android.passingsync:cardUseCompatPadding}</code></td><td></td></tr>
+           <tr><td><code>{@link #CardView_contentPadding com.example.android.passingsync:contentPadding}</code></td><td></td></tr>
+           <tr><td><code>{@link #CardView_contentPaddingBottom com.example.android.passingsync:contentPaddingBottom}</code></td><td></td></tr>
+           <tr><td><code>{@link #CardView_contentPaddingLeft com.example.android.passingsync:contentPaddingLeft}</code></td><td></td></tr>
+           <tr><td><code>{@link #CardView_contentPaddingRight com.example.android.passingsync:contentPaddingRight}</code></td><td></td></tr>
+           <tr><td><code>{@link #CardView_contentPaddingTop com.example.android.passingsync:contentPaddingTop}</code></td><td></td></tr>
            </table>
            @see #CardView_cardBackgroundColor
            @see #CardView_cardCornerRadius
@@ -3051,7 +3057,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
             0x7f01002d, 0x7f01002e, 0x7f01002f
         };
         /**
-          <p>This symbol is the offset where the {@link com.example.android.bluetoothchat.R.attr#cardBackgroundColor}
+          <p>This symbol is the offset where the {@link com.example.android.passingsync.R.attr#cardBackgroundColor}
           attribute's value can be found in the {@link #CardView} array.
 
 
@@ -3062,11 +3068,11 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.example.android.bluetoothchat:cardBackgroundColor
+          @attr name com.example.android.passingsync:cardBackgroundColor
         */
         public static final int CardView_cardBackgroundColor = 0;
         /**
-          <p>This symbol is the offset where the {@link com.example.android.bluetoothchat.R.attr#cardCornerRadius}
+          <p>This symbol is the offset where the {@link com.example.android.passingsync.R.attr#cardCornerRadius}
           attribute's value can be found in the {@link #CardView} array.
 
 
@@ -3078,11 +3084,11 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.example.android.bluetoothchat:cardCornerRadius
+          @attr name com.example.android.passingsync:cardCornerRadius
         */
         public static final int CardView_cardCornerRadius = 1;
         /**
-          <p>This symbol is the offset where the {@link com.example.android.bluetoothchat.R.attr#cardElevation}
+          <p>This symbol is the offset where the {@link com.example.android.passingsync.R.attr#cardElevation}
           attribute's value can be found in the {@link #CardView} array.
 
 
@@ -3094,11 +3100,11 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.example.android.bluetoothchat:cardElevation
+          @attr name com.example.android.passingsync:cardElevation
         */
         public static final int CardView_cardElevation = 2;
         /**
-          <p>This symbol is the offset where the {@link com.example.android.bluetoothchat.R.attr#cardMaxElevation}
+          <p>This symbol is the offset where the {@link com.example.android.passingsync.R.attr#cardMaxElevation}
           attribute's value can be found in the {@link #CardView} array.
 
 
@@ -3110,11 +3116,11 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.example.android.bluetoothchat:cardMaxElevation
+          @attr name com.example.android.passingsync:cardMaxElevation
         */
         public static final int CardView_cardMaxElevation = 3;
         /**
-          <p>This symbol is the offset where the {@link com.example.android.bluetoothchat.R.attr#cardPreventCornerOverlap}
+          <p>This symbol is the offset where the {@link com.example.android.passingsync.R.attr#cardPreventCornerOverlap}
           attribute's value can be found in the {@link #CardView} array.
 
 
@@ -3124,11 +3130,11 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.example.android.bluetoothchat:cardPreventCornerOverlap
+          @attr name com.example.android.passingsync:cardPreventCornerOverlap
         */
         public static final int CardView_cardPreventCornerOverlap = 5;
         /**
-          <p>This symbol is the offset where the {@link com.example.android.bluetoothchat.R.attr#cardUseCompatPadding}
+          <p>This symbol is the offset where the {@link com.example.android.passingsync.R.attr#cardUseCompatPadding}
           attribute's value can be found in the {@link #CardView} array.
 
 
@@ -3138,11 +3144,11 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.example.android.bluetoothchat:cardUseCompatPadding
+          @attr name com.example.android.passingsync:cardUseCompatPadding
         */
         public static final int CardView_cardUseCompatPadding = 4;
         /**
-          <p>This symbol is the offset where the {@link com.example.android.bluetoothchat.R.attr#contentPadding}
+          <p>This symbol is the offset where the {@link com.example.android.passingsync.R.attr#contentPadding}
           attribute's value can be found in the {@link #CardView} array.
 
 
@@ -3154,11 +3160,11 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.example.android.bluetoothchat:contentPadding
+          @attr name com.example.android.passingsync:contentPadding
         */
         public static final int CardView_contentPadding = 6;
         /**
-          <p>This symbol is the offset where the {@link com.example.android.bluetoothchat.R.attr#contentPaddingBottom}
+          <p>This symbol is the offset where the {@link com.example.android.passingsync.R.attr#contentPaddingBottom}
           attribute's value can be found in the {@link #CardView} array.
 
 
@@ -3170,11 +3176,11 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.example.android.bluetoothchat:contentPaddingBottom
+          @attr name com.example.android.passingsync:contentPaddingBottom
         */
         public static final int CardView_contentPaddingBottom = 10;
         /**
-          <p>This symbol is the offset where the {@link com.example.android.bluetoothchat.R.attr#contentPaddingLeft}
+          <p>This symbol is the offset where the {@link com.example.android.passingsync.R.attr#contentPaddingLeft}
           attribute's value can be found in the {@link #CardView} array.
 
 
@@ -3186,11 +3192,11 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.example.android.bluetoothchat:contentPaddingLeft
+          @attr name com.example.android.passingsync:contentPaddingLeft
         */
         public static final int CardView_contentPaddingLeft = 7;
         /**
-          <p>This symbol is the offset where the {@link com.example.android.bluetoothchat.R.attr#contentPaddingRight}
+          <p>This symbol is the offset where the {@link com.example.android.passingsync.R.attr#contentPaddingRight}
           attribute's value can be found in the {@link #CardView} array.
 
 
@@ -3202,11 +3208,11 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.example.android.bluetoothchat:contentPaddingRight
+          @attr name com.example.android.passingsync:contentPaddingRight
         */
         public static final int CardView_contentPaddingRight = 8;
         /**
-          <p>This symbol is the offset where the {@link com.example.android.bluetoothchat.R.attr#contentPaddingTop}
+          <p>This symbol is the offset where the {@link com.example.android.passingsync.R.attr#contentPaddingTop}
           attribute's value can be found in the {@link #CardView} array.
 
 
@@ -3218,7 +3224,7 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.example.android.bluetoothchat:contentPaddingTop
+          @attr name com.example.android.passingsync:contentPaddingTop
         */
         public static final int CardView_contentPaddingTop = 9;
         /** Attributes that can be used with a DrawerArrowToggle.
@@ -3227,14 +3233,14 @@ containing a value of this type.
            <colgroup align="left" />
            <colgroup align="left" />
            <tr><th>Attribute</th><th>Description</th></tr>
-           <tr><td><code>{@link #DrawerArrowToggle_barSize com.example.android.bluetoothchat:barSize}</code></td><td></td></tr>
-           <tr><td><code>{@link #DrawerArrowToggle_color com.example.android.bluetoothchat:color}</code></td><td></td></tr>
-           <tr><td><code>{@link #DrawerArrowToggle_drawableSize com.example.android.bluetoothchat:drawableSize}</code></td><td></td></tr>
-           <tr><td><code>{@link #DrawerArrowToggle_gapBetweenBars com.example.android.bluetoothchat:gapBetweenBars}</code></td><td></td></tr>
-           <tr><td><code>{@link #DrawerArrowToggle_middleBarArrowSize com.example.android.bluetoothchat:middleBarArrowSize}</code></td><td></td></tr>
-           <tr><td><code>{@link #DrawerArrowToggle_spinBars com.example.android.bluetoothchat:spinBars}</code></td><td></td></tr>
-           <tr><td><code>{@link #DrawerArrowToggle_thickness com.example.android.bluetoothchat:thickness}</code></td><td></td></tr>
-           <tr><td><code>{@link #DrawerArrowToggle_topBottomBarArrowSize com.example.android.bluetoothchat:topBottomBarArrowSize}</code></td><td></td></tr>
+           <tr><td><code>{@link #DrawerArrowToggle_barSize com.example.android.passingsync:barSize}</code></td><td></td></tr>
+           <tr><td><code>{@link #DrawerArrowToggle_color com.example.android.passingsync:color}</code></td><td></td></tr>
+           <tr><td><code>{@link #DrawerArrowToggle_drawableSize com.example.android.passingsync:drawableSize}</code></td><td></td></tr>
+           <tr><td><code>{@link #DrawerArrowToggle_gapBetweenBars com.example.android.passingsync:gapBetweenBars}</code></td><td></td></tr>
+           <tr><td><code>{@link #DrawerArrowToggle_middleBarArrowSize com.example.android.passingsync:middleBarArrowSize}</code></td><td></td></tr>
+           <tr><td><code>{@link #DrawerArrowToggle_spinBars com.example.android.passingsync:spinBars}</code></td><td></td></tr>
+           <tr><td><code>{@link #DrawerArrowToggle_thickness com.example.android.passingsync:thickness}</code></td><td></td></tr>
+           <tr><td><code>{@link #DrawerArrowToggle_topBottomBarArrowSize com.example.android.passingsync:topBottomBarArrowSize}</code></td><td></td></tr>
            </table>
            @see #DrawerArrowToggle_barSize
            @see #DrawerArrowToggle_color
@@ -3250,7 +3256,7 @@ containing a value of this type.
             0x7f010034, 0x7f010035, 0x7f010036, 0x7f010037
         };
         /**
-          <p>This symbol is the offset where the {@link com.example.android.bluetoothchat.R.attr#barSize}
+          <p>This symbol is the offset where the {@link com.example.android.passingsync.R.attr#barSize}
           attribute's value can be found in the {@link #DrawerArrowToggle} array.
 
 
@@ -3262,11 +3268,11 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.example.android.bluetoothchat:barSize
+          @attr name com.example.android.passingsync:barSize
         */
         public static final int DrawerArrowToggle_barSize = 6;
         /**
-          <p>This symbol is the offset where the {@link com.example.android.bluetoothchat.R.attr#color}
+          <p>This symbol is the offset where the {@link com.example.android.passingsync.R.attr#color}
           attribute's value can be found in the {@link #DrawerArrowToggle} array.
 
 
@@ -3277,11 +3283,11 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.example.android.bluetoothchat:color
+          @attr name com.example.android.passingsync:color
         */
         public static final int DrawerArrowToggle_color = 0;
         /**
-          <p>This symbol is the offset where the {@link com.example.android.bluetoothchat.R.attr#drawableSize}
+          <p>This symbol is the offset where the {@link com.example.android.passingsync.R.attr#drawableSize}
           attribute's value can be found in the {@link #DrawerArrowToggle} array.
 
 
@@ -3293,11 +3299,11 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.example.android.bluetoothchat:drawableSize
+          @attr name com.example.android.passingsync:drawableSize
         */
         public static final int DrawerArrowToggle_drawableSize = 2;
         /**
-          <p>This symbol is the offset where the {@link com.example.android.bluetoothchat.R.attr#gapBetweenBars}
+          <p>This symbol is the offset where the {@link com.example.android.passingsync.R.attr#gapBetweenBars}
           attribute's value can be found in the {@link #DrawerArrowToggle} array.
 
 
@@ -3309,11 +3315,11 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.example.android.bluetoothchat:gapBetweenBars
+          @attr name com.example.android.passingsync:gapBetweenBars
         */
         public static final int DrawerArrowToggle_gapBetweenBars = 3;
         /**
-          <p>This symbol is the offset where the {@link com.example.android.bluetoothchat.R.attr#middleBarArrowSize}
+          <p>This symbol is the offset where the {@link com.example.android.passingsync.R.attr#middleBarArrowSize}
           attribute's value can be found in the {@link #DrawerArrowToggle} array.
 
 
@@ -3325,11 +3331,11 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.example.android.bluetoothchat:middleBarArrowSize
+          @attr name com.example.android.passingsync:middleBarArrowSize
         */
         public static final int DrawerArrowToggle_middleBarArrowSize = 5;
         /**
-          <p>This symbol is the offset where the {@link com.example.android.bluetoothchat.R.attr#spinBars}
+          <p>This symbol is the offset where the {@link com.example.android.passingsync.R.attr#spinBars}
           attribute's value can be found in the {@link #DrawerArrowToggle} array.
 
 
@@ -3339,11 +3345,11 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.example.android.bluetoothchat:spinBars
+          @attr name com.example.android.passingsync:spinBars
         */
         public static final int DrawerArrowToggle_spinBars = 1;
         /**
-          <p>This symbol is the offset where the {@link com.example.android.bluetoothchat.R.attr#thickness}
+          <p>This symbol is the offset where the {@link com.example.android.passingsync.R.attr#thickness}
           attribute's value can be found in the {@link #DrawerArrowToggle} array.
 
 
@@ -3355,11 +3361,11 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.example.android.bluetoothchat:thickness
+          @attr name com.example.android.passingsync:thickness
         */
         public static final int DrawerArrowToggle_thickness = 7;
         /**
-          <p>This symbol is the offset where the {@link com.example.android.bluetoothchat.R.attr#topBottomBarArrowSize}
+          <p>This symbol is the offset where the {@link com.example.android.passingsync.R.attr#topBottomBarArrowSize}
           attribute's value can be found in the {@link #DrawerArrowToggle} array.
 
 
@@ -3371,7 +3377,7 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.example.android.bluetoothchat:topBottomBarArrowSize
+          @attr name com.example.android.passingsync:topBottomBarArrowSize
         */
         public static final int DrawerArrowToggle_topBottomBarArrowSize = 4;
         /** Attributes that can be used with a GridLayout.
@@ -3380,13 +3386,13 @@ containing a value of this type.
            <colgroup align="left" />
            <colgroup align="left" />
            <tr><th>Attribute</th><th>Description</th></tr>
-           <tr><td><code>{@link #GridLayout_alignmentMode com.example.android.bluetoothchat:alignmentMode}</code></td><td></td></tr>
-           <tr><td><code>{@link #GridLayout_columnCount com.example.android.bluetoothchat:columnCount}</code></td><td></td></tr>
-           <tr><td><code>{@link #GridLayout_columnOrderPreserved com.example.android.bluetoothchat:columnOrderPreserved}</code></td><td></td></tr>
-           <tr><td><code>{@link #GridLayout_orientation com.example.android.bluetoothchat:orientation}</code></td><td></td></tr>
-           <tr><td><code>{@link #GridLayout_rowCount com.example.android.bluetoothchat:rowCount}</code></td><td></td></tr>
-           <tr><td><code>{@link #GridLayout_rowOrderPreserved com.example.android.bluetoothchat:rowOrderPreserved}</code></td><td></td></tr>
-           <tr><td><code>{@link #GridLayout_useDefaultMargins com.example.android.bluetoothchat:useDefaultMargins}</code></td><td></td></tr>
+           <tr><td><code>{@link #GridLayout_alignmentMode com.example.android.passingsync:alignmentMode}</code></td><td></td></tr>
+           <tr><td><code>{@link #GridLayout_columnCount com.example.android.passingsync:columnCount}</code></td><td></td></tr>
+           <tr><td><code>{@link #GridLayout_columnOrderPreserved com.example.android.passingsync:columnOrderPreserved}</code></td><td></td></tr>
+           <tr><td><code>{@link #GridLayout_orientation com.example.android.passingsync:orientation}</code></td><td></td></tr>
+           <tr><td><code>{@link #GridLayout_rowCount com.example.android.passingsync:rowCount}</code></td><td></td></tr>
+           <tr><td><code>{@link #GridLayout_rowOrderPreserved com.example.android.passingsync:rowOrderPreserved}</code></td><td></td></tr>
+           <tr><td><code>{@link #GridLayout_useDefaultMargins com.example.android.passingsync:useDefaultMargins}</code></td><td></td></tr>
            </table>
            @see #GridLayout_alignmentMode
            @see #GridLayout_columnCount
@@ -3401,7 +3407,7 @@ containing a value of this type.
             0x7f01003c, 0x7f01003d, 0x7f01003e
         };
         /**
-          <p>This symbol is the offset where the {@link com.example.android.bluetoothchat.R.attr#alignmentMode}
+          <p>This symbol is the offset where the {@link com.example.android.passingsync.R.attr#alignmentMode}
           attribute's value can be found in the {@link #GridLayout} array.
 
 
@@ -3414,11 +3420,11 @@ containing a value of this type.
 <tr><td><code>alignBounds</code></td><td>0</td><td></td></tr>
 <tr><td><code>alignMargins</code></td><td>1</td><td></td></tr>
 </table>
-          @attr name com.example.android.bluetoothchat:alignmentMode
+          @attr name com.example.android.passingsync:alignmentMode
         */
         public static final int GridLayout_alignmentMode = 4;
         /**
-          <p>This symbol is the offset where the {@link com.example.android.bluetoothchat.R.attr#columnCount}
+          <p>This symbol is the offset where the {@link com.example.android.passingsync.R.attr#columnCount}
           attribute's value can be found in the {@link #GridLayout} array.
 
 
@@ -3428,11 +3434,11 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.example.android.bluetoothchat:columnCount
+          @attr name com.example.android.passingsync:columnCount
         */
         public static final int GridLayout_columnCount = 2;
         /**
-          <p>This symbol is the offset where the {@link com.example.android.bluetoothchat.R.attr#columnOrderPreserved}
+          <p>This symbol is the offset where the {@link com.example.android.passingsync.R.attr#columnOrderPreserved}
           attribute's value can be found in the {@link #GridLayout} array.
 
 
@@ -3442,11 +3448,11 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.example.android.bluetoothchat:columnOrderPreserved
+          @attr name com.example.android.passingsync:columnOrderPreserved
         */
         public static final int GridLayout_columnOrderPreserved = 6;
         /**
-          <p>This symbol is the offset where the {@link com.example.android.bluetoothchat.R.attr#orientation}
+          <p>This symbol is the offset where the {@link com.example.android.passingsync.R.attr#orientation}
           attribute's value can be found in the {@link #GridLayout} array.
 
 
@@ -3459,11 +3465,11 @@ containing a value of this type.
 <tr><td><code>horizontal</code></td><td>0</td><td></td></tr>
 <tr><td><code>vertical</code></td><td>1</td><td></td></tr>
 </table>
-          @attr name com.example.android.bluetoothchat:orientation
+          @attr name com.example.android.passingsync:orientation
         */
         public static final int GridLayout_orientation = 0;
         /**
-          <p>This symbol is the offset where the {@link com.example.android.bluetoothchat.R.attr#rowCount}
+          <p>This symbol is the offset where the {@link com.example.android.passingsync.R.attr#rowCount}
           attribute's value can be found in the {@link #GridLayout} array.
 
 
@@ -3473,11 +3479,11 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.example.android.bluetoothchat:rowCount
+          @attr name com.example.android.passingsync:rowCount
         */
         public static final int GridLayout_rowCount = 1;
         /**
-          <p>This symbol is the offset where the {@link com.example.android.bluetoothchat.R.attr#rowOrderPreserved}
+          <p>This symbol is the offset where the {@link com.example.android.passingsync.R.attr#rowOrderPreserved}
           attribute's value can be found in the {@link #GridLayout} array.
 
 
@@ -3487,11 +3493,11 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.example.android.bluetoothchat:rowOrderPreserved
+          @attr name com.example.android.passingsync:rowOrderPreserved
         */
         public static final int GridLayout_rowOrderPreserved = 5;
         /**
-          <p>This symbol is the offset where the {@link com.example.android.bluetoothchat.R.attr#useDefaultMargins}
+          <p>This symbol is the offset where the {@link com.example.android.passingsync.R.attr#useDefaultMargins}
           attribute's value can be found in the {@link #GridLayout} array.
 
 
@@ -3501,7 +3507,7 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.example.android.bluetoothchat:useDefaultMargins
+          @attr name com.example.android.passingsync:useDefaultMargins
         */
         public static final int GridLayout_useDefaultMargins = 3;
         /** Attributes that can be used with a GridLayout_Layout.
@@ -3517,13 +3523,13 @@ containing a value of this type.
            <tr><td><code>{@link #GridLayout_Layout_android_layout_marginRight android:layout_marginRight}</code></td><td></td></tr>
            <tr><td><code>{@link #GridLayout_Layout_android_layout_marginTop android:layout_marginTop}</code></td><td></td></tr>
            <tr><td><code>{@link #GridLayout_Layout_android_layout_width android:layout_width}</code></td><td></td></tr>
-           <tr><td><code>{@link #GridLayout_Layout_layout_column com.example.android.bluetoothchat:layout_column}</code></td><td></td></tr>
-           <tr><td><code>{@link #GridLayout_Layout_layout_columnSpan com.example.android.bluetoothchat:layout_columnSpan}</code></td><td></td></tr>
-           <tr><td><code>{@link #GridLayout_Layout_layout_columnWeight com.example.android.bluetoothchat:layout_columnWeight}</code></td><td></td></tr>
-           <tr><td><code>{@link #GridLayout_Layout_layout_gravity com.example.android.bluetoothchat:layout_gravity}</code></td><td></td></tr>
-           <tr><td><code>{@link #GridLayout_Layout_layout_row com.example.android.bluetoothchat:layout_row}</code></td><td></td></tr>
-           <tr><td><code>{@link #GridLayout_Layout_layout_rowSpan com.example.android.bluetoothchat:layout_rowSpan}</code></td><td></td></tr>
-           <tr><td><code>{@link #GridLayout_Layout_layout_rowWeight com.example.android.bluetoothchat:layout_rowWeight}</code></td><td></td></tr>
+           <tr><td><code>{@link #GridLayout_Layout_layout_column com.example.android.passingsync:layout_column}</code></td><td></td></tr>
+           <tr><td><code>{@link #GridLayout_Layout_layout_columnSpan com.example.android.passingsync:layout_columnSpan}</code></td><td></td></tr>
+           <tr><td><code>{@link #GridLayout_Layout_layout_columnWeight com.example.android.passingsync:layout_columnWeight}</code></td><td></td></tr>
+           <tr><td><code>{@link #GridLayout_Layout_layout_gravity com.example.android.passingsync:layout_gravity}</code></td><td></td></tr>
+           <tr><td><code>{@link #GridLayout_Layout_layout_row com.example.android.passingsync:layout_row}</code></td><td></td></tr>
+           <tr><td><code>{@link #GridLayout_Layout_layout_rowSpan com.example.android.passingsync:layout_rowSpan}</code></td><td></td></tr>
+           <tr><td><code>{@link #GridLayout_Layout_layout_rowWeight com.example.android.passingsync:layout_rowWeight}</code></td><td></td></tr>
            </table>
            @see #GridLayout_Layout_android_layout_height
            @see #GridLayout_Layout_android_layout_margin
@@ -3589,7 +3595,7 @@ containing a value of this type.
         */
         public static final int GridLayout_Layout_android_layout_width = 0;
         /**
-          <p>This symbol is the offset where the {@link com.example.android.bluetoothchat.R.attr#layout_column}
+          <p>This symbol is the offset where the {@link com.example.android.passingsync.R.attr#layout_column}
           attribute's value can be found in the {@link #GridLayout_Layout} array.
 
 
@@ -3599,11 +3605,11 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.example.android.bluetoothchat:layout_column
+          @attr name com.example.android.passingsync:layout_column
         */
         public static final int GridLayout_Layout_layout_column = 10;
         /**
-          <p>This symbol is the offset where the {@link com.example.android.bluetoothchat.R.attr#layout_columnSpan}
+          <p>This symbol is the offset where the {@link com.example.android.passingsync.R.attr#layout_columnSpan}
           attribute's value can be found in the {@link #GridLayout_Layout} array.
 
 
@@ -3613,11 +3619,11 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.example.android.bluetoothchat:layout_columnSpan
+          @attr name com.example.android.passingsync:layout_columnSpan
         */
         public static final int GridLayout_Layout_layout_columnSpan = 11;
         /**
-          <p>This symbol is the offset where the {@link com.example.android.bluetoothchat.R.attr#layout_columnWeight}
+          <p>This symbol is the offset where the {@link com.example.android.passingsync.R.attr#layout_columnWeight}
           attribute's value can be found in the {@link #GridLayout_Layout} array.
 
 
@@ -3627,11 +3633,11 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.example.android.bluetoothchat:layout_columnWeight
+          @attr name com.example.android.passingsync:layout_columnWeight
         */
         public static final int GridLayout_Layout_layout_columnWeight = 12;
         /**
-          <p>This symbol is the offset where the {@link com.example.android.bluetoothchat.R.attr#layout_gravity}
+          <p>This symbol is the offset where the {@link com.example.android.passingsync.R.attr#layout_gravity}
           attribute's value can be found in the {@link #GridLayout_Layout} array.
 
 
@@ -3656,11 +3662,11 @@ containing a value of this type.
 <tr><td><code>start</code></td><td>0x00800003</td><td></td></tr>
 <tr><td><code>end</code></td><td>0x00800005</td><td></td></tr>
 </table>
-          @attr name com.example.android.bluetoothchat:layout_gravity
+          @attr name com.example.android.passingsync:layout_gravity
         */
         public static final int GridLayout_Layout_layout_gravity = 13;
         /**
-          <p>This symbol is the offset where the {@link com.example.android.bluetoothchat.R.attr#layout_row}
+          <p>This symbol is the offset where the {@link com.example.android.passingsync.R.attr#layout_row}
           attribute's value can be found in the {@link #GridLayout_Layout} array.
 
 
@@ -3670,11 +3676,11 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.example.android.bluetoothchat:layout_row
+          @attr name com.example.android.passingsync:layout_row
         */
         public static final int GridLayout_Layout_layout_row = 7;
         /**
-          <p>This symbol is the offset where the {@link com.example.android.bluetoothchat.R.attr#layout_rowSpan}
+          <p>This symbol is the offset where the {@link com.example.android.passingsync.R.attr#layout_rowSpan}
           attribute's value can be found in the {@link #GridLayout_Layout} array.
 
 
@@ -3684,11 +3690,11 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.example.android.bluetoothchat:layout_rowSpan
+          @attr name com.example.android.passingsync:layout_rowSpan
         */
         public static final int GridLayout_Layout_layout_rowSpan = 8;
         /**
-          <p>This symbol is the offset where the {@link com.example.android.bluetoothchat.R.attr#layout_rowWeight}
+          <p>This symbol is the offset where the {@link com.example.android.passingsync.R.attr#layout_rowWeight}
           attribute's value can be found in the {@link #GridLayout_Layout} array.
 
 
@@ -3698,7 +3704,7 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.example.android.bluetoothchat:layout_rowWeight
+          @attr name com.example.android.passingsync:layout_rowWeight
         */
         public static final int GridLayout_Layout_layout_rowWeight = 9;
         /** Attributes that can be used with a LinearLayoutCompat.
@@ -3712,10 +3718,10 @@ containing a value of this type.
            <tr><td><code>{@link #LinearLayoutCompat_android_gravity android:gravity}</code></td><td></td></tr>
            <tr><td><code>{@link #LinearLayoutCompat_android_orientation android:orientation}</code></td><td></td></tr>
            <tr><td><code>{@link #LinearLayoutCompat_android_weightSum android:weightSum}</code></td><td></td></tr>
-           <tr><td><code>{@link #LinearLayoutCompat_divider com.example.android.bluetoothchat:divider}</code></td><td></td></tr>
-           <tr><td><code>{@link #LinearLayoutCompat_dividerPadding com.example.android.bluetoothchat:dividerPadding}</code></td><td></td></tr>
-           <tr><td><code>{@link #LinearLayoutCompat_measureWithLargestChild com.example.android.bluetoothchat:measureWithLargestChild}</code></td><td></td></tr>
-           <tr><td><code>{@link #LinearLayoutCompat_showDividers com.example.android.bluetoothchat:showDividers}</code></td><td></td></tr>
+           <tr><td><code>{@link #LinearLayoutCompat_divider com.example.android.passingsync:divider}</code></td><td></td></tr>
+           <tr><td><code>{@link #LinearLayoutCompat_dividerPadding com.example.android.passingsync:dividerPadding}</code></td><td></td></tr>
+           <tr><td><code>{@link #LinearLayoutCompat_measureWithLargestChild com.example.android.passingsync:measureWithLargestChild}</code></td><td></td></tr>
+           <tr><td><code>{@link #LinearLayoutCompat_showDividers com.example.android.passingsync:showDividers}</code></td><td></td></tr>
            </table>
            @see #LinearLayoutCompat_android_baselineAligned
            @see #LinearLayoutCompat_android_baselineAlignedChildIndex
@@ -3763,17 +3769,17 @@ containing a value of this type.
         */
         public static final int LinearLayoutCompat_android_weightSum = 4;
         /**
-          <p>This symbol is the offset where the {@link com.example.android.bluetoothchat.R.attr#divider}
+          <p>This symbol is the offset where the {@link com.example.android.passingsync.R.attr#divider}
           attribute's value can be found in the {@link #LinearLayoutCompat} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.example.android.bluetoothchat:divider
+          @attr name com.example.android.passingsync:divider
         */
         public static final int LinearLayoutCompat_divider = 5;
         /**
-          <p>This symbol is the offset where the {@link com.example.android.bluetoothchat.R.attr#dividerPadding}
+          <p>This symbol is the offset where the {@link com.example.android.passingsync.R.attr#dividerPadding}
           attribute's value can be found in the {@link #LinearLayoutCompat} array.
 
 
@@ -3785,11 +3791,11 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.example.android.bluetoothchat:dividerPadding
+          @attr name com.example.android.passingsync:dividerPadding
         */
         public static final int LinearLayoutCompat_dividerPadding = 8;
         /**
-          <p>This symbol is the offset where the {@link com.example.android.bluetoothchat.R.attr#measureWithLargestChild}
+          <p>This symbol is the offset where the {@link com.example.android.passingsync.R.attr#measureWithLargestChild}
           attribute's value can be found in the {@link #LinearLayoutCompat} array.
 
 
@@ -3799,11 +3805,11 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.example.android.bluetoothchat:measureWithLargestChild
+          @attr name com.example.android.passingsync:measureWithLargestChild
         */
         public static final int LinearLayoutCompat_measureWithLargestChild = 6;
         /**
-          <p>This symbol is the offset where the {@link com.example.android.bluetoothchat.R.attr#showDividers}
+          <p>This symbol is the offset where the {@link com.example.android.passingsync.R.attr#showDividers}
           attribute's value can be found in the {@link #LinearLayoutCompat} array.
 
 
@@ -3818,7 +3824,7 @@ containing a value of this type.
 <tr><td><code>middle</code></td><td>2</td><td></td></tr>
 <tr><td><code>end</code></td><td>4</td><td></td></tr>
 </table>
-          @attr name com.example.android.bluetoothchat:showDividers
+          @attr name com.example.android.passingsync:showDividers
         */
         public static final int LinearLayoutCompat_showDividers = 7;
         /** Attributes that can be used with a LinearLayoutCompat_Layout.
@@ -3957,9 +3963,9 @@ containing a value of this type.
            <colgroup align="left" />
            <colgroup align="left" />
            <tr><th>Attribute</th><th>Description</th></tr>
-           <tr><td><code>{@link #MenuItem_actionLayout com.example.android.bluetoothchat:actionLayout}</code></td><td></td></tr>
-           <tr><td><code>{@link #MenuItem_actionProviderClass com.example.android.bluetoothchat:actionProviderClass}</code></td><td></td></tr>
-           <tr><td><code>{@link #MenuItem_actionViewClass com.example.android.bluetoothchat:actionViewClass}</code></td><td></td></tr>
+           <tr><td><code>{@link #MenuItem_actionLayout com.example.android.passingsync:actionLayout}</code></td><td></td></tr>
+           <tr><td><code>{@link #MenuItem_actionProviderClass com.example.android.passingsync:actionProviderClass}</code></td><td></td></tr>
+           <tr><td><code>{@link #MenuItem_actionViewClass com.example.android.passingsync:actionViewClass}</code></td><td></td></tr>
            <tr><td><code>{@link #MenuItem_android_alphabeticShortcut android:alphabeticShortcut}</code></td><td></td></tr>
            <tr><td><code>{@link #MenuItem_android_checkable android:checkable}</code></td><td></td></tr>
            <tr><td><code>{@link #MenuItem_android_checked android:checked}</code></td><td></td></tr>
@@ -3973,7 +3979,7 @@ containing a value of this type.
            <tr><td><code>{@link #MenuItem_android_title android:title}</code></td><td></td></tr>
            <tr><td><code>{@link #MenuItem_android_titleCondensed android:titleCondensed}</code></td><td></td></tr>
            <tr><td><code>{@link #MenuItem_android_visible android:visible}</code></td><td></td></tr>
-           <tr><td><code>{@link #MenuItem_showAsAction com.example.android.bluetoothchat:showAsAction}</code></td><td></td></tr>
+           <tr><td><code>{@link #MenuItem_showAsAction com.example.android.passingsync:showAsAction}</code></td><td></td></tr>
            </table>
            @see #MenuItem_actionLayout
            @see #MenuItem_actionProviderClass
@@ -4001,17 +4007,17 @@ containing a value of this type.
             0x7f01004c
         };
         /**
-          <p>This symbol is the offset where the {@link com.example.android.bluetoothchat.R.attr#actionLayout}
+          <p>This symbol is the offset where the {@link com.example.android.passingsync.R.attr#actionLayout}
           attribute's value can be found in the {@link #MenuItem} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.example.android.bluetoothchat:actionLayout
+          @attr name com.example.android.passingsync:actionLayout
         */
         public static final int MenuItem_actionLayout = 14;
         /**
-          <p>This symbol is the offset where the {@link com.example.android.bluetoothchat.R.attr#actionProviderClass}
+          <p>This symbol is the offset where the {@link com.example.android.passingsync.R.attr#actionProviderClass}
           attribute's value can be found in the {@link #MenuItem} array.
 
 
@@ -4021,11 +4027,11 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.example.android.bluetoothchat:actionProviderClass
+          @attr name com.example.android.passingsync:actionProviderClass
         */
         public static final int MenuItem_actionProviderClass = 16;
         /**
-          <p>This symbol is the offset where the {@link com.example.android.bluetoothchat.R.attr#actionViewClass}
+          <p>This symbol is the offset where the {@link com.example.android.passingsync.R.attr#actionViewClass}
           attribute's value can be found in the {@link #MenuItem} array.
 
 
@@ -4035,7 +4041,7 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.example.android.bluetoothchat:actionViewClass
+          @attr name com.example.android.passingsync:actionViewClass
         */
         public static final int MenuItem_actionViewClass = 15;
         /**
@@ -4117,7 +4123,7 @@ containing a value of this type.
         */
         public static final int MenuItem_android_visible = 4;
         /**
-          <p>This symbol is the offset where the {@link com.example.android.bluetoothchat.R.attr#showAsAction}
+          <p>This symbol is the offset where the {@link com.example.android.passingsync.R.attr#showAsAction}
           attribute's value can be found in the {@link #MenuItem} array.
 
 
@@ -4133,7 +4139,7 @@ containing a value of this type.
 <tr><td><code>withText</code></td><td>4</td><td></td></tr>
 <tr><td><code>collapseActionView</code></td><td>8</td><td></td></tr>
 </table>
-          @attr name com.example.android.bluetoothchat:showAsAction
+          @attr name com.example.android.passingsync:showAsAction
         */
         public static final int MenuItem_showAsAction = 13;
         /** Attributes that can be used with a MenuView.
@@ -4149,7 +4155,7 @@ containing a value of this type.
            <tr><td><code>{@link #MenuView_android_itemTextAppearance android:itemTextAppearance}</code></td><td></td></tr>
            <tr><td><code>{@link #MenuView_android_verticalDivider android:verticalDivider}</code></td><td></td></tr>
            <tr><td><code>{@link #MenuView_android_windowAnimationStyle android:windowAnimationStyle}</code></td><td></td></tr>
-           <tr><td><code>{@link #MenuView_preserveIconSpacing com.example.android.bluetoothchat:preserveIconSpacing}</code></td><td></td></tr>
+           <tr><td><code>{@link #MenuView_preserveIconSpacing com.example.android.passingsync:preserveIconSpacing}</code></td><td></td></tr>
            </table>
            @see #MenuView_android_headerBackground
            @see #MenuView_android_horizontalDivider
@@ -4207,7 +4213,7 @@ containing a value of this type.
         */
         public static final int MenuView_android_windowAnimationStyle = 0;
         /**
-          <p>This symbol is the offset where the {@link com.example.android.bluetoothchat.R.attr#preserveIconSpacing}
+          <p>This symbol is the offset where the {@link com.example.android.passingsync.R.attr#preserveIconSpacing}
           attribute's value can be found in the {@link #MenuView} array.
 
 
@@ -4217,7 +4223,7 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.example.android.bluetoothchat:preserveIconSpacing
+          @attr name com.example.android.passingsync:preserveIconSpacing
         */
         public static final int MenuView_preserveIconSpacing = 7;
         /** Attributes that can be used with a PopupWindow.
@@ -4227,7 +4233,7 @@ containing a value of this type.
            <colgroup align="left" />
            <tr><th>Attribute</th><th>Description</th></tr>
            <tr><td><code>{@link #PopupWindow_android_popupBackground android:popupBackground}</code></td><td></td></tr>
-           <tr><td><code>{@link #PopupWindow_overlapAnchor com.example.android.bluetoothchat:overlapAnchor}</code></td><td></td></tr>
+           <tr><td><code>{@link #PopupWindow_overlapAnchor com.example.android.passingsync:overlapAnchor}</code></td><td></td></tr>
            </table>
            @see #PopupWindow_android_popupBackground
            @see #PopupWindow_overlapAnchor
@@ -4242,7 +4248,7 @@ containing a value of this type.
         */
         public static final int PopupWindow_android_popupBackground = 0;
         /**
-          <p>This symbol is the offset where the {@link com.example.android.bluetoothchat.R.attr#overlapAnchor}
+          <p>This symbol is the offset where the {@link com.example.android.passingsync.R.attr#overlapAnchor}
           attribute's value can be found in the {@link #PopupWindow} array.
 
 
@@ -4252,7 +4258,7 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.example.android.bluetoothchat:overlapAnchor
+          @attr name com.example.android.passingsync:overlapAnchor
         */
         public static final int PopupWindow_overlapAnchor = 1;
         /** Attributes that can be used with a PopupWindowBackgroundState.
@@ -4261,7 +4267,7 @@ containing a value of this type.
            <colgroup align="left" />
            <colgroup align="left" />
            <tr><th>Attribute</th><th>Description</th></tr>
-           <tr><td><code>{@link #PopupWindowBackgroundState_state_above_anchor com.example.android.bluetoothchat:state_above_anchor}</code></td><td></td></tr>
+           <tr><td><code>{@link #PopupWindowBackgroundState_state_above_anchor com.example.android.passingsync:state_above_anchor}</code></td><td></td></tr>
            </table>
            @see #PopupWindowBackgroundState_state_above_anchor
          */
@@ -4269,7 +4275,7 @@ containing a value of this type.
             0x7f01004f
         };
         /**
-          <p>This symbol is the offset where the {@link com.example.android.bluetoothchat.R.attr#state_above_anchor}
+          <p>This symbol is the offset where the {@link com.example.android.passingsync.R.attr#state_above_anchor}
           attribute's value can be found in the {@link #PopupWindowBackgroundState} array.
 
 
@@ -4279,7 +4285,7 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.example.android.bluetoothchat:state_above_anchor
+          @attr name com.example.android.passingsync:state_above_anchor
         */
         public static final int PopupWindowBackgroundState_state_above_anchor = 0;
         /** Attributes that can be used with a SearchView.
@@ -4292,19 +4298,19 @@ containing a value of this type.
            <tr><td><code>{@link #SearchView_android_imeOptions android:imeOptions}</code></td><td></td></tr>
            <tr><td><code>{@link #SearchView_android_inputType android:inputType}</code></td><td></td></tr>
            <tr><td><code>{@link #SearchView_android_maxWidth android:maxWidth}</code></td><td></td></tr>
-           <tr><td><code>{@link #SearchView_closeIcon com.example.android.bluetoothchat:closeIcon}</code></td><td></td></tr>
-           <tr><td><code>{@link #SearchView_commitIcon com.example.android.bluetoothchat:commitIcon}</code></td><td></td></tr>
-           <tr><td><code>{@link #SearchView_defaultQueryHint com.example.android.bluetoothchat:defaultQueryHint}</code></td><td></td></tr>
-           <tr><td><code>{@link #SearchView_goIcon com.example.android.bluetoothchat:goIcon}</code></td><td></td></tr>
-           <tr><td><code>{@link #SearchView_iconifiedByDefault com.example.android.bluetoothchat:iconifiedByDefault}</code></td><td></td></tr>
-           <tr><td><code>{@link #SearchView_layout com.example.android.bluetoothchat:layout}</code></td><td></td></tr>
-           <tr><td><code>{@link #SearchView_queryBackground com.example.android.bluetoothchat:queryBackground}</code></td><td></td></tr>
-           <tr><td><code>{@link #SearchView_queryHint com.example.android.bluetoothchat:queryHint}</code></td><td></td></tr>
-           <tr><td><code>{@link #SearchView_searchHintIcon com.example.android.bluetoothchat:searchHintIcon}</code></td><td></td></tr>
-           <tr><td><code>{@link #SearchView_searchIcon com.example.android.bluetoothchat:searchIcon}</code></td><td></td></tr>
-           <tr><td><code>{@link #SearchView_submitBackground com.example.android.bluetoothchat:submitBackground}</code></td><td></td></tr>
-           <tr><td><code>{@link #SearchView_suggestionRowLayout com.example.android.bluetoothchat:suggestionRowLayout}</code></td><td></td></tr>
-           <tr><td><code>{@link #SearchView_voiceIcon com.example.android.bluetoothchat:voiceIcon}</code></td><td></td></tr>
+           <tr><td><code>{@link #SearchView_closeIcon com.example.android.passingsync:closeIcon}</code></td><td></td></tr>
+           <tr><td><code>{@link #SearchView_commitIcon com.example.android.passingsync:commitIcon}</code></td><td></td></tr>
+           <tr><td><code>{@link #SearchView_defaultQueryHint com.example.android.passingsync:defaultQueryHint}</code></td><td></td></tr>
+           <tr><td><code>{@link #SearchView_goIcon com.example.android.passingsync:goIcon}</code></td><td></td></tr>
+           <tr><td><code>{@link #SearchView_iconifiedByDefault com.example.android.passingsync:iconifiedByDefault}</code></td><td></td></tr>
+           <tr><td><code>{@link #SearchView_layout com.example.android.passingsync:layout}</code></td><td></td></tr>
+           <tr><td><code>{@link #SearchView_queryBackground com.example.android.passingsync:queryBackground}</code></td><td></td></tr>
+           <tr><td><code>{@link #SearchView_queryHint com.example.android.passingsync:queryHint}</code></td><td></td></tr>
+           <tr><td><code>{@link #SearchView_searchHintIcon com.example.android.passingsync:searchHintIcon}</code></td><td></td></tr>
+           <tr><td><code>{@link #SearchView_searchIcon com.example.android.passingsync:searchIcon}</code></td><td></td></tr>
+           <tr><td><code>{@link #SearchView_submitBackground com.example.android.passingsync:submitBackground}</code></td><td></td></tr>
+           <tr><td><code>{@link #SearchView_suggestionRowLayout com.example.android.passingsync:suggestionRowLayout}</code></td><td></td></tr>
+           <tr><td><code>{@link #SearchView_voiceIcon com.example.android.passingsync:voiceIcon}</code></td><td></td></tr>
            </table>
            @see #SearchView_android_focusable
            @see #SearchView_android_imeOptions
@@ -4356,27 +4362,27 @@ containing a value of this type.
         */
         public static final int SearchView_android_maxWidth = 1;
         /**
-          <p>This symbol is the offset where the {@link com.example.android.bluetoothchat.R.attr#closeIcon}
+          <p>This symbol is the offset where the {@link com.example.android.passingsync.R.attr#closeIcon}
           attribute's value can be found in the {@link #SearchView} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.example.android.bluetoothchat:closeIcon
+          @attr name com.example.android.passingsync:closeIcon
         */
         public static final int SearchView_closeIcon = 8;
         /**
-          <p>This symbol is the offset where the {@link com.example.android.bluetoothchat.R.attr#commitIcon}
+          <p>This symbol is the offset where the {@link com.example.android.passingsync.R.attr#commitIcon}
           attribute's value can be found in the {@link #SearchView} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.example.android.bluetoothchat:commitIcon
+          @attr name com.example.android.passingsync:commitIcon
         */
         public static final int SearchView_commitIcon = 13;
         /**
-          <p>This symbol is the offset where the {@link com.example.android.bluetoothchat.R.attr#defaultQueryHint}
+          <p>This symbol is the offset where the {@link com.example.android.passingsync.R.attr#defaultQueryHint}
           attribute's value can be found in the {@link #SearchView} array.
 
 
@@ -4386,21 +4392,21 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.example.android.bluetoothchat:defaultQueryHint
+          @attr name com.example.android.passingsync:defaultQueryHint
         */
         public static final int SearchView_defaultQueryHint = 7;
         /**
-          <p>This symbol is the offset where the {@link com.example.android.bluetoothchat.R.attr#goIcon}
+          <p>This symbol is the offset where the {@link com.example.android.passingsync.R.attr#goIcon}
           attribute's value can be found in the {@link #SearchView} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.example.android.bluetoothchat:goIcon
+          @attr name com.example.android.passingsync:goIcon
         */
         public static final int SearchView_goIcon = 9;
         /**
-          <p>This symbol is the offset where the {@link com.example.android.bluetoothchat.R.attr#iconifiedByDefault}
+          <p>This symbol is the offset where the {@link com.example.android.passingsync.R.attr#iconifiedByDefault}
           attribute's value can be found in the {@link #SearchView} array.
 
 
@@ -4410,31 +4416,31 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.example.android.bluetoothchat:iconifiedByDefault
+          @attr name com.example.android.passingsync:iconifiedByDefault
         */
         public static final int SearchView_iconifiedByDefault = 5;
         /**
-          <p>This symbol is the offset where the {@link com.example.android.bluetoothchat.R.attr#layout}
+          <p>This symbol is the offset where the {@link com.example.android.passingsync.R.attr#layout}
           attribute's value can be found in the {@link #SearchView} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.example.android.bluetoothchat:layout
+          @attr name com.example.android.passingsync:layout
         */
         public static final int SearchView_layout = 4;
         /**
-          <p>This symbol is the offset where the {@link com.example.android.bluetoothchat.R.attr#queryBackground}
+          <p>This symbol is the offset where the {@link com.example.android.passingsync.R.attr#queryBackground}
           attribute's value can be found in the {@link #SearchView} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.example.android.bluetoothchat:queryBackground
+          @attr name com.example.android.passingsync:queryBackground
         */
         public static final int SearchView_queryBackground = 15;
         /**
-          <p>This symbol is the offset where the {@link com.example.android.bluetoothchat.R.attr#queryHint}
+          <p>This symbol is the offset where the {@link com.example.android.passingsync.R.attr#queryHint}
           attribute's value can be found in the {@link #SearchView} array.
 
 
@@ -4444,57 +4450,57 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.example.android.bluetoothchat:queryHint
+          @attr name com.example.android.passingsync:queryHint
         */
         public static final int SearchView_queryHint = 6;
         /**
-          <p>This symbol is the offset where the {@link com.example.android.bluetoothchat.R.attr#searchHintIcon}
+          <p>This symbol is the offset where the {@link com.example.android.passingsync.R.attr#searchHintIcon}
           attribute's value can be found in the {@link #SearchView} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.example.android.bluetoothchat:searchHintIcon
+          @attr name com.example.android.passingsync:searchHintIcon
         */
         public static final int SearchView_searchHintIcon = 11;
         /**
-          <p>This symbol is the offset where the {@link com.example.android.bluetoothchat.R.attr#searchIcon}
+          <p>This symbol is the offset where the {@link com.example.android.passingsync.R.attr#searchIcon}
           attribute's value can be found in the {@link #SearchView} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.example.android.bluetoothchat:searchIcon
+          @attr name com.example.android.passingsync:searchIcon
         */
         public static final int SearchView_searchIcon = 10;
         /**
-          <p>This symbol is the offset where the {@link com.example.android.bluetoothchat.R.attr#submitBackground}
+          <p>This symbol is the offset where the {@link com.example.android.passingsync.R.attr#submitBackground}
           attribute's value can be found in the {@link #SearchView} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.example.android.bluetoothchat:submitBackground
+          @attr name com.example.android.passingsync:submitBackground
         */
         public static final int SearchView_submitBackground = 16;
         /**
-          <p>This symbol is the offset where the {@link com.example.android.bluetoothchat.R.attr#suggestionRowLayout}
+          <p>This symbol is the offset where the {@link com.example.android.passingsync.R.attr#suggestionRowLayout}
           attribute's value can be found in the {@link #SearchView} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.example.android.bluetoothchat:suggestionRowLayout
+          @attr name com.example.android.passingsync:suggestionRowLayout
         */
         public static final int SearchView_suggestionRowLayout = 14;
         /**
-          <p>This symbol is the offset where the {@link com.example.android.bluetoothchat.R.attr#voiceIcon}
+          <p>This symbol is the offset where the {@link com.example.android.passingsync.R.attr#voiceIcon}
           attribute's value can be found in the {@link #SearchView} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.example.android.bluetoothchat:voiceIcon
+          @attr name com.example.android.passingsync:voiceIcon
         */
         public static final int SearchView_voiceIcon = 12;
         /** Attributes that can be used with a Spinner.
@@ -4510,10 +4516,10 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
            <tr><td><code>{@link #Spinner_android_dropDownWidth android:dropDownWidth}</code></td><td></td></tr>
            <tr><td><code>{@link #Spinner_android_gravity android:gravity}</code></td><td></td></tr>
            <tr><td><code>{@link #Spinner_android_popupBackground android:popupBackground}</code></td><td></td></tr>
-           <tr><td><code>{@link #Spinner_disableChildrenWhenDisabled com.example.android.bluetoothchat:disableChildrenWhenDisabled}</code></td><td></td></tr>
-           <tr><td><code>{@link #Spinner_popupPromptView com.example.android.bluetoothchat:popupPromptView}</code></td><td></td></tr>
-           <tr><td><code>{@link #Spinner_prompt com.example.android.bluetoothchat:prompt}</code></td><td></td></tr>
-           <tr><td><code>{@link #Spinner_spinnerMode com.example.android.bluetoothchat:spinnerMode}</code></td><td></td></tr>
+           <tr><td><code>{@link #Spinner_disableChildrenWhenDisabled com.example.android.passingsync:disableChildrenWhenDisabled}</code></td><td></td></tr>
+           <tr><td><code>{@link #Spinner_popupPromptView com.example.android.passingsync:popupPromptView}</code></td><td></td></tr>
+           <tr><td><code>{@link #Spinner_prompt com.example.android.passingsync:prompt}</code></td><td></td></tr>
+           <tr><td><code>{@link #Spinner_spinnerMode com.example.android.passingsync:spinnerMode}</code></td><td></td></tr>
            </table>
            @see #Spinner_android_background
            @see #Spinner_android_dropDownHorizontalOffset
@@ -4575,7 +4581,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         */
         public static final int Spinner_android_popupBackground = 3;
         /**
-          <p>This symbol is the offset where the {@link com.example.android.bluetoothchat.R.attr#disableChildrenWhenDisabled}
+          <p>This symbol is the offset where the {@link com.example.android.passingsync.R.attr#disableChildrenWhenDisabled}
           attribute's value can be found in the {@link #Spinner} array.
 
 
@@ -4585,31 +4591,31 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.example.android.bluetoothchat:disableChildrenWhenDisabled
+          @attr name com.example.android.passingsync:disableChildrenWhenDisabled
         */
         public static final int Spinner_disableChildrenWhenDisabled = 10;
         /**
-          <p>This symbol is the offset where the {@link com.example.android.bluetoothchat.R.attr#popupPromptView}
+          <p>This symbol is the offset where the {@link com.example.android.passingsync.R.attr#popupPromptView}
           attribute's value can be found in the {@link #Spinner} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.example.android.bluetoothchat:popupPromptView
+          @attr name com.example.android.passingsync:popupPromptView
         */
         public static final int Spinner_popupPromptView = 9;
         /**
-          <p>This symbol is the offset where the {@link com.example.android.bluetoothchat.R.attr#prompt}
+          <p>This symbol is the offset where the {@link com.example.android.passingsync.R.attr#prompt}
           attribute's value can be found in the {@link #Spinner} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.example.android.bluetoothchat:prompt
+          @attr name com.example.android.passingsync:prompt
         */
         public static final int Spinner_prompt = 7;
         /**
-          <p>This symbol is the offset where the {@link com.example.android.bluetoothchat.R.attr#spinnerMode}
+          <p>This symbol is the offset where the {@link com.example.android.passingsync.R.attr#spinnerMode}
           attribute's value can be found in the {@link #Spinner} array.
 
 
@@ -4622,7 +4628,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 <tr><td><code>dialog</code></td><td>0</td><td></td></tr>
 <tr><td><code>dropdown</code></td><td>1</td><td></td></tr>
 </table>
-          @attr name com.example.android.bluetoothchat:spinnerMode
+          @attr name com.example.android.passingsync:spinnerMode
         */
         public static final int Spinner_spinnerMode = 8;
         /** Attributes that can be used with a SwitchCompat.
@@ -4634,13 +4640,13 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
            <tr><td><code>{@link #SwitchCompat_android_textOff android:textOff}</code></td><td></td></tr>
            <tr><td><code>{@link #SwitchCompat_android_textOn android:textOn}</code></td><td></td></tr>
            <tr><td><code>{@link #SwitchCompat_android_thumb android:thumb}</code></td><td></td></tr>
-           <tr><td><code>{@link #SwitchCompat_showText com.example.android.bluetoothchat:showText}</code></td><td></td></tr>
-           <tr><td><code>{@link #SwitchCompat_splitTrack com.example.android.bluetoothchat:splitTrack}</code></td><td></td></tr>
-           <tr><td><code>{@link #SwitchCompat_switchMinWidth com.example.android.bluetoothchat:switchMinWidth}</code></td><td></td></tr>
-           <tr><td><code>{@link #SwitchCompat_switchPadding com.example.android.bluetoothchat:switchPadding}</code></td><td></td></tr>
-           <tr><td><code>{@link #SwitchCompat_switchTextAppearance com.example.android.bluetoothchat:switchTextAppearance}</code></td><td></td></tr>
-           <tr><td><code>{@link #SwitchCompat_thumbTextPadding com.example.android.bluetoothchat:thumbTextPadding}</code></td><td></td></tr>
-           <tr><td><code>{@link #SwitchCompat_track com.example.android.bluetoothchat:track}</code></td><td></td></tr>
+           <tr><td><code>{@link #SwitchCompat_showText com.example.android.passingsync:showText}</code></td><td></td></tr>
+           <tr><td><code>{@link #SwitchCompat_splitTrack com.example.android.passingsync:splitTrack}</code></td><td></td></tr>
+           <tr><td><code>{@link #SwitchCompat_switchMinWidth com.example.android.passingsync:switchMinWidth}</code></td><td></td></tr>
+           <tr><td><code>{@link #SwitchCompat_switchPadding com.example.android.passingsync:switchPadding}</code></td><td></td></tr>
+           <tr><td><code>{@link #SwitchCompat_switchTextAppearance com.example.android.passingsync:switchTextAppearance}</code></td><td></td></tr>
+           <tr><td><code>{@link #SwitchCompat_thumbTextPadding com.example.android.passingsync:thumbTextPadding}</code></td><td></td></tr>
+           <tr><td><code>{@link #SwitchCompat_track com.example.android.passingsync:track}</code></td><td></td></tr>
            </table>
            @see #SwitchCompat_android_textOff
            @see #SwitchCompat_android_textOn
@@ -4677,7 +4683,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         */
         public static final int SwitchCompat_android_thumb = 2;
         /**
-          <p>This symbol is the offset where the {@link com.example.android.bluetoothchat.R.attr#showText}
+          <p>This symbol is the offset where the {@link com.example.android.passingsync.R.attr#showText}
           attribute's value can be found in the {@link #SwitchCompat} array.
 
 
@@ -4687,11 +4693,11 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.example.android.bluetoothchat:showText
+          @attr name com.example.android.passingsync:showText
         */
         public static final int SwitchCompat_showText = 9;
         /**
-          <p>This symbol is the offset where the {@link com.example.android.bluetoothchat.R.attr#splitTrack}
+          <p>This symbol is the offset where the {@link com.example.android.passingsync.R.attr#splitTrack}
           attribute's value can be found in the {@link #SwitchCompat} array.
 
 
@@ -4701,11 +4707,11 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.example.android.bluetoothchat:splitTrack
+          @attr name com.example.android.passingsync:splitTrack
         */
         public static final int SwitchCompat_splitTrack = 8;
         /**
-          <p>This symbol is the offset where the {@link com.example.android.bluetoothchat.R.attr#switchMinWidth}
+          <p>This symbol is the offset where the {@link com.example.android.passingsync.R.attr#switchMinWidth}
           attribute's value can be found in the {@link #SwitchCompat} array.
 
 
@@ -4717,11 +4723,11 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.example.android.bluetoothchat:switchMinWidth
+          @attr name com.example.android.passingsync:switchMinWidth
         */
         public static final int SwitchCompat_switchMinWidth = 6;
         /**
-          <p>This symbol is the offset where the {@link com.example.android.bluetoothchat.R.attr#switchPadding}
+          <p>This symbol is the offset where the {@link com.example.android.passingsync.R.attr#switchPadding}
           attribute's value can be found in the {@link #SwitchCompat} array.
 
 
@@ -4733,21 +4739,21 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.example.android.bluetoothchat:switchPadding
+          @attr name com.example.android.passingsync:switchPadding
         */
         public static final int SwitchCompat_switchPadding = 7;
         /**
-          <p>This symbol is the offset where the {@link com.example.android.bluetoothchat.R.attr#switchTextAppearance}
+          <p>This symbol is the offset where the {@link com.example.android.passingsync.R.attr#switchTextAppearance}
           attribute's value can be found in the {@link #SwitchCompat} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.example.android.bluetoothchat:switchTextAppearance
+          @attr name com.example.android.passingsync:switchTextAppearance
         */
         public static final int SwitchCompat_switchTextAppearance = 5;
         /**
-          <p>This symbol is the offset where the {@link com.example.android.bluetoothchat.R.attr#thumbTextPadding}
+          <p>This symbol is the offset where the {@link com.example.android.passingsync.R.attr#thumbTextPadding}
           attribute's value can be found in the {@link #SwitchCompat} array.
 
 
@@ -4759,17 +4765,17 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.example.android.bluetoothchat:thumbTextPadding
+          @attr name com.example.android.passingsync:thumbTextPadding
         */
         public static final int SwitchCompat_thumbTextPadding = 4;
         /**
-          <p>This symbol is the offset where the {@link com.example.android.bluetoothchat.R.attr#track}
+          <p>This symbol is the offset where the {@link com.example.android.passingsync.R.attr#track}
           attribute's value can be found in the {@link #SwitchCompat} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.example.android.bluetoothchat:track
+          @attr name com.example.android.passingsync:track
         */
         public static final int SwitchCompat_track = 3;
         /** Attributes that can be used with a TextAppearance.
@@ -4782,7 +4788,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
            <tr><td><code>{@link #TextAppearance_android_textSize android:textSize}</code></td><td></td></tr>
            <tr><td><code>{@link #TextAppearance_android_textStyle android:textStyle}</code></td><td></td></tr>
            <tr><td><code>{@link #TextAppearance_android_typeface android:typeface}</code></td><td></td></tr>
-           <tr><td><code>{@link #TextAppearance_textAllCaps com.example.android.bluetoothchat:textAllCaps}</code></td><td></td></tr>
+           <tr><td><code>{@link #TextAppearance_textAllCaps com.example.android.passingsync:textAllCaps}</code></td><td></td></tr>
            </table>
            @see #TextAppearance_android_textColor
            @see #TextAppearance_android_textSize
@@ -4819,14 +4825,14 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         */
         public static final int TextAppearance_android_typeface = 1;
         /**
-          <p>This symbol is the offset where the {@link com.example.android.bluetoothchat.R.attr#textAllCaps}
+          <p>This symbol is the offset where the {@link com.example.android.passingsync.R.attr#textAllCaps}
           attribute's value can be found in the {@link #TextAppearance} array.
 
 
           <p>May be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
 <p>May be a boolean value, either "<code>true</code>" or "<code>false</code>".
-          @attr name com.example.android.bluetoothchat:textAllCaps
+          @attr name com.example.android.passingsync:textAllCaps
         */
         public static final int TextAppearance_textAllCaps = 4;
         /** Attributes that can be used with a Theme.
@@ -4835,113 +4841,113 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
            <colgroup align="left" />
            <colgroup align="left" />
            <tr><th>Attribute</th><th>Description</th></tr>
-           <tr><td><code>{@link #Theme_actionBarDivider com.example.android.bluetoothchat:actionBarDivider}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_actionBarItemBackground com.example.android.bluetoothchat:actionBarItemBackground}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_actionBarPopupTheme com.example.android.bluetoothchat:actionBarPopupTheme}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_actionBarSize com.example.android.bluetoothchat:actionBarSize}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_actionBarSplitStyle com.example.android.bluetoothchat:actionBarSplitStyle}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_actionBarStyle com.example.android.bluetoothchat:actionBarStyle}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_actionBarTabBarStyle com.example.android.bluetoothchat:actionBarTabBarStyle}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_actionBarTabStyle com.example.android.bluetoothchat:actionBarTabStyle}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_actionBarTabTextStyle com.example.android.bluetoothchat:actionBarTabTextStyle}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_actionBarTheme com.example.android.bluetoothchat:actionBarTheme}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_actionBarWidgetTheme com.example.android.bluetoothchat:actionBarWidgetTheme}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_actionButtonStyle com.example.android.bluetoothchat:actionButtonStyle}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_actionDropDownStyle com.example.android.bluetoothchat:actionDropDownStyle}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_actionMenuTextAppearance com.example.android.bluetoothchat:actionMenuTextAppearance}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_actionMenuTextColor com.example.android.bluetoothchat:actionMenuTextColor}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_actionModeBackground com.example.android.bluetoothchat:actionModeBackground}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_actionModeCloseButtonStyle com.example.android.bluetoothchat:actionModeCloseButtonStyle}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_actionModeCloseDrawable com.example.android.bluetoothchat:actionModeCloseDrawable}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_actionModeCopyDrawable com.example.android.bluetoothchat:actionModeCopyDrawable}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_actionModeCutDrawable com.example.android.bluetoothchat:actionModeCutDrawable}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_actionModeFindDrawable com.example.android.bluetoothchat:actionModeFindDrawable}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_actionModePasteDrawable com.example.android.bluetoothchat:actionModePasteDrawable}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_actionModePopupWindowStyle com.example.android.bluetoothchat:actionModePopupWindowStyle}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_actionModeSelectAllDrawable com.example.android.bluetoothchat:actionModeSelectAllDrawable}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_actionModeShareDrawable com.example.android.bluetoothchat:actionModeShareDrawable}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_actionModeSplitBackground com.example.android.bluetoothchat:actionModeSplitBackground}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_actionModeStyle com.example.android.bluetoothchat:actionModeStyle}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_actionModeWebSearchDrawable com.example.android.bluetoothchat:actionModeWebSearchDrawable}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_actionOverflowButtonStyle com.example.android.bluetoothchat:actionOverflowButtonStyle}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_actionOverflowMenuStyle com.example.android.bluetoothchat:actionOverflowMenuStyle}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_activityChooserViewStyle com.example.android.bluetoothchat:activityChooserViewStyle}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_alertDialogButtonGroupStyle com.example.android.bluetoothchat:alertDialogButtonGroupStyle}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_alertDialogCenterButtons com.example.android.bluetoothchat:alertDialogCenterButtons}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_alertDialogStyle com.example.android.bluetoothchat:alertDialogStyle}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_alertDialogTheme com.example.android.bluetoothchat:alertDialogTheme}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_actionBarDivider com.example.android.passingsync:actionBarDivider}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_actionBarItemBackground com.example.android.passingsync:actionBarItemBackground}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_actionBarPopupTheme com.example.android.passingsync:actionBarPopupTheme}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_actionBarSize com.example.android.passingsync:actionBarSize}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_actionBarSplitStyle com.example.android.passingsync:actionBarSplitStyle}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_actionBarStyle com.example.android.passingsync:actionBarStyle}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_actionBarTabBarStyle com.example.android.passingsync:actionBarTabBarStyle}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_actionBarTabStyle com.example.android.passingsync:actionBarTabStyle}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_actionBarTabTextStyle com.example.android.passingsync:actionBarTabTextStyle}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_actionBarTheme com.example.android.passingsync:actionBarTheme}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_actionBarWidgetTheme com.example.android.passingsync:actionBarWidgetTheme}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_actionButtonStyle com.example.android.passingsync:actionButtonStyle}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_actionDropDownStyle com.example.android.passingsync:actionDropDownStyle}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_actionMenuTextAppearance com.example.android.passingsync:actionMenuTextAppearance}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_actionMenuTextColor com.example.android.passingsync:actionMenuTextColor}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_actionModeBackground com.example.android.passingsync:actionModeBackground}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_actionModeCloseButtonStyle com.example.android.passingsync:actionModeCloseButtonStyle}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_actionModeCloseDrawable com.example.android.passingsync:actionModeCloseDrawable}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_actionModeCopyDrawable com.example.android.passingsync:actionModeCopyDrawable}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_actionModeCutDrawable com.example.android.passingsync:actionModeCutDrawable}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_actionModeFindDrawable com.example.android.passingsync:actionModeFindDrawable}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_actionModePasteDrawable com.example.android.passingsync:actionModePasteDrawable}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_actionModePopupWindowStyle com.example.android.passingsync:actionModePopupWindowStyle}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_actionModeSelectAllDrawable com.example.android.passingsync:actionModeSelectAllDrawable}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_actionModeShareDrawable com.example.android.passingsync:actionModeShareDrawable}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_actionModeSplitBackground com.example.android.passingsync:actionModeSplitBackground}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_actionModeStyle com.example.android.passingsync:actionModeStyle}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_actionModeWebSearchDrawable com.example.android.passingsync:actionModeWebSearchDrawable}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_actionOverflowButtonStyle com.example.android.passingsync:actionOverflowButtonStyle}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_actionOverflowMenuStyle com.example.android.passingsync:actionOverflowMenuStyle}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_activityChooserViewStyle com.example.android.passingsync:activityChooserViewStyle}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_alertDialogButtonGroupStyle com.example.android.passingsync:alertDialogButtonGroupStyle}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_alertDialogCenterButtons com.example.android.passingsync:alertDialogCenterButtons}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_alertDialogStyle com.example.android.passingsync:alertDialogStyle}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_alertDialogTheme com.example.android.passingsync:alertDialogTheme}</code></td><td></td></tr>
            <tr><td><code>{@link #Theme_android_windowAnimationStyle android:windowAnimationStyle}</code></td><td></td></tr>
            <tr><td><code>{@link #Theme_android_windowIsFloating android:windowIsFloating}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_autoCompleteTextViewStyle com.example.android.bluetoothchat:autoCompleteTextViewStyle}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_borderlessButtonStyle com.example.android.bluetoothchat:borderlessButtonStyle}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_buttonBarButtonStyle com.example.android.bluetoothchat:buttonBarButtonStyle}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_buttonBarNegativeButtonStyle com.example.android.bluetoothchat:buttonBarNegativeButtonStyle}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_buttonBarNeutralButtonStyle com.example.android.bluetoothchat:buttonBarNeutralButtonStyle}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_buttonBarPositiveButtonStyle com.example.android.bluetoothchat:buttonBarPositiveButtonStyle}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_buttonBarStyle com.example.android.bluetoothchat:buttonBarStyle}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_buttonStyle com.example.android.bluetoothchat:buttonStyle}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_buttonStyleSmall com.example.android.bluetoothchat:buttonStyleSmall}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_checkboxStyle com.example.android.bluetoothchat:checkboxStyle}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_checkedTextViewStyle com.example.android.bluetoothchat:checkedTextViewStyle}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_colorAccent com.example.android.bluetoothchat:colorAccent}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_colorButtonNormal com.example.android.bluetoothchat:colorButtonNormal}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_colorControlActivated com.example.android.bluetoothchat:colorControlActivated}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_colorControlHighlight com.example.android.bluetoothchat:colorControlHighlight}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_colorControlNormal com.example.android.bluetoothchat:colorControlNormal}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_colorPrimary com.example.android.bluetoothchat:colorPrimary}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_colorPrimaryDark com.example.android.bluetoothchat:colorPrimaryDark}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_colorSwitchThumbNormal com.example.android.bluetoothchat:colorSwitchThumbNormal}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_dialogPreferredPadding com.example.android.bluetoothchat:dialogPreferredPadding}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_dialogTheme com.example.android.bluetoothchat:dialogTheme}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_dividerHorizontal com.example.android.bluetoothchat:dividerHorizontal}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_dividerVertical com.example.android.bluetoothchat:dividerVertical}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_dropDownListViewStyle com.example.android.bluetoothchat:dropDownListViewStyle}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_dropdownListPreferredItemHeight com.example.android.bluetoothchat:dropdownListPreferredItemHeight}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_editTextBackground com.example.android.bluetoothchat:editTextBackground}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_editTextColor com.example.android.bluetoothchat:editTextColor}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_editTextStyle com.example.android.bluetoothchat:editTextStyle}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_homeAsUpIndicator com.example.android.bluetoothchat:homeAsUpIndicator}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_listChoiceBackgroundIndicator com.example.android.bluetoothchat:listChoiceBackgroundIndicator}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_listDividerAlertDialog com.example.android.bluetoothchat:listDividerAlertDialog}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_listPopupWindowStyle com.example.android.bluetoothchat:listPopupWindowStyle}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_listPreferredItemHeight com.example.android.bluetoothchat:listPreferredItemHeight}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_listPreferredItemHeightLarge com.example.android.bluetoothchat:listPreferredItemHeightLarge}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_listPreferredItemHeightSmall com.example.android.bluetoothchat:listPreferredItemHeightSmall}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_listPreferredItemPaddingLeft com.example.android.bluetoothchat:listPreferredItemPaddingLeft}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_listPreferredItemPaddingRight com.example.android.bluetoothchat:listPreferredItemPaddingRight}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_panelBackground com.example.android.bluetoothchat:panelBackground}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_panelMenuListTheme com.example.android.bluetoothchat:panelMenuListTheme}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_panelMenuListWidth com.example.android.bluetoothchat:panelMenuListWidth}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_popupMenuStyle com.example.android.bluetoothchat:popupMenuStyle}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_popupWindowStyle com.example.android.bluetoothchat:popupWindowStyle}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_radioButtonStyle com.example.android.bluetoothchat:radioButtonStyle}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_ratingBarStyle com.example.android.bluetoothchat:ratingBarStyle}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_searchViewStyle com.example.android.bluetoothchat:searchViewStyle}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_selectableItemBackground com.example.android.bluetoothchat:selectableItemBackground}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_selectableItemBackgroundBorderless com.example.android.bluetoothchat:selectableItemBackgroundBorderless}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_spinnerDropDownItemStyle com.example.android.bluetoothchat:spinnerDropDownItemStyle}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_spinnerStyle com.example.android.bluetoothchat:spinnerStyle}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_switchStyle com.example.android.bluetoothchat:switchStyle}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_textAppearanceLargePopupMenu com.example.android.bluetoothchat:textAppearanceLargePopupMenu}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_textAppearanceListItem com.example.android.bluetoothchat:textAppearanceListItem}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_textAppearanceListItemSmall com.example.android.bluetoothchat:textAppearanceListItemSmall}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_textAppearanceSearchResultSubtitle com.example.android.bluetoothchat:textAppearanceSearchResultSubtitle}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_textAppearanceSearchResultTitle com.example.android.bluetoothchat:textAppearanceSearchResultTitle}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_textAppearanceSmallPopupMenu com.example.android.bluetoothchat:textAppearanceSmallPopupMenu}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_textColorAlertDialogListItem com.example.android.bluetoothchat:textColorAlertDialogListItem}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_textColorSearchUrl com.example.android.bluetoothchat:textColorSearchUrl}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_toolbarNavigationButtonStyle com.example.android.bluetoothchat:toolbarNavigationButtonStyle}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_toolbarStyle com.example.android.bluetoothchat:toolbarStyle}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_windowActionBar com.example.android.bluetoothchat:windowActionBar}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_windowActionBarOverlay com.example.android.bluetoothchat:windowActionBarOverlay}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_windowActionModeOverlay com.example.android.bluetoothchat:windowActionModeOverlay}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_windowFixedHeightMajor com.example.android.bluetoothchat:windowFixedHeightMajor}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_windowFixedHeightMinor com.example.android.bluetoothchat:windowFixedHeightMinor}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_windowFixedWidthMajor com.example.android.bluetoothchat:windowFixedWidthMajor}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_windowFixedWidthMinor com.example.android.bluetoothchat:windowFixedWidthMinor}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_windowMinWidthMajor com.example.android.bluetoothchat:windowMinWidthMajor}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_windowMinWidthMinor com.example.android.bluetoothchat:windowMinWidthMinor}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_windowNoTitle com.example.android.bluetoothchat:windowNoTitle}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_autoCompleteTextViewStyle com.example.android.passingsync:autoCompleteTextViewStyle}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_borderlessButtonStyle com.example.android.passingsync:borderlessButtonStyle}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_buttonBarButtonStyle com.example.android.passingsync:buttonBarButtonStyle}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_buttonBarNegativeButtonStyle com.example.android.passingsync:buttonBarNegativeButtonStyle}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_buttonBarNeutralButtonStyle com.example.android.passingsync:buttonBarNeutralButtonStyle}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_buttonBarPositiveButtonStyle com.example.android.passingsync:buttonBarPositiveButtonStyle}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_buttonBarStyle com.example.android.passingsync:buttonBarStyle}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_buttonStyle com.example.android.passingsync:buttonStyle}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_buttonStyleSmall com.example.android.passingsync:buttonStyleSmall}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_checkboxStyle com.example.android.passingsync:checkboxStyle}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_checkedTextViewStyle com.example.android.passingsync:checkedTextViewStyle}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_colorAccent com.example.android.passingsync:colorAccent}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_colorButtonNormal com.example.android.passingsync:colorButtonNormal}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_colorControlActivated com.example.android.passingsync:colorControlActivated}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_colorControlHighlight com.example.android.passingsync:colorControlHighlight}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_colorControlNormal com.example.android.passingsync:colorControlNormal}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_colorPrimary com.example.android.passingsync:colorPrimary}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_colorPrimaryDark com.example.android.passingsync:colorPrimaryDark}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_colorSwitchThumbNormal com.example.android.passingsync:colorSwitchThumbNormal}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_dialogPreferredPadding com.example.android.passingsync:dialogPreferredPadding}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_dialogTheme com.example.android.passingsync:dialogTheme}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_dividerHorizontal com.example.android.passingsync:dividerHorizontal}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_dividerVertical com.example.android.passingsync:dividerVertical}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_dropDownListViewStyle com.example.android.passingsync:dropDownListViewStyle}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_dropdownListPreferredItemHeight com.example.android.passingsync:dropdownListPreferredItemHeight}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_editTextBackground com.example.android.passingsync:editTextBackground}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_editTextColor com.example.android.passingsync:editTextColor}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_editTextStyle com.example.android.passingsync:editTextStyle}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_homeAsUpIndicator com.example.android.passingsync:homeAsUpIndicator}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_listChoiceBackgroundIndicator com.example.android.passingsync:listChoiceBackgroundIndicator}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_listDividerAlertDialog com.example.android.passingsync:listDividerAlertDialog}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_listPopupWindowStyle com.example.android.passingsync:listPopupWindowStyle}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_listPreferredItemHeight com.example.android.passingsync:listPreferredItemHeight}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_listPreferredItemHeightLarge com.example.android.passingsync:listPreferredItemHeightLarge}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_listPreferredItemHeightSmall com.example.android.passingsync:listPreferredItemHeightSmall}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_listPreferredItemPaddingLeft com.example.android.passingsync:listPreferredItemPaddingLeft}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_listPreferredItemPaddingRight com.example.android.passingsync:listPreferredItemPaddingRight}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_panelBackground com.example.android.passingsync:panelBackground}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_panelMenuListTheme com.example.android.passingsync:panelMenuListTheme}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_panelMenuListWidth com.example.android.passingsync:panelMenuListWidth}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_popupMenuStyle com.example.android.passingsync:popupMenuStyle}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_popupWindowStyle com.example.android.passingsync:popupWindowStyle}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_radioButtonStyle com.example.android.passingsync:radioButtonStyle}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_ratingBarStyle com.example.android.passingsync:ratingBarStyle}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_searchViewStyle com.example.android.passingsync:searchViewStyle}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_selectableItemBackground com.example.android.passingsync:selectableItemBackground}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_selectableItemBackgroundBorderless com.example.android.passingsync:selectableItemBackgroundBorderless}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_spinnerDropDownItemStyle com.example.android.passingsync:spinnerDropDownItemStyle}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_spinnerStyle com.example.android.passingsync:spinnerStyle}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_switchStyle com.example.android.passingsync:switchStyle}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_textAppearanceLargePopupMenu com.example.android.passingsync:textAppearanceLargePopupMenu}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_textAppearanceListItem com.example.android.passingsync:textAppearanceListItem}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_textAppearanceListItemSmall com.example.android.passingsync:textAppearanceListItemSmall}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_textAppearanceSearchResultSubtitle com.example.android.passingsync:textAppearanceSearchResultSubtitle}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_textAppearanceSearchResultTitle com.example.android.passingsync:textAppearanceSearchResultTitle}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_textAppearanceSmallPopupMenu com.example.android.passingsync:textAppearanceSmallPopupMenu}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_textColorAlertDialogListItem com.example.android.passingsync:textColorAlertDialogListItem}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_textColorSearchUrl com.example.android.passingsync:textColorSearchUrl}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_toolbarNavigationButtonStyle com.example.android.passingsync:toolbarNavigationButtonStyle}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_toolbarStyle com.example.android.passingsync:toolbarStyle}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_windowActionBar com.example.android.passingsync:windowActionBar}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_windowActionBarOverlay com.example.android.passingsync:windowActionBarOverlay}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_windowActionModeOverlay com.example.android.passingsync:windowActionModeOverlay}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_windowFixedHeightMajor com.example.android.passingsync:windowFixedHeightMajor}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_windowFixedHeightMinor com.example.android.passingsync:windowFixedHeightMinor}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_windowFixedWidthMajor com.example.android.passingsync:windowFixedWidthMajor}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_windowFixedWidthMinor com.example.android.passingsync:windowFixedWidthMinor}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_windowMinWidthMajor com.example.android.passingsync:windowMinWidthMajor}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_windowMinWidthMinor com.example.android.passingsync:windowMinWidthMinor}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_windowNoTitle com.example.android.passingsync:windowNoTitle}</code></td><td></td></tr>
            </table>
            @see #Theme_actionBarDivider
            @see #Theme_actionBarItemBackground
@@ -5081,37 +5087,37 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
             0x7f0100ce, 0x7f0100cf, 0x7f0100d0
         };
         /**
-          <p>This symbol is the offset where the {@link com.example.android.bluetoothchat.R.attr#actionBarDivider}
+          <p>This symbol is the offset where the {@link com.example.android.passingsync.R.attr#actionBarDivider}
           attribute's value can be found in the {@link #Theme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.example.android.bluetoothchat:actionBarDivider
+          @attr name com.example.android.passingsync:actionBarDivider
         */
         public static final int Theme_actionBarDivider = 23;
         /**
-          <p>This symbol is the offset where the {@link com.example.android.bluetoothchat.R.attr#actionBarItemBackground}
+          <p>This symbol is the offset where the {@link com.example.android.passingsync.R.attr#actionBarItemBackground}
           attribute's value can be found in the {@link #Theme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.example.android.bluetoothchat:actionBarItemBackground
+          @attr name com.example.android.passingsync:actionBarItemBackground
         */
         public static final int Theme_actionBarItemBackground = 24;
         /**
-          <p>This symbol is the offset where the {@link com.example.android.bluetoothchat.R.attr#actionBarPopupTheme}
+          <p>This symbol is the offset where the {@link com.example.android.passingsync.R.attr#actionBarPopupTheme}
           attribute's value can be found in the {@link #Theme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.example.android.bluetoothchat:actionBarPopupTheme
+          @attr name com.example.android.passingsync:actionBarPopupTheme
         */
         public static final int Theme_actionBarPopupTheme = 17;
         /**
-          <p>This symbol is the offset where the {@link com.example.android.bluetoothchat.R.attr#actionBarSize}
+          <p>This symbol is the offset where the {@link com.example.android.passingsync.R.attr#actionBarSize}
           attribute's value can be found in the {@link #Theme} array.
 
 
@@ -5131,111 +5137,111 @@ containing a value of this type.
 <tr><th>Constant</th><th>Value</th><th>Description</th></tr>
 <tr><td><code>wrap_content</code></td><td>0</td><td></td></tr>
 </table>
-          @attr name com.example.android.bluetoothchat:actionBarSize
+          @attr name com.example.android.passingsync:actionBarSize
         */
         public static final int Theme_actionBarSize = 22;
         /**
-          <p>This symbol is the offset where the {@link com.example.android.bluetoothchat.R.attr#actionBarSplitStyle}
+          <p>This symbol is the offset where the {@link com.example.android.passingsync.R.attr#actionBarSplitStyle}
           attribute's value can be found in the {@link #Theme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.example.android.bluetoothchat:actionBarSplitStyle
+          @attr name com.example.android.passingsync:actionBarSplitStyle
         */
         public static final int Theme_actionBarSplitStyle = 19;
         /**
-          <p>This symbol is the offset where the {@link com.example.android.bluetoothchat.R.attr#actionBarStyle}
+          <p>This symbol is the offset where the {@link com.example.android.passingsync.R.attr#actionBarStyle}
           attribute's value can be found in the {@link #Theme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.example.android.bluetoothchat:actionBarStyle
+          @attr name com.example.android.passingsync:actionBarStyle
         */
         public static final int Theme_actionBarStyle = 18;
         /**
-          <p>This symbol is the offset where the {@link com.example.android.bluetoothchat.R.attr#actionBarTabBarStyle}
+          <p>This symbol is the offset where the {@link com.example.android.passingsync.R.attr#actionBarTabBarStyle}
           attribute's value can be found in the {@link #Theme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.example.android.bluetoothchat:actionBarTabBarStyle
+          @attr name com.example.android.passingsync:actionBarTabBarStyle
         */
         public static final int Theme_actionBarTabBarStyle = 13;
         /**
-          <p>This symbol is the offset where the {@link com.example.android.bluetoothchat.R.attr#actionBarTabStyle}
+          <p>This symbol is the offset where the {@link com.example.android.passingsync.R.attr#actionBarTabStyle}
           attribute's value can be found in the {@link #Theme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.example.android.bluetoothchat:actionBarTabStyle
+          @attr name com.example.android.passingsync:actionBarTabStyle
         */
         public static final int Theme_actionBarTabStyle = 12;
         /**
-          <p>This symbol is the offset where the {@link com.example.android.bluetoothchat.R.attr#actionBarTabTextStyle}
+          <p>This symbol is the offset where the {@link com.example.android.passingsync.R.attr#actionBarTabTextStyle}
           attribute's value can be found in the {@link #Theme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.example.android.bluetoothchat:actionBarTabTextStyle
+          @attr name com.example.android.passingsync:actionBarTabTextStyle
         */
         public static final int Theme_actionBarTabTextStyle = 14;
         /**
-          <p>This symbol is the offset where the {@link com.example.android.bluetoothchat.R.attr#actionBarTheme}
+          <p>This symbol is the offset where the {@link com.example.android.passingsync.R.attr#actionBarTheme}
           attribute's value can be found in the {@link #Theme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.example.android.bluetoothchat:actionBarTheme
+          @attr name com.example.android.passingsync:actionBarTheme
         */
         public static final int Theme_actionBarTheme = 20;
         /**
-          <p>This symbol is the offset where the {@link com.example.android.bluetoothchat.R.attr#actionBarWidgetTheme}
+          <p>This symbol is the offset where the {@link com.example.android.passingsync.R.attr#actionBarWidgetTheme}
           attribute's value can be found in the {@link #Theme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.example.android.bluetoothchat:actionBarWidgetTheme
+          @attr name com.example.android.passingsync:actionBarWidgetTheme
         */
         public static final int Theme_actionBarWidgetTheme = 21;
         /**
-          <p>This symbol is the offset where the {@link com.example.android.bluetoothchat.R.attr#actionButtonStyle}
+          <p>This symbol is the offset where the {@link com.example.android.passingsync.R.attr#actionButtonStyle}
           attribute's value can be found in the {@link #Theme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.example.android.bluetoothchat:actionButtonStyle
+          @attr name com.example.android.passingsync:actionButtonStyle
         */
         public static final int Theme_actionButtonStyle = 49;
         /**
-          <p>This symbol is the offset where the {@link com.example.android.bluetoothchat.R.attr#actionDropDownStyle}
+          <p>This symbol is the offset where the {@link com.example.android.passingsync.R.attr#actionDropDownStyle}
           attribute's value can be found in the {@link #Theme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.example.android.bluetoothchat:actionDropDownStyle
+          @attr name com.example.android.passingsync:actionDropDownStyle
         */
         public static final int Theme_actionDropDownStyle = 45;
         /**
-          <p>This symbol is the offset where the {@link com.example.android.bluetoothchat.R.attr#actionMenuTextAppearance}
+          <p>This symbol is the offset where the {@link com.example.android.passingsync.R.attr#actionMenuTextAppearance}
           attribute's value can be found in the {@link #Theme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.example.android.bluetoothchat:actionMenuTextAppearance
+          @attr name com.example.android.passingsync:actionMenuTextAppearance
         */
         public static final int Theme_actionMenuTextAppearance = 25;
         /**
-          <p>This symbol is the offset where the {@link com.example.android.bluetoothchat.R.attr#actionMenuTextColor}
+          <p>This symbol is the offset where the {@link com.example.android.passingsync.R.attr#actionMenuTextColor}
           attribute's value can be found in the {@link #Theme} array.
 
 
@@ -5243,181 +5249,181 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
 <p>May be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
 "<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
-          @attr name com.example.android.bluetoothchat:actionMenuTextColor
+          @attr name com.example.android.passingsync:actionMenuTextColor
         */
         public static final int Theme_actionMenuTextColor = 26;
         /**
-          <p>This symbol is the offset where the {@link com.example.android.bluetoothchat.R.attr#actionModeBackground}
+          <p>This symbol is the offset where the {@link com.example.android.passingsync.R.attr#actionModeBackground}
           attribute's value can be found in the {@link #Theme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.example.android.bluetoothchat:actionModeBackground
+          @attr name com.example.android.passingsync:actionModeBackground
         */
         public static final int Theme_actionModeBackground = 29;
         /**
-          <p>This symbol is the offset where the {@link com.example.android.bluetoothchat.R.attr#actionModeCloseButtonStyle}
+          <p>This symbol is the offset where the {@link com.example.android.passingsync.R.attr#actionModeCloseButtonStyle}
           attribute's value can be found in the {@link #Theme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.example.android.bluetoothchat:actionModeCloseButtonStyle
+          @attr name com.example.android.passingsync:actionModeCloseButtonStyle
         */
         public static final int Theme_actionModeCloseButtonStyle = 28;
         /**
-          <p>This symbol is the offset where the {@link com.example.android.bluetoothchat.R.attr#actionModeCloseDrawable}
+          <p>This symbol is the offset where the {@link com.example.android.passingsync.R.attr#actionModeCloseDrawable}
           attribute's value can be found in the {@link #Theme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.example.android.bluetoothchat:actionModeCloseDrawable
+          @attr name com.example.android.passingsync:actionModeCloseDrawable
         */
         public static final int Theme_actionModeCloseDrawable = 31;
         /**
-          <p>This symbol is the offset where the {@link com.example.android.bluetoothchat.R.attr#actionModeCopyDrawable}
+          <p>This symbol is the offset where the {@link com.example.android.passingsync.R.attr#actionModeCopyDrawable}
           attribute's value can be found in the {@link #Theme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.example.android.bluetoothchat:actionModeCopyDrawable
+          @attr name com.example.android.passingsync:actionModeCopyDrawable
         */
         public static final int Theme_actionModeCopyDrawable = 33;
         /**
-          <p>This symbol is the offset where the {@link com.example.android.bluetoothchat.R.attr#actionModeCutDrawable}
+          <p>This symbol is the offset where the {@link com.example.android.passingsync.R.attr#actionModeCutDrawable}
           attribute's value can be found in the {@link #Theme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.example.android.bluetoothchat:actionModeCutDrawable
+          @attr name com.example.android.passingsync:actionModeCutDrawable
         */
         public static final int Theme_actionModeCutDrawable = 32;
         /**
-          <p>This symbol is the offset where the {@link com.example.android.bluetoothchat.R.attr#actionModeFindDrawable}
+          <p>This symbol is the offset where the {@link com.example.android.passingsync.R.attr#actionModeFindDrawable}
           attribute's value can be found in the {@link #Theme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.example.android.bluetoothchat:actionModeFindDrawable
+          @attr name com.example.android.passingsync:actionModeFindDrawable
         */
         public static final int Theme_actionModeFindDrawable = 37;
         /**
-          <p>This symbol is the offset where the {@link com.example.android.bluetoothchat.R.attr#actionModePasteDrawable}
+          <p>This symbol is the offset where the {@link com.example.android.passingsync.R.attr#actionModePasteDrawable}
           attribute's value can be found in the {@link #Theme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.example.android.bluetoothchat:actionModePasteDrawable
+          @attr name com.example.android.passingsync:actionModePasteDrawable
         */
         public static final int Theme_actionModePasteDrawable = 34;
         /**
-          <p>This symbol is the offset where the {@link com.example.android.bluetoothchat.R.attr#actionModePopupWindowStyle}
+          <p>This symbol is the offset where the {@link com.example.android.passingsync.R.attr#actionModePopupWindowStyle}
           attribute's value can be found in the {@link #Theme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.example.android.bluetoothchat:actionModePopupWindowStyle
+          @attr name com.example.android.passingsync:actionModePopupWindowStyle
         */
         public static final int Theme_actionModePopupWindowStyle = 39;
         /**
-          <p>This symbol is the offset where the {@link com.example.android.bluetoothchat.R.attr#actionModeSelectAllDrawable}
+          <p>This symbol is the offset where the {@link com.example.android.passingsync.R.attr#actionModeSelectAllDrawable}
           attribute's value can be found in the {@link #Theme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.example.android.bluetoothchat:actionModeSelectAllDrawable
+          @attr name com.example.android.passingsync:actionModeSelectAllDrawable
         */
         public static final int Theme_actionModeSelectAllDrawable = 35;
         /**
-          <p>This symbol is the offset where the {@link com.example.android.bluetoothchat.R.attr#actionModeShareDrawable}
+          <p>This symbol is the offset where the {@link com.example.android.passingsync.R.attr#actionModeShareDrawable}
           attribute's value can be found in the {@link #Theme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.example.android.bluetoothchat:actionModeShareDrawable
+          @attr name com.example.android.passingsync:actionModeShareDrawable
         */
         public static final int Theme_actionModeShareDrawable = 36;
         /**
-          <p>This symbol is the offset where the {@link com.example.android.bluetoothchat.R.attr#actionModeSplitBackground}
+          <p>This symbol is the offset where the {@link com.example.android.passingsync.R.attr#actionModeSplitBackground}
           attribute's value can be found in the {@link #Theme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.example.android.bluetoothchat:actionModeSplitBackground
+          @attr name com.example.android.passingsync:actionModeSplitBackground
         */
         public static final int Theme_actionModeSplitBackground = 30;
         /**
-          <p>This symbol is the offset where the {@link com.example.android.bluetoothchat.R.attr#actionModeStyle}
+          <p>This symbol is the offset where the {@link com.example.android.passingsync.R.attr#actionModeStyle}
           attribute's value can be found in the {@link #Theme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.example.android.bluetoothchat:actionModeStyle
+          @attr name com.example.android.passingsync:actionModeStyle
         */
         public static final int Theme_actionModeStyle = 27;
         /**
-          <p>This symbol is the offset where the {@link com.example.android.bluetoothchat.R.attr#actionModeWebSearchDrawable}
+          <p>This symbol is the offset where the {@link com.example.android.passingsync.R.attr#actionModeWebSearchDrawable}
           attribute's value can be found in the {@link #Theme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.example.android.bluetoothchat:actionModeWebSearchDrawable
+          @attr name com.example.android.passingsync:actionModeWebSearchDrawable
         */
         public static final int Theme_actionModeWebSearchDrawable = 38;
         /**
-          <p>This symbol is the offset where the {@link com.example.android.bluetoothchat.R.attr#actionOverflowButtonStyle}
+          <p>This symbol is the offset where the {@link com.example.android.passingsync.R.attr#actionOverflowButtonStyle}
           attribute's value can be found in the {@link #Theme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.example.android.bluetoothchat:actionOverflowButtonStyle
+          @attr name com.example.android.passingsync:actionOverflowButtonStyle
         */
         public static final int Theme_actionOverflowButtonStyle = 15;
         /**
-          <p>This symbol is the offset where the {@link com.example.android.bluetoothchat.R.attr#actionOverflowMenuStyle}
+          <p>This symbol is the offset where the {@link com.example.android.passingsync.R.attr#actionOverflowMenuStyle}
           attribute's value can be found in the {@link #Theme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.example.android.bluetoothchat:actionOverflowMenuStyle
+          @attr name com.example.android.passingsync:actionOverflowMenuStyle
         */
         public static final int Theme_actionOverflowMenuStyle = 16;
         /**
-          <p>This symbol is the offset where the {@link com.example.android.bluetoothchat.R.attr#activityChooserViewStyle}
+          <p>This symbol is the offset where the {@link com.example.android.passingsync.R.attr#activityChooserViewStyle}
           attribute's value can be found in the {@link #Theme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.example.android.bluetoothchat:activityChooserViewStyle
+          @attr name com.example.android.passingsync:activityChooserViewStyle
         */
         public static final int Theme_activityChooserViewStyle = 57;
         /**
-          <p>This symbol is the offset where the {@link com.example.android.bluetoothchat.R.attr#alertDialogButtonGroupStyle}
+          <p>This symbol is the offset where the {@link com.example.android.passingsync.R.attr#alertDialogButtonGroupStyle}
           attribute's value can be found in the {@link #Theme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.example.android.bluetoothchat:alertDialogButtonGroupStyle
+          @attr name com.example.android.passingsync:alertDialogButtonGroupStyle
         */
         public static final int Theme_alertDialogButtonGroupStyle = 90;
         /**
-          <p>This symbol is the offset where the {@link com.example.android.bluetoothchat.R.attr#alertDialogCenterButtons}
+          <p>This symbol is the offset where the {@link com.example.android.passingsync.R.attr#alertDialogCenterButtons}
           attribute's value can be found in the {@link #Theme} array.
 
 
@@ -5427,27 +5433,27 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.example.android.bluetoothchat:alertDialogCenterButtons
+          @attr name com.example.android.passingsync:alertDialogCenterButtons
         */
         public static final int Theme_alertDialogCenterButtons = 91;
         /**
-          <p>This symbol is the offset where the {@link com.example.android.bluetoothchat.R.attr#alertDialogStyle}
+          <p>This symbol is the offset where the {@link com.example.android.passingsync.R.attr#alertDialogStyle}
           attribute's value can be found in the {@link #Theme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.example.android.bluetoothchat:alertDialogStyle
+          @attr name com.example.android.passingsync:alertDialogStyle
         */
         public static final int Theme_alertDialogStyle = 89;
         /**
-          <p>This symbol is the offset where the {@link com.example.android.bluetoothchat.R.attr#alertDialogTheme}
+          <p>This symbol is the offset where the {@link com.example.android.passingsync.R.attr#alertDialogTheme}
           attribute's value can be found in the {@link #Theme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.example.android.bluetoothchat:alertDialogTheme
+          @attr name com.example.android.passingsync:alertDialogTheme
         */
         public static final int Theme_alertDialogTheme = 92;
         /**
@@ -5463,117 +5469,117 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         */
         public static final int Theme_android_windowIsFloating = 0;
         /**
-          <p>This symbol is the offset where the {@link com.example.android.bluetoothchat.R.attr#autoCompleteTextViewStyle}
+          <p>This symbol is the offset where the {@link com.example.android.passingsync.R.attr#autoCompleteTextViewStyle}
           attribute's value can be found in the {@link #Theme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.example.android.bluetoothchat:autoCompleteTextViewStyle
+          @attr name com.example.android.passingsync:autoCompleteTextViewStyle
         */
         public static final int Theme_autoCompleteTextViewStyle = 97;
         /**
-          <p>This symbol is the offset where the {@link com.example.android.bluetoothchat.R.attr#borderlessButtonStyle}
+          <p>This symbol is the offset where the {@link com.example.android.passingsync.R.attr#borderlessButtonStyle}
           attribute's value can be found in the {@link #Theme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.example.android.bluetoothchat:borderlessButtonStyle
+          @attr name com.example.android.passingsync:borderlessButtonStyle
         */
         public static final int Theme_borderlessButtonStyle = 54;
         /**
-          <p>This symbol is the offset where the {@link com.example.android.bluetoothchat.R.attr#buttonBarButtonStyle}
+          <p>This symbol is the offset where the {@link com.example.android.passingsync.R.attr#buttonBarButtonStyle}
           attribute's value can be found in the {@link #Theme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.example.android.bluetoothchat:buttonBarButtonStyle
+          @attr name com.example.android.passingsync:buttonBarButtonStyle
         */
         public static final int Theme_buttonBarButtonStyle = 51;
         /**
-          <p>This symbol is the offset where the {@link com.example.android.bluetoothchat.R.attr#buttonBarNegativeButtonStyle}
+          <p>This symbol is the offset where the {@link com.example.android.passingsync.R.attr#buttonBarNegativeButtonStyle}
           attribute's value can be found in the {@link #Theme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.example.android.bluetoothchat:buttonBarNegativeButtonStyle
+          @attr name com.example.android.passingsync:buttonBarNegativeButtonStyle
         */
         public static final int Theme_buttonBarNegativeButtonStyle = 95;
         /**
-          <p>This symbol is the offset where the {@link com.example.android.bluetoothchat.R.attr#buttonBarNeutralButtonStyle}
+          <p>This symbol is the offset where the {@link com.example.android.passingsync.R.attr#buttonBarNeutralButtonStyle}
           attribute's value can be found in the {@link #Theme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.example.android.bluetoothchat:buttonBarNeutralButtonStyle
+          @attr name com.example.android.passingsync:buttonBarNeutralButtonStyle
         */
         public static final int Theme_buttonBarNeutralButtonStyle = 96;
         /**
-          <p>This symbol is the offset where the {@link com.example.android.bluetoothchat.R.attr#buttonBarPositiveButtonStyle}
+          <p>This symbol is the offset where the {@link com.example.android.passingsync.R.attr#buttonBarPositiveButtonStyle}
           attribute's value can be found in the {@link #Theme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.example.android.bluetoothchat:buttonBarPositiveButtonStyle
+          @attr name com.example.android.passingsync:buttonBarPositiveButtonStyle
         */
         public static final int Theme_buttonBarPositiveButtonStyle = 94;
         /**
-          <p>This symbol is the offset where the {@link com.example.android.bluetoothchat.R.attr#buttonBarStyle}
+          <p>This symbol is the offset where the {@link com.example.android.passingsync.R.attr#buttonBarStyle}
           attribute's value can be found in the {@link #Theme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.example.android.bluetoothchat:buttonBarStyle
+          @attr name com.example.android.passingsync:buttonBarStyle
         */
         public static final int Theme_buttonBarStyle = 50;
         /**
-          <p>This symbol is the offset where the {@link com.example.android.bluetoothchat.R.attr#buttonStyle}
+          <p>This symbol is the offset where the {@link com.example.android.passingsync.R.attr#buttonStyle}
           attribute's value can be found in the {@link #Theme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.example.android.bluetoothchat:buttonStyle
+          @attr name com.example.android.passingsync:buttonStyle
         */
         public static final int Theme_buttonStyle = 98;
         /**
-          <p>This symbol is the offset where the {@link com.example.android.bluetoothchat.R.attr#buttonStyleSmall}
+          <p>This symbol is the offset where the {@link com.example.android.passingsync.R.attr#buttonStyleSmall}
           attribute's value can be found in the {@link #Theme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.example.android.bluetoothchat:buttonStyleSmall
+          @attr name com.example.android.passingsync:buttonStyleSmall
         */
         public static final int Theme_buttonStyleSmall = 99;
         /**
-          <p>This symbol is the offset where the {@link com.example.android.bluetoothchat.R.attr#checkboxStyle}
+          <p>This symbol is the offset where the {@link com.example.android.passingsync.R.attr#checkboxStyle}
           attribute's value can be found in the {@link #Theme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.example.android.bluetoothchat:checkboxStyle
+          @attr name com.example.android.passingsync:checkboxStyle
         */
         public static final int Theme_checkboxStyle = 100;
         /**
-          <p>This symbol is the offset where the {@link com.example.android.bluetoothchat.R.attr#checkedTextViewStyle}
+          <p>This symbol is the offset where the {@link com.example.android.passingsync.R.attr#checkedTextViewStyle}
           attribute's value can be found in the {@link #Theme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.example.android.bluetoothchat:checkedTextViewStyle
+          @attr name com.example.android.passingsync:checkedTextViewStyle
         */
         public static final int Theme_checkedTextViewStyle = 101;
         /**
-          <p>This symbol is the offset where the {@link com.example.android.bluetoothchat.R.attr#colorAccent}
+          <p>This symbol is the offset where the {@link com.example.android.passingsync.R.attr#colorAccent}
           attribute's value can be found in the {@link #Theme} array.
 
 
@@ -5584,11 +5590,11 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.example.android.bluetoothchat:colorAccent
+          @attr name com.example.android.passingsync:colorAccent
         */
         public static final int Theme_colorAccent = 83;
         /**
-          <p>This symbol is the offset where the {@link com.example.android.bluetoothchat.R.attr#colorButtonNormal}
+          <p>This symbol is the offset where the {@link com.example.android.passingsync.R.attr#colorButtonNormal}
           attribute's value can be found in the {@link #Theme} array.
 
 
@@ -5599,11 +5605,11 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.example.android.bluetoothchat:colorButtonNormal
+          @attr name com.example.android.passingsync:colorButtonNormal
         */
         public static final int Theme_colorButtonNormal = 87;
         /**
-          <p>This symbol is the offset where the {@link com.example.android.bluetoothchat.R.attr#colorControlActivated}
+          <p>This symbol is the offset where the {@link com.example.android.passingsync.R.attr#colorControlActivated}
           attribute's value can be found in the {@link #Theme} array.
 
 
@@ -5614,11 +5620,11 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.example.android.bluetoothchat:colorControlActivated
+          @attr name com.example.android.passingsync:colorControlActivated
         */
         public static final int Theme_colorControlActivated = 85;
         /**
-          <p>This symbol is the offset where the {@link com.example.android.bluetoothchat.R.attr#colorControlHighlight}
+          <p>This symbol is the offset where the {@link com.example.android.passingsync.R.attr#colorControlHighlight}
           attribute's value can be found in the {@link #Theme} array.
 
 
@@ -5629,11 +5635,11 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.example.android.bluetoothchat:colorControlHighlight
+          @attr name com.example.android.passingsync:colorControlHighlight
         */
         public static final int Theme_colorControlHighlight = 86;
         /**
-          <p>This symbol is the offset where the {@link com.example.android.bluetoothchat.R.attr#colorControlNormal}
+          <p>This symbol is the offset where the {@link com.example.android.passingsync.R.attr#colorControlNormal}
           attribute's value can be found in the {@link #Theme} array.
 
 
@@ -5644,11 +5650,11 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.example.android.bluetoothchat:colorControlNormal
+          @attr name com.example.android.passingsync:colorControlNormal
         */
         public static final int Theme_colorControlNormal = 84;
         /**
-          <p>This symbol is the offset where the {@link com.example.android.bluetoothchat.R.attr#colorPrimary}
+          <p>This symbol is the offset where the {@link com.example.android.passingsync.R.attr#colorPrimary}
           attribute's value can be found in the {@link #Theme} array.
 
 
@@ -5659,11 +5665,11 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.example.android.bluetoothchat:colorPrimary
+          @attr name com.example.android.passingsync:colorPrimary
         */
         public static final int Theme_colorPrimary = 81;
         /**
-          <p>This symbol is the offset where the {@link com.example.android.bluetoothchat.R.attr#colorPrimaryDark}
+          <p>This symbol is the offset where the {@link com.example.android.passingsync.R.attr#colorPrimaryDark}
           attribute's value can be found in the {@link #Theme} array.
 
 
@@ -5674,11 +5680,11 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.example.android.bluetoothchat:colorPrimaryDark
+          @attr name com.example.android.passingsync:colorPrimaryDark
         */
         public static final int Theme_colorPrimaryDark = 82;
         /**
-          <p>This symbol is the offset where the {@link com.example.android.bluetoothchat.R.attr#colorSwitchThumbNormal}
+          <p>This symbol is the offset where the {@link com.example.android.passingsync.R.attr#colorSwitchThumbNormal}
           attribute's value can be found in the {@link #Theme} array.
 
 
@@ -5689,11 +5695,11 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.example.android.bluetoothchat:colorSwitchThumbNormal
+          @attr name com.example.android.passingsync:colorSwitchThumbNormal
         */
         public static final int Theme_colorSwitchThumbNormal = 88;
         /**
-          <p>This symbol is the offset where the {@link com.example.android.bluetoothchat.R.attr#dialogPreferredPadding}
+          <p>This symbol is the offset where the {@link com.example.android.passingsync.R.attr#dialogPreferredPadding}
           attribute's value can be found in the {@link #Theme} array.
 
 
@@ -5705,51 +5711,51 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.example.android.bluetoothchat:dialogPreferredPadding
+          @attr name com.example.android.passingsync:dialogPreferredPadding
         */
         public static final int Theme_dialogPreferredPadding = 43;
         /**
-          <p>This symbol is the offset where the {@link com.example.android.bluetoothchat.R.attr#dialogTheme}
+          <p>This symbol is the offset where the {@link com.example.android.passingsync.R.attr#dialogTheme}
           attribute's value can be found in the {@link #Theme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.example.android.bluetoothchat:dialogTheme
+          @attr name com.example.android.passingsync:dialogTheme
         */
         public static final int Theme_dialogTheme = 42;
         /**
-          <p>This symbol is the offset where the {@link com.example.android.bluetoothchat.R.attr#dividerHorizontal}
+          <p>This symbol is the offset where the {@link com.example.android.passingsync.R.attr#dividerHorizontal}
           attribute's value can be found in the {@link #Theme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.example.android.bluetoothchat:dividerHorizontal
+          @attr name com.example.android.passingsync:dividerHorizontal
         */
         public static final int Theme_dividerHorizontal = 56;
         /**
-          <p>This symbol is the offset where the {@link com.example.android.bluetoothchat.R.attr#dividerVertical}
+          <p>This symbol is the offset where the {@link com.example.android.passingsync.R.attr#dividerVertical}
           attribute's value can be found in the {@link #Theme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.example.android.bluetoothchat:dividerVertical
+          @attr name com.example.android.passingsync:dividerVertical
         */
         public static final int Theme_dividerVertical = 55;
         /**
-          <p>This symbol is the offset where the {@link com.example.android.bluetoothchat.R.attr#dropDownListViewStyle}
+          <p>This symbol is the offset where the {@link com.example.android.passingsync.R.attr#dropDownListViewStyle}
           attribute's value can be found in the {@link #Theme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.example.android.bluetoothchat:dropDownListViewStyle
+          @attr name com.example.android.passingsync:dropDownListViewStyle
         */
         public static final int Theme_dropDownListViewStyle = 73;
         /**
-          <p>This symbol is the offset where the {@link com.example.android.bluetoothchat.R.attr#dropdownListPreferredItemHeight}
+          <p>This symbol is the offset where the {@link com.example.android.passingsync.R.attr#dropdownListPreferredItemHeight}
           attribute's value can be found in the {@link #Theme} array.
 
 
@@ -5761,21 +5767,21 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.example.android.bluetoothchat:dropdownListPreferredItemHeight
+          @attr name com.example.android.passingsync:dropdownListPreferredItemHeight
         */
         public static final int Theme_dropdownListPreferredItemHeight = 46;
         /**
-          <p>This symbol is the offset where the {@link com.example.android.bluetoothchat.R.attr#editTextBackground}
+          <p>This symbol is the offset where the {@link com.example.android.passingsync.R.attr#editTextBackground}
           attribute's value can be found in the {@link #Theme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.example.android.bluetoothchat:editTextBackground
+          @attr name com.example.android.passingsync:editTextBackground
         */
         public static final int Theme_editTextBackground = 63;
         /**
-          <p>This symbol is the offset where the {@link com.example.android.bluetoothchat.R.attr#editTextColor}
+          <p>This symbol is the offset where the {@link com.example.android.passingsync.R.attr#editTextColor}
           attribute's value can be found in the {@link #Theme} array.
 
 
@@ -5783,61 +5789,61 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
 <p>May be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
 "<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
-          @attr name com.example.android.bluetoothchat:editTextColor
+          @attr name com.example.android.passingsync:editTextColor
         */
         public static final int Theme_editTextColor = 62;
         /**
-          <p>This symbol is the offset where the {@link com.example.android.bluetoothchat.R.attr#editTextStyle}
+          <p>This symbol is the offset where the {@link com.example.android.passingsync.R.attr#editTextStyle}
           attribute's value can be found in the {@link #Theme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.example.android.bluetoothchat:editTextStyle
+          @attr name com.example.android.passingsync:editTextStyle
         */
         public static final int Theme_editTextStyle = 102;
         /**
-          <p>This symbol is the offset where the {@link com.example.android.bluetoothchat.R.attr#homeAsUpIndicator}
+          <p>This symbol is the offset where the {@link com.example.android.passingsync.R.attr#homeAsUpIndicator}
           attribute's value can be found in the {@link #Theme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.example.android.bluetoothchat:homeAsUpIndicator
+          @attr name com.example.android.passingsync:homeAsUpIndicator
         */
         public static final int Theme_homeAsUpIndicator = 48;
         /**
-          <p>This symbol is the offset where the {@link com.example.android.bluetoothchat.R.attr#listChoiceBackgroundIndicator}
+          <p>This symbol is the offset where the {@link com.example.android.passingsync.R.attr#listChoiceBackgroundIndicator}
           attribute's value can be found in the {@link #Theme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.example.android.bluetoothchat:listChoiceBackgroundIndicator
+          @attr name com.example.android.passingsync:listChoiceBackgroundIndicator
         */
         public static final int Theme_listChoiceBackgroundIndicator = 80;
         /**
-          <p>This symbol is the offset where the {@link com.example.android.bluetoothchat.R.attr#listDividerAlertDialog}
+          <p>This symbol is the offset where the {@link com.example.android.passingsync.R.attr#listDividerAlertDialog}
           attribute's value can be found in the {@link #Theme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.example.android.bluetoothchat:listDividerAlertDialog
+          @attr name com.example.android.passingsync:listDividerAlertDialog
         */
         public static final int Theme_listDividerAlertDialog = 44;
         /**
-          <p>This symbol is the offset where the {@link com.example.android.bluetoothchat.R.attr#listPopupWindowStyle}
+          <p>This symbol is the offset where the {@link com.example.android.passingsync.R.attr#listPopupWindowStyle}
           attribute's value can be found in the {@link #Theme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.example.android.bluetoothchat:listPopupWindowStyle
+          @attr name com.example.android.passingsync:listPopupWindowStyle
         */
         public static final int Theme_listPopupWindowStyle = 74;
         /**
-          <p>This symbol is the offset where the {@link com.example.android.bluetoothchat.R.attr#listPreferredItemHeight}
+          <p>This symbol is the offset where the {@link com.example.android.passingsync.R.attr#listPreferredItemHeight}
           attribute's value can be found in the {@link #Theme} array.
 
 
@@ -5849,11 +5855,11 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.example.android.bluetoothchat:listPreferredItemHeight
+          @attr name com.example.android.passingsync:listPreferredItemHeight
         */
         public static final int Theme_listPreferredItemHeight = 68;
         /**
-          <p>This symbol is the offset where the {@link com.example.android.bluetoothchat.R.attr#listPreferredItemHeightLarge}
+          <p>This symbol is the offset where the {@link com.example.android.passingsync.R.attr#listPreferredItemHeightLarge}
           attribute's value can be found in the {@link #Theme} array.
 
 
@@ -5865,11 +5871,11 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.example.android.bluetoothchat:listPreferredItemHeightLarge
+          @attr name com.example.android.passingsync:listPreferredItemHeightLarge
         */
         public static final int Theme_listPreferredItemHeightLarge = 70;
         /**
-          <p>This symbol is the offset where the {@link com.example.android.bluetoothchat.R.attr#listPreferredItemHeightSmall}
+          <p>This symbol is the offset where the {@link com.example.android.passingsync.R.attr#listPreferredItemHeightSmall}
           attribute's value can be found in the {@link #Theme} array.
 
 
@@ -5881,11 +5887,11 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.example.android.bluetoothchat:listPreferredItemHeightSmall
+          @attr name com.example.android.passingsync:listPreferredItemHeightSmall
         */
         public static final int Theme_listPreferredItemHeightSmall = 69;
         /**
-          <p>This symbol is the offset where the {@link com.example.android.bluetoothchat.R.attr#listPreferredItemPaddingLeft}
+          <p>This symbol is the offset where the {@link com.example.android.passingsync.R.attr#listPreferredItemPaddingLeft}
           attribute's value can be found in the {@link #Theme} array.
 
 
@@ -5897,11 +5903,11 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.example.android.bluetoothchat:listPreferredItemPaddingLeft
+          @attr name com.example.android.passingsync:listPreferredItemPaddingLeft
         */
         public static final int Theme_listPreferredItemPaddingLeft = 71;
         /**
-          <p>This symbol is the offset where the {@link com.example.android.bluetoothchat.R.attr#listPreferredItemPaddingRight}
+          <p>This symbol is the offset where the {@link com.example.android.passingsync.R.attr#listPreferredItemPaddingRight}
           attribute's value can be found in the {@link #Theme} array.
 
 
@@ -5913,31 +5919,31 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.example.android.bluetoothchat:listPreferredItemPaddingRight
+          @attr name com.example.android.passingsync:listPreferredItemPaddingRight
         */
         public static final int Theme_listPreferredItemPaddingRight = 72;
         /**
-          <p>This symbol is the offset where the {@link com.example.android.bluetoothchat.R.attr#panelBackground}
+          <p>This symbol is the offset where the {@link com.example.android.passingsync.R.attr#panelBackground}
           attribute's value can be found in the {@link #Theme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.example.android.bluetoothchat:panelBackground
+          @attr name com.example.android.passingsync:panelBackground
         */
         public static final int Theme_panelBackground = 77;
         /**
-          <p>This symbol is the offset where the {@link com.example.android.bluetoothchat.R.attr#panelMenuListTheme}
+          <p>This symbol is the offset where the {@link com.example.android.passingsync.R.attr#panelMenuListTheme}
           attribute's value can be found in the {@link #Theme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.example.android.bluetoothchat:panelMenuListTheme
+          @attr name com.example.android.passingsync:panelMenuListTheme
         */
         public static final int Theme_panelMenuListTheme = 79;
         /**
-          <p>This symbol is the offset where the {@link com.example.android.bluetoothchat.R.attr#panelMenuListWidth}
+          <p>This symbol is the offset where the {@link com.example.android.passingsync.R.attr#panelMenuListWidth}
           attribute's value can be found in the {@link #Theme} array.
 
 
@@ -5949,171 +5955,171 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.example.android.bluetoothchat:panelMenuListWidth
+          @attr name com.example.android.passingsync:panelMenuListWidth
         */
         public static final int Theme_panelMenuListWidth = 78;
         /**
-          <p>This symbol is the offset where the {@link com.example.android.bluetoothchat.R.attr#popupMenuStyle}
+          <p>This symbol is the offset where the {@link com.example.android.passingsync.R.attr#popupMenuStyle}
           attribute's value can be found in the {@link #Theme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.example.android.bluetoothchat:popupMenuStyle
+          @attr name com.example.android.passingsync:popupMenuStyle
         */
         public static final int Theme_popupMenuStyle = 60;
         /**
-          <p>This symbol is the offset where the {@link com.example.android.bluetoothchat.R.attr#popupWindowStyle}
+          <p>This symbol is the offset where the {@link com.example.android.passingsync.R.attr#popupWindowStyle}
           attribute's value can be found in the {@link #Theme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.example.android.bluetoothchat:popupWindowStyle
+          @attr name com.example.android.passingsync:popupWindowStyle
         */
         public static final int Theme_popupWindowStyle = 61;
         /**
-          <p>This symbol is the offset where the {@link com.example.android.bluetoothchat.R.attr#radioButtonStyle}
+          <p>This symbol is the offset where the {@link com.example.android.passingsync.R.attr#radioButtonStyle}
           attribute's value can be found in the {@link #Theme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.example.android.bluetoothchat:radioButtonStyle
+          @attr name com.example.android.passingsync:radioButtonStyle
         */
         public static final int Theme_radioButtonStyle = 103;
         /**
-          <p>This symbol is the offset where the {@link com.example.android.bluetoothchat.R.attr#ratingBarStyle}
+          <p>This symbol is the offset where the {@link com.example.android.passingsync.R.attr#ratingBarStyle}
           attribute's value can be found in the {@link #Theme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.example.android.bluetoothchat:ratingBarStyle
+          @attr name com.example.android.passingsync:ratingBarStyle
         */
         public static final int Theme_ratingBarStyle = 104;
         /**
-          <p>This symbol is the offset where the {@link com.example.android.bluetoothchat.R.attr#searchViewStyle}
+          <p>This symbol is the offset where the {@link com.example.android.passingsync.R.attr#searchViewStyle}
           attribute's value can be found in the {@link #Theme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.example.android.bluetoothchat:searchViewStyle
+          @attr name com.example.android.passingsync:searchViewStyle
         */
         public static final int Theme_searchViewStyle = 67;
         /**
-          <p>This symbol is the offset where the {@link com.example.android.bluetoothchat.R.attr#selectableItemBackground}
+          <p>This symbol is the offset where the {@link com.example.android.passingsync.R.attr#selectableItemBackground}
           attribute's value can be found in the {@link #Theme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.example.android.bluetoothchat:selectableItemBackground
+          @attr name com.example.android.passingsync:selectableItemBackground
         */
         public static final int Theme_selectableItemBackground = 52;
         /**
-          <p>This symbol is the offset where the {@link com.example.android.bluetoothchat.R.attr#selectableItemBackgroundBorderless}
+          <p>This symbol is the offset where the {@link com.example.android.passingsync.R.attr#selectableItemBackgroundBorderless}
           attribute's value can be found in the {@link #Theme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.example.android.bluetoothchat:selectableItemBackgroundBorderless
+          @attr name com.example.android.passingsync:selectableItemBackgroundBorderless
         */
         public static final int Theme_selectableItemBackgroundBorderless = 53;
         /**
-          <p>This symbol is the offset where the {@link com.example.android.bluetoothchat.R.attr#spinnerDropDownItemStyle}
+          <p>This symbol is the offset where the {@link com.example.android.passingsync.R.attr#spinnerDropDownItemStyle}
           attribute's value can be found in the {@link #Theme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.example.android.bluetoothchat:spinnerDropDownItemStyle
+          @attr name com.example.android.passingsync:spinnerDropDownItemStyle
         */
         public static final int Theme_spinnerDropDownItemStyle = 47;
         /**
-          <p>This symbol is the offset where the {@link com.example.android.bluetoothchat.R.attr#spinnerStyle}
+          <p>This symbol is the offset where the {@link com.example.android.passingsync.R.attr#spinnerStyle}
           attribute's value can be found in the {@link #Theme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.example.android.bluetoothchat:spinnerStyle
+          @attr name com.example.android.passingsync:spinnerStyle
         */
         public static final int Theme_spinnerStyle = 105;
         /**
-          <p>This symbol is the offset where the {@link com.example.android.bluetoothchat.R.attr#switchStyle}
+          <p>This symbol is the offset where the {@link com.example.android.passingsync.R.attr#switchStyle}
           attribute's value can be found in the {@link #Theme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.example.android.bluetoothchat:switchStyle
+          @attr name com.example.android.passingsync:switchStyle
         */
         public static final int Theme_switchStyle = 106;
         /**
-          <p>This symbol is the offset where the {@link com.example.android.bluetoothchat.R.attr#textAppearanceLargePopupMenu}
+          <p>This symbol is the offset where the {@link com.example.android.passingsync.R.attr#textAppearanceLargePopupMenu}
           attribute's value can be found in the {@link #Theme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.example.android.bluetoothchat:textAppearanceLargePopupMenu
+          @attr name com.example.android.passingsync:textAppearanceLargePopupMenu
         */
         public static final int Theme_textAppearanceLargePopupMenu = 40;
         /**
-          <p>This symbol is the offset where the {@link com.example.android.bluetoothchat.R.attr#textAppearanceListItem}
+          <p>This symbol is the offset where the {@link com.example.android.passingsync.R.attr#textAppearanceListItem}
           attribute's value can be found in the {@link #Theme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.example.android.bluetoothchat:textAppearanceListItem
+          @attr name com.example.android.passingsync:textAppearanceListItem
         */
         public static final int Theme_textAppearanceListItem = 75;
         /**
-          <p>This symbol is the offset where the {@link com.example.android.bluetoothchat.R.attr#textAppearanceListItemSmall}
+          <p>This symbol is the offset where the {@link com.example.android.passingsync.R.attr#textAppearanceListItemSmall}
           attribute's value can be found in the {@link #Theme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.example.android.bluetoothchat:textAppearanceListItemSmall
+          @attr name com.example.android.passingsync:textAppearanceListItemSmall
         */
         public static final int Theme_textAppearanceListItemSmall = 76;
         /**
-          <p>This symbol is the offset where the {@link com.example.android.bluetoothchat.R.attr#textAppearanceSearchResultSubtitle}
+          <p>This symbol is the offset where the {@link com.example.android.passingsync.R.attr#textAppearanceSearchResultSubtitle}
           attribute's value can be found in the {@link #Theme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.example.android.bluetoothchat:textAppearanceSearchResultSubtitle
+          @attr name com.example.android.passingsync:textAppearanceSearchResultSubtitle
         */
         public static final int Theme_textAppearanceSearchResultSubtitle = 65;
         /**
-          <p>This symbol is the offset where the {@link com.example.android.bluetoothchat.R.attr#textAppearanceSearchResultTitle}
+          <p>This symbol is the offset where the {@link com.example.android.passingsync.R.attr#textAppearanceSearchResultTitle}
           attribute's value can be found in the {@link #Theme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.example.android.bluetoothchat:textAppearanceSearchResultTitle
+          @attr name com.example.android.passingsync:textAppearanceSearchResultTitle
         */
         public static final int Theme_textAppearanceSearchResultTitle = 64;
         /**
-          <p>This symbol is the offset where the {@link com.example.android.bluetoothchat.R.attr#textAppearanceSmallPopupMenu}
+          <p>This symbol is the offset where the {@link com.example.android.passingsync.R.attr#textAppearanceSmallPopupMenu}
           attribute's value can be found in the {@link #Theme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.example.android.bluetoothchat:textAppearanceSmallPopupMenu
+          @attr name com.example.android.passingsync:textAppearanceSmallPopupMenu
         */
         public static final int Theme_textAppearanceSmallPopupMenu = 41;
         /**
-          <p>This symbol is the offset where the {@link com.example.android.bluetoothchat.R.attr#textColorAlertDialogListItem}
+          <p>This symbol is the offset where the {@link com.example.android.passingsync.R.attr#textColorAlertDialogListItem}
           attribute's value can be found in the {@link #Theme} array.
 
 
@@ -6121,11 +6127,11 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
 <p>May be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
 "<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
-          @attr name com.example.android.bluetoothchat:textColorAlertDialogListItem
+          @attr name com.example.android.passingsync:textColorAlertDialogListItem
         */
         public static final int Theme_textColorAlertDialogListItem = 93;
         /**
-          <p>This symbol is the offset where the {@link com.example.android.bluetoothchat.R.attr#textColorSearchUrl}
+          <p>This symbol is the offset where the {@link com.example.android.passingsync.R.attr#textColorSearchUrl}
           attribute's value can be found in the {@link #Theme} array.
 
 
@@ -6133,31 +6139,31 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
 <p>May be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
 "<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
-          @attr name com.example.android.bluetoothchat:textColorSearchUrl
+          @attr name com.example.android.passingsync:textColorSearchUrl
         */
         public static final int Theme_textColorSearchUrl = 66;
         /**
-          <p>This symbol is the offset where the {@link com.example.android.bluetoothchat.R.attr#toolbarNavigationButtonStyle}
+          <p>This symbol is the offset where the {@link com.example.android.passingsync.R.attr#toolbarNavigationButtonStyle}
           attribute's value can be found in the {@link #Theme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.example.android.bluetoothchat:toolbarNavigationButtonStyle
+          @attr name com.example.android.passingsync:toolbarNavigationButtonStyle
         */
         public static final int Theme_toolbarNavigationButtonStyle = 59;
         /**
-          <p>This symbol is the offset where the {@link com.example.android.bluetoothchat.R.attr#toolbarStyle}
+          <p>This symbol is the offset where the {@link com.example.android.passingsync.R.attr#toolbarStyle}
           attribute's value can be found in the {@link #Theme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.example.android.bluetoothchat:toolbarStyle
+          @attr name com.example.android.passingsync:toolbarStyle
         */
         public static final int Theme_toolbarStyle = 58;
         /**
-          <p>This symbol is the offset where the {@link com.example.android.bluetoothchat.R.attr#windowActionBar}
+          <p>This symbol is the offset where the {@link com.example.android.passingsync.R.attr#windowActionBar}
           attribute's value can be found in the {@link #Theme} array.
 
 
@@ -6167,11 +6173,11 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.example.android.bluetoothchat:windowActionBar
+          @attr name com.example.android.passingsync:windowActionBar
         */
         public static final int Theme_windowActionBar = 2;
         /**
-          <p>This symbol is the offset where the {@link com.example.android.bluetoothchat.R.attr#windowActionBarOverlay}
+          <p>This symbol is the offset where the {@link com.example.android.passingsync.R.attr#windowActionBarOverlay}
           attribute's value can be found in the {@link #Theme} array.
 
 
@@ -6181,11 +6187,11 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.example.android.bluetoothchat:windowActionBarOverlay
+          @attr name com.example.android.passingsync:windowActionBarOverlay
         */
         public static final int Theme_windowActionBarOverlay = 4;
         /**
-          <p>This symbol is the offset where the {@link com.example.android.bluetoothchat.R.attr#windowActionModeOverlay}
+          <p>This symbol is the offset where the {@link com.example.android.passingsync.R.attr#windowActionModeOverlay}
           attribute's value can be found in the {@link #Theme} array.
 
 
@@ -6195,11 +6201,11 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.example.android.bluetoothchat:windowActionModeOverlay
+          @attr name com.example.android.passingsync:windowActionModeOverlay
         */
         public static final int Theme_windowActionModeOverlay = 5;
         /**
-          <p>This symbol is the offset where the {@link com.example.android.bluetoothchat.R.attr#windowFixedHeightMajor}
+          <p>This symbol is the offset where the {@link com.example.android.passingsync.R.attr#windowFixedHeightMajor}
           attribute's value can be found in the {@link #Theme} array.
 
 
@@ -6214,11 +6220,11 @@ some parent container.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.example.android.bluetoothchat:windowFixedHeightMajor
+          @attr name com.example.android.passingsync:windowFixedHeightMajor
         */
         public static final int Theme_windowFixedHeightMajor = 9;
         /**
-          <p>This symbol is the offset where the {@link com.example.android.bluetoothchat.R.attr#windowFixedHeightMinor}
+          <p>This symbol is the offset where the {@link com.example.android.passingsync.R.attr#windowFixedHeightMinor}
           attribute's value can be found in the {@link #Theme} array.
 
 
@@ -6233,11 +6239,11 @@ some parent container.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.example.android.bluetoothchat:windowFixedHeightMinor
+          @attr name com.example.android.passingsync:windowFixedHeightMinor
         */
         public static final int Theme_windowFixedHeightMinor = 7;
         /**
-          <p>This symbol is the offset where the {@link com.example.android.bluetoothchat.R.attr#windowFixedWidthMajor}
+          <p>This symbol is the offset where the {@link com.example.android.passingsync.R.attr#windowFixedWidthMajor}
           attribute's value can be found in the {@link #Theme} array.
 
 
@@ -6252,11 +6258,11 @@ some parent container.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.example.android.bluetoothchat:windowFixedWidthMajor
+          @attr name com.example.android.passingsync:windowFixedWidthMajor
         */
         public static final int Theme_windowFixedWidthMajor = 6;
         /**
-          <p>This symbol is the offset where the {@link com.example.android.bluetoothchat.R.attr#windowFixedWidthMinor}
+          <p>This symbol is the offset where the {@link com.example.android.passingsync.R.attr#windowFixedWidthMinor}
           attribute's value can be found in the {@link #Theme} array.
 
 
@@ -6271,11 +6277,11 @@ some parent container.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.example.android.bluetoothchat:windowFixedWidthMinor
+          @attr name com.example.android.passingsync:windowFixedWidthMinor
         */
         public static final int Theme_windowFixedWidthMinor = 8;
         /**
-          <p>This symbol is the offset where the {@link com.example.android.bluetoothchat.R.attr#windowMinWidthMajor}
+          <p>This symbol is the offset where the {@link com.example.android.passingsync.R.attr#windowMinWidthMajor}
           attribute's value can be found in the {@link #Theme} array.
 
 
@@ -6290,11 +6296,11 @@ some parent container.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.example.android.bluetoothchat:windowMinWidthMajor
+          @attr name com.example.android.passingsync:windowMinWidthMajor
         */
         public static final int Theme_windowMinWidthMajor = 10;
         /**
-          <p>This symbol is the offset where the {@link com.example.android.bluetoothchat.R.attr#windowMinWidthMinor}
+          <p>This symbol is the offset where the {@link com.example.android.passingsync.R.attr#windowMinWidthMinor}
           attribute's value can be found in the {@link #Theme} array.
 
 
@@ -6309,11 +6315,11 @@ some parent container.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.example.android.bluetoothchat:windowMinWidthMinor
+          @attr name com.example.android.passingsync:windowMinWidthMinor
         */
         public static final int Theme_windowMinWidthMinor = 11;
         /**
-          <p>This symbol is the offset where the {@link com.example.android.bluetoothchat.R.attr#windowNoTitle}
+          <p>This symbol is the offset where the {@link com.example.android.passingsync.R.attr#windowNoTitle}
           attribute's value can be found in the {@link #Theme} array.
 
 
@@ -6323,7 +6329,7 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.example.android.bluetoothchat:windowNoTitle
+          @attr name com.example.android.passingsync:windowNoTitle
         */
         public static final int Theme_windowNoTitle = 3;
         /** Attributes that can be used with a Toolbar.
@@ -6334,25 +6340,25 @@ containing a value of this type.
            <tr><th>Attribute</th><th>Description</th></tr>
            <tr><td><code>{@link #Toolbar_android_gravity android:gravity}</code></td><td></td></tr>
            <tr><td><code>{@link #Toolbar_android_minHeight android:minHeight}</code></td><td></td></tr>
-           <tr><td><code>{@link #Toolbar_collapseContentDescription com.example.android.bluetoothchat:collapseContentDescription}</code></td><td></td></tr>
-           <tr><td><code>{@link #Toolbar_collapseIcon com.example.android.bluetoothchat:collapseIcon}</code></td><td></td></tr>
-           <tr><td><code>{@link #Toolbar_contentInsetEnd com.example.android.bluetoothchat:contentInsetEnd}</code></td><td></td></tr>
-           <tr><td><code>{@link #Toolbar_contentInsetLeft com.example.android.bluetoothchat:contentInsetLeft}</code></td><td></td></tr>
-           <tr><td><code>{@link #Toolbar_contentInsetRight com.example.android.bluetoothchat:contentInsetRight}</code></td><td></td></tr>
-           <tr><td><code>{@link #Toolbar_contentInsetStart com.example.android.bluetoothchat:contentInsetStart}</code></td><td></td></tr>
-           <tr><td><code>{@link #Toolbar_maxButtonHeight com.example.android.bluetoothchat:maxButtonHeight}</code></td><td></td></tr>
-           <tr><td><code>{@link #Toolbar_navigationContentDescription com.example.android.bluetoothchat:navigationContentDescription}</code></td><td></td></tr>
-           <tr><td><code>{@link #Toolbar_navigationIcon com.example.android.bluetoothchat:navigationIcon}</code></td><td></td></tr>
-           <tr><td><code>{@link #Toolbar_popupTheme com.example.android.bluetoothchat:popupTheme}</code></td><td></td></tr>
-           <tr><td><code>{@link #Toolbar_subtitle com.example.android.bluetoothchat:subtitle}</code></td><td></td></tr>
-           <tr><td><code>{@link #Toolbar_subtitleTextAppearance com.example.android.bluetoothchat:subtitleTextAppearance}</code></td><td></td></tr>
-           <tr><td><code>{@link #Toolbar_title com.example.android.bluetoothchat:title}</code></td><td></td></tr>
-           <tr><td><code>{@link #Toolbar_titleMarginBottom com.example.android.bluetoothchat:titleMarginBottom}</code></td><td></td></tr>
-           <tr><td><code>{@link #Toolbar_titleMarginEnd com.example.android.bluetoothchat:titleMarginEnd}</code></td><td></td></tr>
-           <tr><td><code>{@link #Toolbar_titleMarginStart com.example.android.bluetoothchat:titleMarginStart}</code></td><td></td></tr>
-           <tr><td><code>{@link #Toolbar_titleMarginTop com.example.android.bluetoothchat:titleMarginTop}</code></td><td></td></tr>
-           <tr><td><code>{@link #Toolbar_titleMargins com.example.android.bluetoothchat:titleMargins}</code></td><td></td></tr>
-           <tr><td><code>{@link #Toolbar_titleTextAppearance com.example.android.bluetoothchat:titleTextAppearance}</code></td><td></td></tr>
+           <tr><td><code>{@link #Toolbar_collapseContentDescription com.example.android.passingsync:collapseContentDescription}</code></td><td></td></tr>
+           <tr><td><code>{@link #Toolbar_collapseIcon com.example.android.passingsync:collapseIcon}</code></td><td></td></tr>
+           <tr><td><code>{@link #Toolbar_contentInsetEnd com.example.android.passingsync:contentInsetEnd}</code></td><td></td></tr>
+           <tr><td><code>{@link #Toolbar_contentInsetLeft com.example.android.passingsync:contentInsetLeft}</code></td><td></td></tr>
+           <tr><td><code>{@link #Toolbar_contentInsetRight com.example.android.passingsync:contentInsetRight}</code></td><td></td></tr>
+           <tr><td><code>{@link #Toolbar_contentInsetStart com.example.android.passingsync:contentInsetStart}</code></td><td></td></tr>
+           <tr><td><code>{@link #Toolbar_maxButtonHeight com.example.android.passingsync:maxButtonHeight}</code></td><td></td></tr>
+           <tr><td><code>{@link #Toolbar_navigationContentDescription com.example.android.passingsync:navigationContentDescription}</code></td><td></td></tr>
+           <tr><td><code>{@link #Toolbar_navigationIcon com.example.android.passingsync:navigationIcon}</code></td><td></td></tr>
+           <tr><td><code>{@link #Toolbar_popupTheme com.example.android.passingsync:popupTheme}</code></td><td></td></tr>
+           <tr><td><code>{@link #Toolbar_subtitle com.example.android.passingsync:subtitle}</code></td><td></td></tr>
+           <tr><td><code>{@link #Toolbar_subtitleTextAppearance com.example.android.passingsync:subtitleTextAppearance}</code></td><td></td></tr>
+           <tr><td><code>{@link #Toolbar_title com.example.android.passingsync:title}</code></td><td></td></tr>
+           <tr><td><code>{@link #Toolbar_titleMarginBottom com.example.android.passingsync:titleMarginBottom}</code></td><td></td></tr>
+           <tr><td><code>{@link #Toolbar_titleMarginEnd com.example.android.passingsync:titleMarginEnd}</code></td><td></td></tr>
+           <tr><td><code>{@link #Toolbar_titleMarginStart com.example.android.passingsync:titleMarginStart}</code></td><td></td></tr>
+           <tr><td><code>{@link #Toolbar_titleMarginTop com.example.android.passingsync:titleMarginTop}</code></td><td></td></tr>
+           <tr><td><code>{@link #Toolbar_titleMargins com.example.android.passingsync:titleMargins}</code></td><td></td></tr>
+           <tr><td><code>{@link #Toolbar_titleTextAppearance com.example.android.passingsync:titleTextAppearance}</code></td><td></td></tr>
            </table>
            @see #Toolbar_android_gravity
            @see #Toolbar_android_minHeight
@@ -6397,7 +6403,7 @@ containing a value of this type.
         */
         public static final int Toolbar_android_minHeight = 1;
         /**
-          <p>This symbol is the offset where the {@link com.example.android.bluetoothchat.R.attr#collapseContentDescription}
+          <p>This symbol is the offset where the {@link com.example.android.passingsync.R.attr#collapseContentDescription}
           attribute's value can be found in the {@link #Toolbar} array.
 
 
@@ -6407,21 +6413,21 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.example.android.bluetoothchat:collapseContentDescription
+          @attr name com.example.android.passingsync:collapseContentDescription
         */
         public static final int Toolbar_collapseContentDescription = 18;
         /**
-          <p>This symbol is the offset where the {@link com.example.android.bluetoothchat.R.attr#collapseIcon}
+          <p>This symbol is the offset where the {@link com.example.android.passingsync.R.attr#collapseIcon}
           attribute's value can be found in the {@link #Toolbar} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.example.android.bluetoothchat:collapseIcon
+          @attr name com.example.android.passingsync:collapseIcon
         */
         public static final int Toolbar_collapseIcon = 17;
         /**
-          <p>This symbol is the offset where the {@link com.example.android.bluetoothchat.R.attr#contentInsetEnd}
+          <p>This symbol is the offset where the {@link com.example.android.passingsync.R.attr#contentInsetEnd}
           attribute's value can be found in the {@link #Toolbar} array.
 
 
@@ -6433,11 +6439,11 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.example.android.bluetoothchat:contentInsetEnd
+          @attr name com.example.android.passingsync:contentInsetEnd
         */
         public static final int Toolbar_contentInsetEnd = 5;
         /**
-          <p>This symbol is the offset where the {@link com.example.android.bluetoothchat.R.attr#contentInsetLeft}
+          <p>This symbol is the offset where the {@link com.example.android.passingsync.R.attr#contentInsetLeft}
           attribute's value can be found in the {@link #Toolbar} array.
 
 
@@ -6449,11 +6455,11 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.example.android.bluetoothchat:contentInsetLeft
+          @attr name com.example.android.passingsync:contentInsetLeft
         */
         public static final int Toolbar_contentInsetLeft = 6;
         /**
-          <p>This symbol is the offset where the {@link com.example.android.bluetoothchat.R.attr#contentInsetRight}
+          <p>This symbol is the offset where the {@link com.example.android.passingsync.R.attr#contentInsetRight}
           attribute's value can be found in the {@link #Toolbar} array.
 
 
@@ -6465,11 +6471,11 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.example.android.bluetoothchat:contentInsetRight
+          @attr name com.example.android.passingsync:contentInsetRight
         */
         public static final int Toolbar_contentInsetRight = 7;
         /**
-          <p>This symbol is the offset where the {@link com.example.android.bluetoothchat.R.attr#contentInsetStart}
+          <p>This symbol is the offset where the {@link com.example.android.passingsync.R.attr#contentInsetStart}
           attribute's value can be found in the {@link #Toolbar} array.
 
 
@@ -6481,11 +6487,11 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.example.android.bluetoothchat:contentInsetStart
+          @attr name com.example.android.passingsync:contentInsetStart
         */
         public static final int Toolbar_contentInsetStart = 4;
         /**
-          <p>This symbol is the offset where the {@link com.example.android.bluetoothchat.R.attr#maxButtonHeight}
+          <p>This symbol is the offset where the {@link com.example.android.passingsync.R.attr#maxButtonHeight}
           attribute's value can be found in the {@link #Toolbar} array.
 
 
@@ -6497,11 +6503,11 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.example.android.bluetoothchat:maxButtonHeight
+          @attr name com.example.android.passingsync:maxButtonHeight
         */
         public static final int Toolbar_maxButtonHeight = 16;
         /**
-          <p>This symbol is the offset where the {@link com.example.android.bluetoothchat.R.attr#navigationContentDescription}
+          <p>This symbol is the offset where the {@link com.example.android.passingsync.R.attr#navigationContentDescription}
           attribute's value can be found in the {@link #Toolbar} array.
 
 
@@ -6511,31 +6517,31 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.example.android.bluetoothchat:navigationContentDescription
+          @attr name com.example.android.passingsync:navigationContentDescription
         */
         public static final int Toolbar_navigationContentDescription = 20;
         /**
-          <p>This symbol is the offset where the {@link com.example.android.bluetoothchat.R.attr#navigationIcon}
+          <p>This symbol is the offset where the {@link com.example.android.passingsync.R.attr#navigationIcon}
           attribute's value can be found in the {@link #Toolbar} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.example.android.bluetoothchat:navigationIcon
+          @attr name com.example.android.passingsync:navigationIcon
         */
         public static final int Toolbar_navigationIcon = 19;
         /**
-          <p>This symbol is the offset where the {@link com.example.android.bluetoothchat.R.attr#popupTheme}
+          <p>This symbol is the offset where the {@link com.example.android.passingsync.R.attr#popupTheme}
           attribute's value can be found in the {@link #Toolbar} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.example.android.bluetoothchat:popupTheme
+          @attr name com.example.android.passingsync:popupTheme
         */
         public static final int Toolbar_popupTheme = 8;
         /**
-          <p>This symbol is the offset where the {@link com.example.android.bluetoothchat.R.attr#subtitle}
+          <p>This symbol is the offset where the {@link com.example.android.passingsync.R.attr#subtitle}
           attribute's value can be found in the {@link #Toolbar} array.
 
 
@@ -6545,21 +6551,21 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.example.android.bluetoothchat:subtitle
+          @attr name com.example.android.passingsync:subtitle
         */
         public static final int Toolbar_subtitle = 3;
         /**
-          <p>This symbol is the offset where the {@link com.example.android.bluetoothchat.R.attr#subtitleTextAppearance}
+          <p>This symbol is the offset where the {@link com.example.android.passingsync.R.attr#subtitleTextAppearance}
           attribute's value can be found in the {@link #Toolbar} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.example.android.bluetoothchat:subtitleTextAppearance
+          @attr name com.example.android.passingsync:subtitleTextAppearance
         */
         public static final int Toolbar_subtitleTextAppearance = 10;
         /**
-          <p>This symbol is the offset where the {@link com.example.android.bluetoothchat.R.attr#title}
+          <p>This symbol is the offset where the {@link com.example.android.passingsync.R.attr#title}
           attribute's value can be found in the {@link #Toolbar} array.
 
 
@@ -6569,11 +6575,11 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.example.android.bluetoothchat:title
+          @attr name com.example.android.passingsync:title
         */
         public static final int Toolbar_title = 2;
         /**
-          <p>This symbol is the offset where the {@link com.example.android.bluetoothchat.R.attr#titleMarginBottom}
+          <p>This symbol is the offset where the {@link com.example.android.passingsync.R.attr#titleMarginBottom}
           attribute's value can be found in the {@link #Toolbar} array.
 
 
@@ -6585,11 +6591,11 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.example.android.bluetoothchat:titleMarginBottom
+          @attr name com.example.android.passingsync:titleMarginBottom
         */
         public static final int Toolbar_titleMarginBottom = 15;
         /**
-          <p>This symbol is the offset where the {@link com.example.android.bluetoothchat.R.attr#titleMarginEnd}
+          <p>This symbol is the offset where the {@link com.example.android.passingsync.R.attr#titleMarginEnd}
           attribute's value can be found in the {@link #Toolbar} array.
 
 
@@ -6601,11 +6607,11 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.example.android.bluetoothchat:titleMarginEnd
+          @attr name com.example.android.passingsync:titleMarginEnd
         */
         public static final int Toolbar_titleMarginEnd = 13;
         /**
-          <p>This symbol is the offset where the {@link com.example.android.bluetoothchat.R.attr#titleMarginStart}
+          <p>This symbol is the offset where the {@link com.example.android.passingsync.R.attr#titleMarginStart}
           attribute's value can be found in the {@link #Toolbar} array.
 
 
@@ -6617,11 +6623,11 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.example.android.bluetoothchat:titleMarginStart
+          @attr name com.example.android.passingsync:titleMarginStart
         */
         public static final int Toolbar_titleMarginStart = 12;
         /**
-          <p>This symbol is the offset where the {@link com.example.android.bluetoothchat.R.attr#titleMarginTop}
+          <p>This symbol is the offset where the {@link com.example.android.passingsync.R.attr#titleMarginTop}
           attribute's value can be found in the {@link #Toolbar} array.
 
 
@@ -6633,11 +6639,11 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.example.android.bluetoothchat:titleMarginTop
+          @attr name com.example.android.passingsync:titleMarginTop
         */
         public static final int Toolbar_titleMarginTop = 14;
         /**
-          <p>This symbol is the offset where the {@link com.example.android.bluetoothchat.R.attr#titleMargins}
+          <p>This symbol is the offset where the {@link com.example.android.passingsync.R.attr#titleMargins}
           attribute's value can be found in the {@link #Toolbar} array.
 
 
@@ -6649,17 +6655,17 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.example.android.bluetoothchat:titleMargins
+          @attr name com.example.android.passingsync:titleMargins
         */
         public static final int Toolbar_titleMargins = 11;
         /**
-          <p>This symbol is the offset where the {@link com.example.android.bluetoothchat.R.attr#titleTextAppearance}
+          <p>This symbol is the offset where the {@link com.example.android.passingsync.R.attr#titleTextAppearance}
           attribute's value can be found in the {@link #Toolbar} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.example.android.bluetoothchat:titleTextAppearance
+          @attr name com.example.android.passingsync:titleTextAppearance
         */
         public static final int Toolbar_titleTextAppearance = 9;
         /** Attributes that can be used with a View.
@@ -6670,11 +6676,11 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
            <tr><th>Attribute</th><th>Description</th></tr>
            <tr><td><code>{@link #View_android_focusable android:focusable}</code></td><td></td></tr>
            <tr><td><code>{@link #View_android_theme android:theme}</code></td><td></td></tr>
-           <tr><td><code>{@link #View_backgroundTint com.example.android.bluetoothchat:backgroundTint}</code></td><td></td></tr>
-           <tr><td><code>{@link #View_backgroundTintMode com.example.android.bluetoothchat:backgroundTintMode}</code></td><td></td></tr>
-           <tr><td><code>{@link #View_paddingEnd com.example.android.bluetoothchat:paddingEnd}</code></td><td></td></tr>
-           <tr><td><code>{@link #View_paddingStart com.example.android.bluetoothchat:paddingStart}</code></td><td></td></tr>
-           <tr><td><code>{@link #View_theme com.example.android.bluetoothchat:theme}</code></td><td></td></tr>
+           <tr><td><code>{@link #View_backgroundTint com.example.android.passingsync:backgroundTint}</code></td><td></td></tr>
+           <tr><td><code>{@link #View_backgroundTintMode com.example.android.passingsync:backgroundTintMode}</code></td><td></td></tr>
+           <tr><td><code>{@link #View_paddingEnd com.example.android.passingsync:paddingEnd}</code></td><td></td></tr>
+           <tr><td><code>{@link #View_paddingStart com.example.android.passingsync:paddingStart}</code></td><td></td></tr>
+           <tr><td><code>{@link #View_theme com.example.android.passingsync:theme}</code></td><td></td></tr>
            </table>
            @see #View_android_focusable
            @see #View_android_theme
@@ -6701,7 +6707,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         */
         public static final int View_android_theme = 0;
         /**
-          <p>This symbol is the offset where the {@link com.example.android.bluetoothchat.R.attr#backgroundTint}
+          <p>This symbol is the offset where the {@link com.example.android.passingsync.R.attr#backgroundTint}
           attribute's value can be found in the {@link #View} array.
 
 
@@ -6712,11 +6718,11 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.example.android.bluetoothchat:backgroundTint
+          @attr name com.example.android.passingsync:backgroundTint
         */
         public static final int View_backgroundTint = 5;
         /**
-          <p>This symbol is the offset where the {@link com.example.android.bluetoothchat.R.attr#backgroundTintMode}
+          <p>This symbol is the offset where the {@link com.example.android.passingsync.R.attr#backgroundTintMode}
           attribute's value can be found in the {@link #View} array.
 
 
@@ -6732,11 +6738,11 @@ containing a value of this type.
 <tr><td><code>multiply</code></td><td>14</td><td></td></tr>
 <tr><td><code>screen</code></td><td>15</td><td></td></tr>
 </table>
-          @attr name com.example.android.bluetoothchat:backgroundTintMode
+          @attr name com.example.android.passingsync:backgroundTintMode
         */
         public static final int View_backgroundTintMode = 6;
         /**
-          <p>This symbol is the offset where the {@link com.example.android.bluetoothchat.R.attr#paddingEnd}
+          <p>This symbol is the offset where the {@link com.example.android.passingsync.R.attr#paddingEnd}
           attribute's value can be found in the {@link #View} array.
 
 
@@ -6748,11 +6754,11 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.example.android.bluetoothchat:paddingEnd
+          @attr name com.example.android.passingsync:paddingEnd
         */
         public static final int View_paddingEnd = 3;
         /**
-          <p>This symbol is the offset where the {@link com.example.android.bluetoothchat.R.attr#paddingStart}
+          <p>This symbol is the offset where the {@link com.example.android.passingsync.R.attr#paddingStart}
           attribute's value can be found in the {@link #View} array.
 
 
@@ -6764,17 +6770,17 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.example.android.bluetoothchat:paddingStart
+          @attr name com.example.android.passingsync:paddingStart
         */
         public static final int View_paddingStart = 2;
         /**
-          <p>This symbol is the offset where the {@link com.example.android.bluetoothchat.R.attr#theme}
+          <p>This symbol is the offset where the {@link com.example.android.passingsync.R.attr#theme}
           attribute's value can be found in the {@link #View} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.example.android.bluetoothchat:theme
+          @attr name com.example.android.passingsync:theme
         */
         public static final int View_theme = 4;
         /** Attributes that can be used with a ViewStubCompat.

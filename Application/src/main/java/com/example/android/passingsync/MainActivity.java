@@ -15,7 +15,7 @@
 */
 
 
-package com.example.android.bluetoothchat;
+package com.example.android.passingsync;
 
 import android.os.Bundle;
 import android.support.v4.app.FragmentTransaction;
