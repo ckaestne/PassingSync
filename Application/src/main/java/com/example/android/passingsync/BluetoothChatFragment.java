@@ -38,6 +38,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.inputmethod.EditorInfo;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
@@ -57,9 +58,9 @@ public class BluetoothChatFragment extends Fragment {
     private static final int REQUEST_ENABLE_BT = 3;
 
     // Layout Views
-    private ListView mConversationView;
-    private EditText mOutEditText;
-    private Button mSendButton;
+    private ListView mSiteswapList;
+    private EditText mSiteswapEditor;
+    private Button mStartButton;
 
     /**
      * Name of the connected device
@@ -69,12 +70,8 @@ public class BluetoothChatFragment extends Fragment {
     /**
      * Array adapter for the conversation thread
      */
-    private ArrayAdapter<String> mConversationArrayAdapter;
+    private ArrayAdapter<String> mSiteswapListProvider;
 
-    /**
-     * String buffer for outgoing messages
-     */
-    private StringBuffer mOutStringBuffer;
 
     /**
      * Local Bluetooth adapter
@@ -84,7 +81,7 @@ public class BluetoothChatFragment extends Fragment {
     /**
      * Member object for the chat services
      */
-    private BluetoothService mChatService = null;
+    private BluetoothService mBluetoothService = null;
 
 
     @Override
@@ -112,7 +109,7 @@ public class BluetoothChatFragment extends Fragment {
             Intent enableIntent = new Intent(BluetoothAdapter.ACTION_REQUEST_ENABLE);
             startActivityForResult(enableIntent, REQUEST_ENABLE_BT);
             // Otherwise, setup the chat session
-        } else if (mChatService == null) {
+        } else if (mBluetoothService == null) {
             setupChat();
         }
     }
@@ -120,8 +117,8 @@ public class BluetoothChatFragment extends Fragment {
     @Override
     public void onDestroy() {
         super.onDestroy();
-        if (mChatService != null) {
-            mChatService.stop();
+        if (mBluetoothService != null) {
+            mBluetoothService.stop();
         }
     }
 
@@ -132,11 +129,11 @@ public class BluetoothChatFragment extends Fragment {
         // Performing this check in onResume() covers the case in which BT was
         // not enabled during onStart(), so we were paused to enable it...
         // onResume() will be called when ACTION_REQUEST_ENABLE activity returns.
-        if (mChatService != null) {
+        if (mBluetoothService != null) {
             // Only if the state is STATE_NONE, do we know that we haven't started already
-            if (mChatService.getState() == BluetoothService.STATE_NONE) {
+            if (mBluetoothService.getState() == BluetoothService.STATE_NONE) {
                 // Start the Bluetooth chat services
-                mChatService.start();
+                mBluetoothService.start();
             }
         }
     }
@@ -149,9 +146,9 @@ public class BluetoothChatFragment extends Fragment {
 
     @Override
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
-        mConversationView = (ListView) view.findViewById(R.id.in);
-        mOutEditText = (EditText) view.findViewById(R.id.edit_text_out);
-        mSendButton = (Button) view.findViewById(R.id.button_send);
+        mSiteswapList = (ListView) view.findViewById(R.id.siteswaplist);
+        mSiteswapEditor = (EditText) view.findViewById(R.id.siteswapeditor);
+        mStartButton = (Button) view.findViewById(R.id.button_send);
     }
 
     /**
@@ -160,22 +157,29 @@ public class BluetoothChatFragment extends Fragment {
     private void setupChat() {
 
         // Initialize the array adapter for the conversation thread
-        mConversationArrayAdapter = new ArrayAdapter<String>(getActivity(), R.layout.message);
+        mSiteswapListProvider = new ArrayAdapter<String>(getActivity(), R.layout.message);
+        mSiteswapListProvider.add("86777");
+        mSiteswapListProvider.add("867");
+        mSiteswapListProvider.add("972");
+        mSiteswapListProvider.add("567");
+        mSiteswapListProvider.add("75666");
+        mSiteswapListProvider.add("7747746677466");
 
-        mConversationView.setAdapter(mConversationArrayAdapter);
+        mSiteswapList.setAdapter(mSiteswapListProvider);
+        mSiteswapList.setChoiceMode(ListView.CHOICE_MODE_SINGLE);
 
         // Initialize the compose field with a listener for the return key
-        mOutEditText.setOnEditorActionListener(mWriteListener);
+        mSiteswapEditor.setOnEditorActionListener(mWriteListener);
 
         // Initialize the send button with a listener that for click events
-        mSendButton.setOnClickListener(new View.OnClickListener() {
+        mStartButton.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 // Send a message using content of the edit text widget
                 View view = getView();
                 if (null != view) {
-                    TextView textView = (TextView) view.findViewById(R.id.edit_text_out);
+                    TextView textView = (TextView) view.findViewById(R.id.siteswapeditor);
                     String message = textView.getText().toString();
-                    sendMessage(message);
+                    startSiteswap(message);
                 }
 
                 MediaPlayer mediaPlayer = MediaPlayer.create(getActivity(), R.raw.p7);
@@ -183,11 +187,17 @@ public class BluetoothChatFragment extends Fragment {
             }
         });
 
-        // Initialize the BluetoothService to perform bluetooth connections
-        mChatService = new BluetoothService(getActivity(), mHandler);
+        mSiteswapList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view,
+                                    int position, long id) {
+                mSiteswapEditor.setText(mSiteswapListProvider.getItem(position));
+            }
+        });
 
-        // Initialize the buffer for outgoing messages
-        mOutStringBuffer = new StringBuffer("");
+        // Initialize the BluetoothService to perform bluetooth connections
+        mBluetoothService = new BluetoothService(getActivity(), mHandler);
+
     }
 
     /**
@@ -205,24 +215,18 @@ public class BluetoothChatFragment extends Fragment {
     /**
      * Sends a message.
      *
-     * @param message A string of text to send.
+     * @param siteswap A string of text to send.
      */
-    private void sendMessage(String message) {
+    private void startSiteswap(String siteswap) {
         // Check that we're actually connected before trying anything
-        if (mChatService.getState() != BluetoothService.STATE_CONNECTED) {
-            Toast.makeText(getActivity(), R.string.not_connected, Toast.LENGTH_SHORT).show();
-            return;
-        }
+//        if (mBluetoothService.getState() != BluetoothService.STATE_CONNECTED) {
+//            Toast.makeText(getActivity(), R.string.not_connected, Toast.LENGTH_SHORT).show();
+//            return;
+//        }
 
         // Check that there's actually something to send
-        if (message.length() > 0) {
-            // Get the message bytes and tell the BluetoothService to write
-            byte[] send = message.getBytes();
-            mChatService.write(send);
+        if (siteswap.length() > 0) {
 
-            // Reset out string buffer to zero and clear the edit text field
-            mOutStringBuffer.setLength(0);
-            mOutEditText.setText(mOutStringBuffer);
         }
     }
 
@@ -235,7 +239,7 @@ public class BluetoothChatFragment extends Fragment {
             // If the action is a key-up event on the return key, send the message
             if (actionId == EditorInfo.IME_NULL && event.getAction() == KeyEvent.ACTION_UP) {
                 String message = view.getText().toString();
-                sendMessage(message);
+                startSiteswap(message);
             }
             return true;
         }
@@ -279,7 +283,7 @@ public class BluetoothChatFragment extends Fragment {
                     switch (msg.arg1) {
                         case BluetoothService.STATE_CONNECTED:
                             setStatus(getString(R.string.title_connected_to, mConnectedDeviceName));
-                            mConversationArrayAdapter.clear();
+//                            mSiteswapListProvider.clear();
                             break;
                         case BluetoothService.STATE_CONNECTING:
                             setStatus(R.string.title_connecting);
@@ -291,19 +295,19 @@ public class BluetoothChatFragment extends Fragment {
                     }
                     break;
                 case Constants.MESSAGE_WRITE:
-                    byte[] writeBuf = (byte[]) msg.obj;
-                    // construct a string from the buffer
-                    String writeMessage = new String(writeBuf);
-                    mConversationArrayAdapter.add("Me:  " + writeMessage);
-                    break;
+//                    byte[] writeBuf = (byte[]) msg.obj;
+//                    // construct a string from the buffer
+//                    String writeMessage = new String(writeBuf);
+////                    mSiteswapListProvider.add("Me:  " + writeMessage);
+//                    break;
                 case Constants.MESSAGE_READ:
-                    byte[] readBuf = (byte[]) msg.obj;
-                    // construct a string from the valid bytes in the buffer
-                    String readMessage = new String(readBuf, 0, msg.arg1);
-                    mConversationArrayAdapter.add(mConnectedDeviceName + ":  " + readMessage);
-
-                    MediaPlayer mediaPlayer = MediaPlayer.create(getActivity(), R.raw.p7);
-                    mediaPlayer.start();
+//                    byte[] readBuf = (byte[]) msg.obj;
+//                    // construct a string from the valid bytes in the buffer
+//                    String readMessage = new String(readBuf, 0, msg.arg1);
+//                    mSiteswapListProvider.add(mConnectedDeviceName + ":  " + readMessage);
+//
+//                    MediaPlayer mediaPlayer = MediaPlayer.create(getActivity(), R.raw.p7);
+//                    mediaPlayer.start();
                     break;
                 case Constants.MESSAGE_DEVICE_NAME:
                     // save the connected device's name
@@ -364,7 +368,7 @@ public class BluetoothChatFragment extends Fragment {
         // Get the BluetoothDevice object
         BluetoothDevice device = mBluetoothAdapter.getRemoteDevice(address);
         // Attempt to connect to the device
-        mChatService.connect(device, secure);
+        mBluetoothService.connect(device, secure);
     }
 
     @Override
