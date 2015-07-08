@@ -51,7 +51,6 @@ import android.widget.Toast;
  */
 public class BluetoothChatFragment extends Fragment {
 
-
     // Intent request codes
     private static final int REQUEST_CONNECT_DEVICE_SECURE = 1;
     private static final int REQUEST_CONNECT_DEVICE_INSECURE = 2;
@@ -226,7 +225,9 @@ public class BluetoothChatFragment extends Fragment {
 
         // Check that there's actually something to send
         if (siteswap.length() > 0) {
-
+            Intent intent = new Intent(getActivity(), RunSiteswapActivity.class);
+            intent.putExtra(MainActivity.EXTRA_SITESWAP, siteswap);
+            startActivity(intent);
         }
     }
 
@@ -251,11 +252,16 @@ public class BluetoothChatFragment extends Fragment {
      * @param resId a string resource ID
      */
     private void setStatus(int resId) {
-        final ActionBar actionBar = ((AppCompatActivity) getActivity()).getSupportActionBar();
-        if (null == actionBar) {
-            return;
-        }
+        final ActionBar actionBar = getActionBar();
+        if (actionBar == null) return;
         actionBar.setSubtitle(resId);
+    }
+
+    private ActionBar getActionBar() {
+        AppCompatActivity activity = (AppCompatActivity) getActivity();
+        if (activity == null)
+            return null;
+        return activity.getSupportActionBar();
     }
 
     /**
@@ -264,7 +270,7 @@ public class BluetoothChatFragment extends Fragment {
      * @param subTitle status
      */
     private void setStatus(CharSequence subTitle) {
-        final ActionBar actionBar = ((AppCompatActivity) getActivity()).getSupportActionBar();
+        final ActionBar actionBar = getActionBar();
         if (null == actionBar) {
             return;
         }

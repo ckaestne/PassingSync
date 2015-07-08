@@ -31,6 +31,8 @@ import android.support.v7.app.AppCompatActivity;
  */
 public class MainActivity extends AppCompatActivity {
 
+    public final static String EXTRA_SITESWAP = "edu.cmu.passingsync.SITESWAP";
+
 
     // Whether the Log Fragment is currently shown
     private boolean mLogShown;
