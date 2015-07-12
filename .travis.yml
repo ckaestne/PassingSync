@@ -1,4 +1,5 @@
 language: android
 
 android:
- - android-10
+  components
+    - android-10
