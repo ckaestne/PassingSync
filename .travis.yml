@@ -4,3 +4,4 @@ android:
   components:
     - android-22
     - android-10
+    - build-tools-22.0.1
