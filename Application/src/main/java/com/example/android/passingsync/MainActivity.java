@@ -18,8 +18,13 @@
 package com.example.android.passingsync;
 
 import android.os.Bundle;
+import android.speech.tts.TextToSpeech;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
+
+import java.io.File;
+import java.util.HashMap;
 
 
 /**
@@ -48,6 +53,6 @@ public class MainActivity extends AppCompatActivity {
             transaction.replace(R.id.sample_content_fragment, fragment);
             transaction.commit();
         }
-    }
 
+    }
 }

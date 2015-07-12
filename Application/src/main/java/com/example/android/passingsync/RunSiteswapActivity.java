@@ -29,7 +29,7 @@ public class RunSiteswapActivity extends ActionBarActivity {
     private int speed = 80;
     private boolean skipUpdate = false;
     private Timer timer = new Timer("timer", true);
-    private final Map<String,MediaPlayer> mediaPlayer=new HashMap<>();
+//    private final Map<String,MediaPlayer> mediaPlayer=new HashMap<>();
     private TextView mLHLabel;
     private TextView mRHLabel;
 
@@ -113,15 +113,15 @@ public class RunSiteswapActivity extends ActionBarActivity {
 
 
         speedEdit.setText("80");
-        mediaPlayer.put("0", MediaPlayer.create(this.getApplicationContext(), R.raw.p0));
-        mediaPlayer.put("2", MediaPlayer.create(this.getApplicationContext(), R.raw.p2));
-        mediaPlayer.put("4", MediaPlayer.create(this.getApplicationContext(), R.raw.p4));
-        mediaPlayer.put("5", MediaPlayer.create(this.getApplicationContext(), R.raw.p5));
-        mediaPlayer.put("6", MediaPlayer.create(this.getApplicationContext(), R.raw.p6));
-        mediaPlayer.put("7", MediaPlayer.create(this.getApplicationContext(), R.raw.p7));
-        mediaPlayer.put("8", MediaPlayer.create(this.getApplicationContext(), R.raw.p8));
-        mediaPlayer.put("9", MediaPlayer.create(this.getApplicationContext(), R.raw.p9));
-        mediaPlayer.put("a", MediaPlayer.create(this.getApplicationContext(), R.raw.p10));
+//        mediaPlayer.put("0", MediaPlayer.create(this.getApplicationContext(), R.raw.p0));
+//        mediaPlayer.put("2", MediaPlayer.create(this.getApplicationContext(), R.raw.p2));
+//        mediaPlayer.put("4", MediaPlayer.create(this.getApplicationContext(), R.raw.p4));
+//        mediaPlayer.put("5", MediaPlayer.create(this.getApplicationContext(), R.raw.p5));
+//        mediaPlayer.put("6", MediaPlayer.create(this.getApplicationContext(), R.raw.p6));
+//        mediaPlayer.put("7", MediaPlayer.create(this.getApplicationContext(), R.raw.p7));
+//        mediaPlayer.put("8", MediaPlayer.create(this.getApplicationContext(), R.raw.p8));
+//        mediaPlayer.put("9", MediaPlayer.create(this.getApplicationContext(), R.raw.p9));
+//        mediaPlayer.put("a", MediaPlayer.create(this.getApplicationContext(), R.raw.p10));
 
     }
 
@@ -177,7 +177,7 @@ public class RunSiteswapActivity extends ActionBarActivity {
         sw_hand = (sw_hand + 1) % 4;
         final int pos = sw_position;
         final int hand = sw_hand;
-        final String pass="" + siteswap.charAt(pos);
+        final Character pass=siteswap.charAt(pos);
 
         runOnUiThread(new Runnable() {
             @Override
@@ -185,11 +185,11 @@ public class RunSiteswapActivity extends ActionBarActivity {
                 mRHLabel.setTextColor(Color.BLACK);
                 mLHLabel.setTextColor(Color.BLACK);
                 if (hand == 0) {
-                    mRHLabel.setText(pass);
+                    mRHLabel.setText(""+pass);
                     mRHLabel.setTextColor(Color.RED);
                 }
                 if (hand == 2) {
-                    mLHLabel.setText(pass);
+                    mLHLabel.setText(""+pass);
                     mLHLabel.setTextColor(Color.RED);
                 }
 
@@ -201,13 +201,14 @@ public class RunSiteswapActivity extends ActionBarActivity {
     }
 
     private MediaPlayer lastPlayer=null;
-    private void playSound(String pass) {
-        if (lastPlayer!=null && lastPlayer.isPlaying()) {
-            lastPlayer.pause();
-        }
-        MediaPlayer player = mediaPlayer.get(pass);
-        player.seekTo(0);
-        player.start();
+    private void playSound(Character pass) {
+        PassingSyncApplication.speech(pass, getApplicationContext());
+//        if (lastPlayer!=null && lastPlayer.isPlaying()) {
+//            lastPlayer.pause();
+//        }
+//        MediaPlayer player = mediaPlayer.get(pass);
+//        player.seekTo(0);
+//        player.start();
     }
 
 

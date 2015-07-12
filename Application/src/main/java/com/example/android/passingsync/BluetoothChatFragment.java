@@ -22,14 +22,17 @@ import android.bluetooth.BluetoothAdapter;
 import android.bluetooth.BluetoothDevice;
 import android.content.Intent;
 import android.media.MediaPlayer;
+import android.net.Uri;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
+import android.speech.tts.TextToSpeech;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.KeyEvent;
 import android.view.LayoutInflater;
 import android.view.Menu;
@@ -45,6 +48,12 @@ import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import java.io.File;
+import java.net.URI;
+import java.net.URISyntaxException;
+import java.util.HashMap;
+import java.util.Locale;
 
 /**
  * This fragment controls Bluetooth to communicate with other devices.
@@ -81,6 +90,7 @@ public class BluetoothChatFragment extends Fragment {
      * Member object for the chat services
      */
     private BluetoothService mBluetoothService = null;
+    private TextToSpeech mTts=null;
 
 
     @Override
@@ -96,6 +106,7 @@ public class BluetoothChatFragment extends Fragment {
             Toast.makeText(activity, "Bluetooth is not available", Toast.LENGTH_LONG).show();
             activity.finish();
         }
+
     }
 
 
@@ -119,6 +130,8 @@ public class BluetoothChatFragment extends Fragment {
         if (mBluetoothService != null) {
             mBluetoothService.stop();
         }
+        if (mTts!=null)
+            mTts.shutdown();
     }
 
     @Override
@@ -181,8 +194,6 @@ public class BluetoothChatFragment extends Fragment {
                     startSiteswap(message);
                 }
 
-                MediaPlayer mediaPlayer = MediaPlayer.create(getActivity(), R.raw.p7);
-                mediaPlayer.start();
             }
         });
 
@@ -218,10 +229,9 @@ public class BluetoothChatFragment extends Fragment {
      */
     private void startSiteswap(String siteswap) {
         // Check that we're actually connected before trying anything
-//        if (mBluetoothService.getState() != BluetoothService.STATE_CONNECTED) {
-//            Toast.makeText(getActivity(), R.string.not_connected, Toast.LENGTH_SHORT).show();
-//            return;
-//        }
+        if (mBluetoothService.getState() != BluetoothService.STATE_CONNECTED) {
+            Toast.makeText(getActivity(), "Warning, starting siteswap without connection!", Toast.LENGTH_LONG).show();
+        }
 
         // Check that there's actually something to send
         if (siteswap.length() > 0) {
