@@ -1,24 +1,41 @@
 package com.example.android.passingsync;
 
 import android.app.Application;
+import android.bluetooth.BluetoothAdapter;
 import android.content.Context;
 import android.media.MediaPlayer;
 import android.net.Uri;
 import android.speech.tts.TextToSpeech;
+import android.support.v4.app.FragmentActivity;
 import android.util.Log;
+import android.widget.Toast;
 
 import java.io.File;
 import java.util.HashMap;
 import java.util.Map;
 
 /**
- * Created by ckaestne on 7/7/2015.
+ * central application class that manages audio and bluetooth across multiple activities
  */
 public class PassingSyncApplication extends Application {
+
     TextToSpeech mTts;
-    final Map<Character, File> speechCache = new HashMap<>();
-    final Map<Character, String> speechText = new HashMap<>();
-    final Map<Character, MediaPlayer> players = new HashMap<>();
+
+    private final Map<Character, File> speechCache = new HashMap<>();
+    private final Map<Character, String> speechText = new HashMap<>();
+    private final Map<Character, MediaPlayer> players = new HashMap<>();
+
+
+    /**
+     * Local Bluetooth adapter
+     */
+    private BluetoothAdapter mBluetoothAdapter = null;
+
+    /**
+     * Member object for the chat services
+     */
+    private BluetoothService mBluetoothService = null;
+
 
     @Override
     public void onCreate() {
@@ -57,6 +74,11 @@ public class PassingSyncApplication extends Application {
                 }
             }
         });
+
+        mBluetoothAdapter = BluetoothAdapter.getDefaultAdapter();
+
+
+
     }
 
     public void speech(Character p) {
@@ -79,6 +101,15 @@ public class PassingSyncApplication extends Application {
         super.onTerminate();
     }
 
-    //    ((cBaseApplication)this.getApplicationContext()).myBlueComms.SomeMethod();
+    public synchronized BluetoothAdapter getBluetoothAdapter() {
+        return mBluetoothAdapter;
+    }
 
+    public synchronized BluetoothService getBluetoothService() {
+        return mBluetoothService;
+    }
+
+    public synchronized void initBluetoothService(BluetoothService bluetoothService) {
+        mBluetoothService=bluetoothService;
+    }
 }

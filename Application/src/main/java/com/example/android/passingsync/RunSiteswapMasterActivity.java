@@ -25,7 +25,7 @@ import java.util.Timer;
 import java.util.TimerTask;
 
 
-public class RunSiteswapActivity extends ActionBarActivity {
+public class RunSiteswapMasterActivity extends ActionBarActivity {
 
     private int speed = 80;
     private boolean skipUpdate = false;

@@ -50,9 +50,11 @@ public class MainActivity extends AppCompatActivity {
         if (savedInstanceState == null) {
             FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
             BluetoothChatFragment fragment = new BluetoothChatFragment();
+            fragment.setApp((PassingSyncApplication) getApplicationContext());
             transaction.replace(R.id.sample_content_fragment, fragment);
             transaction.commit();
         }
 
     }
+
 }

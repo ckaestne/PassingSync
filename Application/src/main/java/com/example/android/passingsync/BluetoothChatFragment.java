@@ -21,18 +21,14 @@ import android.app.Activity;
 import android.bluetooth.BluetoothAdapter;
 import android.bluetooth.BluetoothDevice;
 import android.content.Intent;
-import android.media.MediaPlayer;
-import android.net.Uri;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
-import android.speech.tts.TextToSpeech;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
-import android.util.Log;
 import android.view.KeyEvent;
 import android.view.LayoutInflater;
 import android.view.Menu;
@@ -49,12 +45,6 @@ import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import java.io.File;
-import java.net.URI;
-import java.net.URISyntaxException;
-import java.util.HashMap;
-import java.util.Locale;
-
 /**
  * This fragment controls Bluetooth to communicate with other devices.
  */
@@ -64,6 +54,7 @@ public class BluetoothChatFragment extends Fragment {
     private static final int REQUEST_CONNECT_DEVICE_SECURE = 1;
     private static final int REQUEST_CONNECT_DEVICE_INSECURE = 2;
     private static final int REQUEST_ENABLE_BT = 3;
+    private PassingSyncApplication app=null;
 
     // Layout Views
     private ListView mSiteswapList;
@@ -81,57 +72,49 @@ public class BluetoothChatFragment extends Fragment {
     private ArrayAdapter<String> mSiteswapListProvider;
 
 
-    /**
-     * Local Bluetooth adapter
-     */
-    private BluetoothAdapter mBluetoothAdapter = null;
-
-    /**
-     * Member object for the chat services
-     */
-    private BluetoothService mBluetoothService = null;
-    private TextToSpeech mTts=null;
-
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setHasOptionsMenu(true);
-        // Get local Bluetooth adapter
-        mBluetoothAdapter = BluetoothAdapter.getDefaultAdapter();
 
         // If the adapter is null, then Bluetooth is not supported
-        if (mBluetoothAdapter == null) {
-            FragmentActivity activity = getActivity();
+        if (getBluetoothAdapter() == null) {
+            FragmentActivity activity =  getActivity();
             Toast.makeText(activity, "Bluetooth is not available", Toast.LENGTH_LONG).show();
             activity.finish();
         }
-
     }
 
 
     @Override
     public void onStart() {
         super.onStart();
+
+        setupSiteswapList();
+
         // If BT is not on, request that it be enabled.
-        // setupChat() will then be called during onActivityResult
-        if (mBluetoothAdapter != null && !mBluetoothAdapter.isEnabled()) {
+        if (getBluetoothAdapter() != null && !getBluetoothAdapter().isEnabled()) {
             Intent enableIntent = new Intent(BluetoothAdapter.ACTION_REQUEST_ENABLE);
             startActivityForResult(enableIntent, REQUEST_ENABLE_BT);
             // Otherwise, setup the chat session
-        } else if (mBluetoothService == null) {
-            setupChat();
+        } else if (app.getBluetoothAdapter() == null) {
+            //TODO disable start button
         }
+        // Initialize the BluetoothService to perform bluetooth connections
+
+        app.initBluetoothService(new BluetoothService(getActivity(), mHandler));
     }
+
+    private BluetoothService getBluetoothService(){return app.getBluetoothService();}
+    private BluetoothAdapter getBluetoothAdapter(){return app.getBluetoothAdapter();}
 
     @Override
     public void onDestroy() {
         super.onDestroy();
-        if (mBluetoothService != null) {
-            mBluetoothService.stop();
+        if (getBluetoothService() != null) {
+            getBluetoothService().stop();
         }
-        if (mTts!=null)
-            mTts.shutdown();
     }
 
     @Override
@@ -141,11 +124,11 @@ public class BluetoothChatFragment extends Fragment {
         // Performing this check in onResume() covers the case in which BT was
         // not enabled during onStart(), so we were paused to enable it...
         // onResume() will be called when ACTION_REQUEST_ENABLE activity returns.
-        if (mBluetoothService != null) {
+        if (getBluetoothService() != null) {
             // Only if the state is STATE_NONE, do we know that we haven't started already
-            if (mBluetoothService.getState() == BluetoothService.STATE_NONE) {
+            if (getBluetoothService().getState() == BluetoothService.STATE_NONE) {
                 // Start the Bluetooth chat services
-                mBluetoothService.start();
+                getBluetoothService().start();
             }
         }
     }
@@ -166,10 +149,13 @@ public class BluetoothChatFragment extends Fragment {
     /**
      * Set up the UI and background operations for chat.
      */
-    private void setupChat() {
+    private void setupSiteswapList() {
 
         // Initialize the array adapter for the conversation thread
         mSiteswapListProvider = new ArrayAdapter<String>(getActivity(), R.layout.message);
+        mSiteswapListProvider.add("56789");
+        mSiteswapListProvider.add("6789a");
+        mSiteswapListProvider.add("456789a");
         mSiteswapListProvider.add("86777");
         mSiteswapListProvider.add("867");
         mSiteswapListProvider.add("972");
@@ -205,8 +191,6 @@ public class BluetoothChatFragment extends Fragment {
             }
         });
 
-        // Initialize the BluetoothService to perform bluetooth connections
-        mBluetoothService = new BluetoothService(getActivity(), mHandler);
 
     }
 
@@ -214,7 +198,7 @@ public class BluetoothChatFragment extends Fragment {
      * Makes this device discoverable.
      */
     private void ensureDiscoverable() {
-        if (mBluetoothAdapter.getScanMode() !=
+        if (getBluetoothAdapter().getScanMode() !=
                 BluetoothAdapter.SCAN_MODE_CONNECTABLE_DISCOVERABLE) {
             Intent discoverableIntent = new Intent(BluetoothAdapter.ACTION_REQUEST_DISCOVERABLE);
             discoverableIntent.putExtra(BluetoothAdapter.EXTRA_DISCOVERABLE_DURATION, 300);
@@ -229,13 +213,13 @@ public class BluetoothChatFragment extends Fragment {
      */
     private void startSiteswap(String siteswap) {
         // Check that we're actually connected before trying anything
-        if (mBluetoothService.getState() != BluetoothService.STATE_CONNECTED) {
+        if (getBluetoothService().getState() != BluetoothService.STATE_CONNECTED) {
             Toast.makeText(getActivity(), "Warning, starting siteswap without connection!", Toast.LENGTH_LONG).show();
         }
 
         // Check that there's actually something to send
         if (siteswap.length() > 0) {
-            Intent intent = new Intent(getActivity(), RunSiteswapActivity.class);
+            Intent intent = new Intent(getActivity(), RunSiteswapMasterActivity.class);
             intent.putExtra(MainActivity.EXTRA_SITESWAP, siteswap);
             startActivity(intent);
         }
@@ -361,7 +345,7 @@ public class BluetoothChatFragment extends Fragment {
                 // When the request to enable Bluetooth returns
                 if (resultCode == Activity.RESULT_OK) {
                     // Bluetooth is now enabled, so set up a chat session
-                    setupChat();
+//                    setupSiteswapList();
                 } else {
                     // User did not enable Bluetooth or an error occurred
                     Toast.makeText(getActivity(), R.string.bt_not_enabled_leaving,
@@ -382,9 +366,9 @@ public class BluetoothChatFragment extends Fragment {
         String address = data.getExtras()
                 .getString(DeviceListActivity.EXTRA_DEVICE_ADDRESS);
         // Get the BluetoothDevice object
-        BluetoothDevice device = mBluetoothAdapter.getRemoteDevice(address);
+        BluetoothDevice device = getBluetoothAdapter().getRemoteDevice(address);
         // Attempt to connect to the device
-        mBluetoothService.connect(device, secure);
+        getBluetoothService().connect(device, secure);
     }
 
     @Override
@@ -416,4 +400,7 @@ public class BluetoothChatFragment extends Fragment {
         return false;
     }
 
+    public void setApp(PassingSyncApplication applicationContext) {
+        this.app=applicationContext;
+    }
 }

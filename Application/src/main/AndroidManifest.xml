@@ -48,7 +48,7 @@
             android:label="@string/select_device"
             android:theme="@android:style/Theme.Dialog" />
         <activity
-            android:name=".RunSiteswapActivity"
+            android:name=".RunSiteswapMasterActivity"
             android:label="@string/title_activity_run_siteswap"
             android:parentActivityName=".MainActivity" >
         </activity>
