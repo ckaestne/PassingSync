@@ -1,5 +1,6 @@
 package com.example.android.passingsync;
 
+import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
@@ -8,10 +9,19 @@ import android.view.MenuItem;
 
 public class RunSiteswapClientActivity extends ActionBarActivity {
 
+    private SiteswapFragment siteswapFragment;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_run_siteswap_client);
+
+        if (savedInstanceState == null) {
+            FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
+            siteswapFragment = SiteswapFragment.newInstance();
+            transaction.replace(R.id.body, siteswapFragment);
+            transaction.commit();
+        }
     }
 
     @Override

@@ -16,15 +16,13 @@ import java.util.Map;
  */
 public class PassingSyncApplication extends Application {
     TextToSpeech mTts;
-    static final Map<Character, File> speechCache = new HashMap<>();
-    static final Map<Character, String> speechText = new HashMap<>();
-    static final Map<Character, MediaPlayer> players = new HashMap<>();
+    final Map<Character, File> speechCache = new HashMap<>();
+    final Map<Character, String> speechText = new HashMap<>();
+    final Map<Character, MediaPlayer> players = new HashMap<>();
 
-    //    public BlueComms myBlueComms;
     @Override
     public void onCreate() {
         super.onCreate();
-//        myBlueComms = new BlueComms();
 
         speechText.clear();
         speechText.put('0', "hold");
@@ -36,7 +34,6 @@ public class PassingSyncApplication extends Application {
         speechText.put('8', "heff");
         speechText.put('9', "double");
         speechText.put('a', "triple");
-
 
 
         mTts = new TextToSpeech(getBaseContext(), new TextToSpeech.OnInitListener() {
@@ -62,10 +59,10 @@ public class PassingSyncApplication extends Application {
         });
     }
 
-    static void speech(Character p, Context c) {
+    public void speech(Character p) {
         if (speechCache.containsKey(p) && !players.containsKey(p)) {
-            File f= speechCache.get(p);
-            players.put(p, MediaPlayer.create(c, Uri.fromFile(f)) );
+            File f = speechCache.get(p);
+            players.put(p, MediaPlayer.create(this, Uri.fromFile(f)));
         }
 
         if (players.containsKey(p)) {
