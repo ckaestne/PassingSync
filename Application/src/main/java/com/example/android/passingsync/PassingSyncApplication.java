@@ -2,13 +2,8 @@ package com.example.android.passingsync;
 
 import android.app.Application;
 import android.bluetooth.BluetoothAdapter;
-import android.content.Context;
 import android.media.MediaPlayer;
 import android.net.Uri;
-import android.speech.tts.TextToSpeech;
-import android.support.v4.app.FragmentActivity;
-import android.util.Log;
-import android.widget.Toast;
 
 import java.io.File;
 import java.util.HashMap;
@@ -19,9 +14,9 @@ import java.util.Map;
  */
 public class PassingSyncApplication extends Application {
 
-    TextToSpeech mTts;
+//    TextToSpeech mTts;
 
-    private final Map<Character, File> speechCache = new HashMap<>();
+//    private final Map<Character, File> speechFiles = new HashMap<>();
     private final Map<Character, String> speechText = new HashMap<>();
     private final Map<Character, MediaPlayer> players = new HashMap<>();
 
@@ -52,28 +47,37 @@ public class PassingSyncApplication extends Application {
         speechText.put('9', "double");
         speechText.put('a', "triple");
 
+        players.put('0', MediaPlayer.create(this, R.raw.p0));
+        players.put('2', MediaPlayer.create(this, R.raw.p2));
+        players.put('4', MediaPlayer.create(this, R.raw.p4));
+        players.put('5', MediaPlayer.create(this, R.raw.p5));
+        players.put('6', MediaPlayer.create(this, R.raw.p6));
+        players.put('7', MediaPlayer.create(this, R.raw.p7));
+        players.put('8', MediaPlayer.create(this, R.raw.p8));
+        players.put('9', MediaPlayer.create(this, R.raw.p9));
+        players.put('a', MediaPlayer.create(this, R.raw.pa));
 
-        mTts = new TextToSpeech(getBaseContext(), new TextToSpeech.OnInitListener() {
-            @Override
-            public void onInit(int status) {
-                if (status == TextToSpeech.SUCCESS) {
-
-                    for (Map.Entry<Character, String> v : speechText.entrySet()) {
-                        String txt = v.getValue();
-                        File file = new File(getBaseContext().getExternalCacheDir(), "p" + v.getKey() + ".wav");
-                        speechCache.put(v.getKey(), file);
-                        HashMap<String, String> myHashRender = new HashMap();
-                        myHashRender.put(TextToSpeech.Engine.KEY_PARAM_UTTERANCE_ID, txt);
-                        int r = mTts.synthesizeToFile(txt, myHashRender, file.getPath());
-                        Log.e("TTS", "synth " + txt + " in " + file + ": " + r);
-                    }
-
-
-                } else {
-                    Log.e("TTS", "Initilization Failed! " + status);
-                }
-            }
-        });
+//        mTts = new TextToSpeech(getBaseContext(), new TextToSpeech.OnInitListener() {
+//            @Override
+//            public void onInit(int status) {
+//                if (status == TextToSpeech.SUCCESS) {
+//
+//                    for (Map.Entry<Character, String> v : speechText.entrySet()) {
+//                        String txt = v.getValue();
+//                        File file = new File(getBaseContext().getExternalCacheDir(), "p" + v.getKey() + ".wav");
+//                        speechFiles.put(v.getKey(), file);
+//                        HashMap<String, String> myHashRender = new HashMap();
+//                        myHashRender.put(TextToSpeech.Engine.KEY_PARAM_UTTERANCE_ID, txt);
+//                        int r = mTts.synthesizeToFile(txt, myHashRender, file.getPath());
+//                        Log.e("TTS", "synth " + txt + " in " + file + ": " + r);
+//                    }
+//
+//
+//                } else {
+//                    Log.e("TTS", "Initilization Failed! " + status);
+//                }
+//            }
+//        });
 
         mBluetoothAdapter = BluetoothAdapter.getDefaultAdapter();
 
@@ -82,10 +86,10 @@ public class PassingSyncApplication extends Application {
     }
 
     public void speech(Character p) {
-        if (speechCache.containsKey(p) && !players.containsKey(p)) {
-            File f = speechCache.get(p);
-            players.put(p, MediaPlayer.create(this, Uri.fromFile(f)));
-        }
+//        if (speechFiles.containsKey(p) && !players.containsKey(p)) {
+//            File f = speechFiles.get(p);
+//            players.put(p, MediaPlayer.create(this, Uri.fromFile(f)));
+//        }
 
         if (players.containsKey(p)) {
             MediaPlayer player = players.get(p);
@@ -97,7 +101,7 @@ public class PassingSyncApplication extends Application {
 
     @Override
     public void onTerminate() {
-        mTts.shutdown();
+//        mTts.shutdown();
         super.onTerminate();
     }
 
