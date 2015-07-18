@@ -35,7 +35,7 @@ public class PassingSyncApplication extends Application {
         super.onCreate();
 
         speechText.clear();
-        speechText.put('0', "hold");
+        speechText.put('0', "wait");
         speechText.put('2', "zip");
         speechText.put('4', "flip");
         speechText.put('5', "zap");
@@ -56,6 +56,8 @@ public class PassingSyncApplication extends Application {
         players.put('8', MediaPlayer.create(this, R.raw.p8));
         players.put('9', MediaPlayer.create(this, R.raw.p9));
         players.put('a', MediaPlayer.create(this, R.raw.pa));
+        players.put('u', MediaPlayer.create(this, R.raw.p4));
+        players.put('d', MediaPlayer.create(this, R.raw.p4));
 
 //        mTts = new TextToSpeech(getBaseContext(), new TextToSpeech.OnInitListener() {
 //            @Override
