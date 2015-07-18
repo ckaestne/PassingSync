@@ -65,13 +65,78 @@ public class BluetoothChatFragment extends Fragment {
      * Name of the connected device
      */
     private String mConnectedDeviceName = null;
-
+    /**
+     * The Handler that gets information back from the BluetoothService
+     */
+    private final Handler mHandler = new Handler() {
+        @Override
+        public void handleMessage(Message msg) {
+            FragmentActivity activity = getActivity();
+            switch (msg.what) {
+                case Constants.MESSAGE_STATE_CHANGE:
+                    switch (msg.arg1) {
+                        case BluetoothService.STATE_CONNECTED:
+                            setStatus(getString(R.string.title_connected_to, mConnectedDeviceName));
+                            break;
+                        case BluetoothService.STATE_CONNECTING:
+                            setStatus(R.string.title_connecting);
+                            break;
+                        case BluetoothService.STATE_LISTEN:
+                        case BluetoothService.STATE_NONE:
+                            setStatus(R.string.title_not_connected);
+                            break;
+                    }
+                    break;
+                case Constants.MESSAGE_WRITE:
+//                    byte[] writeBuf = (byte[]) msg.obj;
+//                    // construct a string from the buffer
+//                    String writeMessage = new String(writeBuf);
+////                    mSiteswapListProvider.add("Me:  " + writeMessage);
+//                    break;
+                case Constants.MESSAGE_READ:
+//                    byte[] readBuf = (byte[]) msg.obj;
+//                    // construct a string from the valid bytes in the buffer
+//                    String readMessage = new String(readBuf, 0, msg.arg1);
+//                    mSiteswapListProvider.add(mConnectedDeviceName + ":  " + readMessage);
+//
+//                    MediaPlayer mediaPlayer = MediaPlayer.create(getActivity(), R.raw.p7);
+//                    mediaPlayer.start();
+                    break;
+                case Constants.MESSAGE_DEVICE_NAME:
+                    // save the connected device's name
+                    mConnectedDeviceName = msg.getData().getString(Constants.DEVICE_NAME);
+                    if (null != activity) {
+                        Toast.makeText(activity, "Connected to "
+                                + mConnectedDeviceName, Toast.LENGTH_SHORT).show();
+                    }
+                    break;
+                case Constants.MESSAGE_TOAST:
+                    if (null != activity) {
+                        Toast.makeText(activity, msg.getData().getString(Constants.TOAST),
+                                Toast.LENGTH_SHORT).show();
+                    }
+                    break;
+            }
+        }
+    };
     /**
      * Array adapter for the conversation thread
      */
     private ArrayAdapter<String> mSiteswapListProvider;
-
-
+    /**
+     * The action listener for the EditText widget, to listen for the return key
+     */
+    private TextView.OnEditorActionListener mWriteListener
+            = new TextView.OnEditorActionListener() {
+        public boolean onEditorAction(TextView view, int actionId, KeyEvent event) {
+            // If the action is a key-up event on the return key, send the message
+            if (actionId == EditorInfo.IME_NULL && event.getAction() == KeyEvent.ACTION_UP) {
+                String message = view.getText().toString();
+                startSiteswap(message);
+            }
+            return true;
+        }
+    };
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -85,7 +150,6 @@ public class BluetoothChatFragment extends Fragment {
             activity.finish();
         }
     }
-
 
     @Override
     public void onStart() {
@@ -103,10 +167,11 @@ public class BluetoothChatFragment extends Fragment {
         }
         // Initialize the BluetoothService to perform bluetooth connections
 
-        app.initBluetoothService(new BluetoothService(getActivity(), mHandler));
+        getBluetoothService().addHandler(mHandler);
     }
 
     private BluetoothService getBluetoothService(){return app.getBluetoothService();}
+
     private BluetoothAdapter getBluetoothAdapter(){return app.getBluetoothAdapter();}
 
     @Override
@@ -114,6 +179,7 @@ public class BluetoothChatFragment extends Fragment {
         super.onDestroy();
         if (getBluetoothService() != null) {
             getBluetoothService().stop();
+            getBluetoothService().removeHandler(mHandler);
         }
     }
 
@@ -226,21 +292,6 @@ public class BluetoothChatFragment extends Fragment {
     }
 
     /**
-     * The action listener for the EditText widget, to listen for the return key
-     */
-    private TextView.OnEditorActionListener mWriteListener
-            = new TextView.OnEditorActionListener() {
-        public boolean onEditorAction(TextView view, int actionId, KeyEvent event) {
-            // If the action is a key-up event on the return key, send the message
-            if (actionId == EditorInfo.IME_NULL && event.getAction() == KeyEvent.ACTION_UP) {
-                String message = view.getText().toString();
-                startSiteswap(message);
-            }
-            return true;
-        }
-    };
-
-    /**
      * Updates the status on the action bar.
      *
      * @param resId a string resource ID
@@ -270,61 +321,6 @@ public class BluetoothChatFragment extends Fragment {
         }
         actionBar.setSubtitle(subTitle);
     }
-
-    /**
-     * The Handler that gets information back from the BluetoothService
-     */
-    private final Handler mHandler = new Handler() {
-        @Override
-        public void handleMessage(Message msg) {
-            FragmentActivity activity = getActivity();
-            switch (msg.what) {
-                case Constants.MESSAGE_STATE_CHANGE:
-                    switch (msg.arg1) {
-                        case BluetoothService.STATE_CONNECTED:
-                            setStatus(getString(R.string.title_connected_to, mConnectedDeviceName));
-                            break;
-                        case BluetoothService.STATE_CONNECTING:
-                            setStatus(R.string.title_connecting);
-                            break;
-                        case BluetoothService.STATE_LISTEN:
-                        case BluetoothService.STATE_NONE:
-                            setStatus(R.string.title_not_connected);
-                            break;
-                    }
-                    break;
-                case Constants.MESSAGE_WRITE:
-//                    byte[] writeBuf = (byte[]) msg.obj;
-//                    // construct a string from the buffer
-//                    String writeMessage = new String(writeBuf);
-////                    mSiteswapListProvider.add("Me:  " + writeMessage);
-//                    break;
-                case Constants.MESSAGE_READ:
-//                    byte[] readBuf = (byte[]) msg.obj;
-//                    // construct a string from the valid bytes in the buffer
-//                    String readMessage = new String(readBuf, 0, msg.arg1);
-//                    mSiteswapListProvider.add(mConnectedDeviceName + ":  " + readMessage);
-//
-//                    MediaPlayer mediaPlayer = MediaPlayer.create(getActivity(), R.raw.p7);
-//                    mediaPlayer.start();
-                    break;
-                case Constants.MESSAGE_DEVICE_NAME:
-                    // save the connected device's name
-                    mConnectedDeviceName = msg.getData().getString(Constants.DEVICE_NAME);
-                    if (null != activity) {
-                        Toast.makeText(activity, "Connected to "
-                                + mConnectedDeviceName, Toast.LENGTH_SHORT).show();
-                    }
-                    break;
-                case Constants.MESSAGE_TOAST:
-                    if (null != activity) {
-                        Toast.makeText(activity, msg.getData().getString(Constants.TOAST),
-                                Toast.LENGTH_SHORT).show();
-                    }
-                    break;
-            }
-        }
-    };
 
     public void onActivityResult(int requestCode, int resultCode, Intent data) {
         switch (requestCode) {

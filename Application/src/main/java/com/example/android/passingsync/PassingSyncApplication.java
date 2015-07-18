@@ -3,9 +3,7 @@ package com.example.android.passingsync;
 import android.app.Application;
 import android.bluetooth.BluetoothAdapter;
 import android.media.MediaPlayer;
-import android.net.Uri;
 
-import java.io.File;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -46,6 +44,8 @@ public class PassingSyncApplication extends Application {
         speechText.put('8', "heff");
         speechText.put('9', "double");
         speechText.put('a', "triple");
+        speechText.put('u', "up");
+        speechText.put('d', "down");
 
         players.put('0', MediaPlayer.create(this, R.raw.p0));
         players.put('2', MediaPlayer.create(this, R.raw.p2));
@@ -80,7 +80,7 @@ public class PassingSyncApplication extends Application {
 //        });
 
         mBluetoothAdapter = BluetoothAdapter.getDefaultAdapter();
-
+        mBluetoothService = new BluetoothService(this);
 
 
     }
@@ -113,7 +113,4 @@ public class PassingSyncApplication extends Application {
         return mBluetoothService;
     }
 
-    public synchronized void initBluetoothService(BluetoothService bluetoothService) {
-        mBluetoothService=bluetoothService;
-    }
 }
