@@ -231,7 +231,7 @@ public class BluetoothService {
      * @param out The bytes to write
      * @see ConnectedThread#write(byte[])
      */
-    public void write(byte[] out) {
+    public void write(String out) {
         // Create temporary object
         ConnectedThread r;
         // Synchronize a copy of the ConnectedThread
@@ -241,6 +241,14 @@ public class BluetoothService {
         }
         // Perform the write unsynchronized
         r.write(out);
+    }
+
+    public void startSiteswap(String siteswap) {
+        write("START:" + siteswap);
+    }
+
+    public void pass(Character pass) {
+        write("PASS :" + pass);
     }
 
     /**
@@ -258,7 +266,7 @@ public class BluetoothService {
         // Start the service over to restart listening mode
         BluetoothService.this.start();
     }
-
+    
     /**
      * Indicate that the connection was lost and notify the UI Activity.
      */
@@ -281,6 +289,14 @@ public class BluetoothService {
 
     public void removeHandler(Handler mHandler) {
         mHandlers.remove(mHandler);
+    }
+
+    static class StartSiteswapMsg {
+        private final String siteswap;
+
+        StartSiteswapMsg(String sw) {
+            this.siteswap = sw;
+        }
     }
 
     /**
@@ -476,11 +492,17 @@ public class BluetoothService {
                 try {
                     // Read from the InputStream
                     bytes = mmInStream.read(buffer);
+                    String msg = new String(buffer, 0, bytes);
 
                     // Send the obtained bytes to the UI Activity
-                    for (Handler mHandler : mHandlers)
-                        mHandler.obtainMessage(Constants.MESSAGE_READ, bytes, -1, buffer)
-                                .sendToTarget();
+                    for (Handler mHandler : mHandlers) {
+                        if (msg.startsWith("START:"))
+                            mHandler.obtainMessage(Constants.MESSAGE_STARTSITESWAP, -1, -1, msg.substring(6))
+                                    .sendToTarget();
+                        if (msg.startsWith("PASS :"))
+                            mHandler.obtainMessage(Constants.MESSAGE_PASS, msg.charAt(6), -1, null)
+                                    .sendToTarget();
+                    }
                 } catch (IOException e) {
 //                    Log.e(TAG, "disconnected", e);
                     connectionLost();
@@ -496,14 +518,14 @@ public class BluetoothService {
          *
          * @param buffer The bytes to write
          */
-        public void write(byte[] buffer) {
+        public void write(String buffer) {
             try {
-                mmOutStream.write(buffer);
+                mmOutStream.write(buffer.getBytes());
 
                 // Share the sent message back to the UI Activity
-                for (Handler mHandler : mHandlers)
-                    mHandler.obtainMessage(Constants.MESSAGE_WRITE, -1, -1, buffer)
-                            .sendToTarget();
+//                for (Handler mHandler : mHandlers)
+//                    mHandler.obtainMessage(Constants.MESSAGE_WRITE, -1, -1, buffer)
+//                            .sendToTarget();
             } catch (IOException e) {
 //                Log.e(TAG, "Exception during write", e);
             }

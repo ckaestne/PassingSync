@@ -54,7 +54,7 @@ public class BluetoothChatFragment extends Fragment {
     private static final int REQUEST_CONNECT_DEVICE_SECURE = 1;
     private static final int REQUEST_CONNECT_DEVICE_INSECURE = 2;
     private static final int REQUEST_ENABLE_BT = 3;
-    private PassingSyncApplication app=null;
+    private PassingSyncApplication app = null;
 
     // Layout Views
     private ListView mSiteswapList;
@@ -87,13 +87,13 @@ public class BluetoothChatFragment extends Fragment {
                             break;
                     }
                     break;
-                case Constants.MESSAGE_WRITE:
+                case Constants.MESSAGE_STARTSITESWAP:
 //                    byte[] writeBuf = (byte[]) msg.obj;
 //                    // construct a string from the buffer
 //                    String writeMessage = new String(writeBuf);
 ////                    mSiteswapListProvider.add("Me:  " + writeMessage);
 //                    break;
-                case Constants.MESSAGE_READ:
+//                case Constants.MESSAGE_READ:
 //                    byte[] readBuf = (byte[]) msg.obj;
 //                    // construct a string from the valid bytes in the buffer
 //                    String readMessage = new String(readBuf, 0, msg.arg1);
@@ -101,6 +101,11 @@ public class BluetoothChatFragment extends Fragment {
 //
 //                    MediaPlayer mediaPlayer = MediaPlayer.create(getActivity(), R.raw.p7);
 //                    mediaPlayer.start();
+                    String siteswap = (String) msg.obj;
+                    Intent intent = new Intent(getActivity(), RunSiteswapClientActivity.class);
+                    intent.putExtra(MainActivity.EXTRA_SITESWAP, siteswap);
+                    startActivity(intent);
+
                     break;
                 case Constants.MESSAGE_DEVICE_NAME:
                     // save the connected device's name
@@ -145,7 +150,7 @@ public class BluetoothChatFragment extends Fragment {
 
         // If the adapter is null, then Bluetooth is not supported
         if (getBluetoothAdapter() == null) {
-            FragmentActivity activity =  getActivity();
+            FragmentActivity activity = getActivity();
             Toast.makeText(activity, "Bluetooth is not available", Toast.LENGTH_LONG).show();
             activity.finish();
         }
@@ -170,9 +175,13 @@ public class BluetoothChatFragment extends Fragment {
         getBluetoothService().addHandler(mHandler);
     }
 
-    private BluetoothService getBluetoothService(){return app.getBluetoothService();}
+    private BluetoothService getBluetoothService() {
+        return app.getBluetoothService();
+    }
 
-    private BluetoothAdapter getBluetoothAdapter(){return app.getBluetoothAdapter();}
+    private BluetoothAdapter getBluetoothAdapter() {
+        return app.getBluetoothAdapter();
+    }
 
     @Override
     public void onDestroy() {
@@ -288,6 +297,8 @@ public class BluetoothChatFragment extends Fragment {
             Intent intent = new Intent(getActivity(), RunSiteswapMasterActivity.class);
             intent.putExtra(MainActivity.EXTRA_SITESWAP, siteswap);
             startActivity(intent);
+
+            getBluetoothService().startSiteswap(siteswap);
         }
     }
 
@@ -396,6 +407,6 @@ public class BluetoothChatFragment extends Fragment {
     }
 
     public void setApp(PassingSyncApplication applicationContext) {
-        this.app=applicationContext;
+        this.app = applicationContext;
     }
 }

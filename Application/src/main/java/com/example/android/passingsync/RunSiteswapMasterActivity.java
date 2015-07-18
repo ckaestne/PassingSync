@@ -1,26 +1,18 @@
 package com.example.android.passingsync;
 
-import android.content.Context;
 import android.content.Intent;
-import android.graphics.Color;
-import android.media.MediaPlayer;
+import android.os.Bundle;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.ActionBarActivity;
-import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
-import android.util.AttributeSet;
-import android.view.KeyEvent;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.EditText;
-import android.widget.ListView;
 import android.widget.SeekBar;
 import android.widget.TextView;
 
-import java.util.HashMap;
-import java.util.Map;
 import java.util.Timer;
 import java.util.TimerTask;
 
@@ -182,6 +174,12 @@ public class RunSiteswapMasterActivity extends ActionBarActivity {
 
         if (sw_hand % 2 == 0)
             playSound(pass);
+        if (sw_hand % 2 == 1)
+            getBluetoothService().pass(pass);
+    }
+
+    private BluetoothService getBluetoothService() {
+        return ((PassingSyncApplication) getApplicationContext()).getBluetoothService();
     }
 
     private void playSound(Character pass) {

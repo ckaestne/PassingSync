@@ -1,14 +1,27 @@
 package com.example.android.passingsync;
 
+import android.os.Bundle;
+import android.os.Handler;
+import android.os.Message;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.ActionBarActivity;
-import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 
 
 public class RunSiteswapClientActivity extends ActionBarActivity {
 
+    private final Handler mHandler = new Handler() {
+        @Override
+        public void handleMessage(Message msg) {
+            switch (msg.what) {
+                case Constants.MESSAGE_PASS:
+                    Character p = (char) msg.arg1;
+                    getApp().speech(p);
+                    break;
+            }
+        }
+    };
     private SiteswapFragment siteswapFragment;
 
     @Override
@@ -22,6 +35,22 @@ public class RunSiteswapClientActivity extends ActionBarActivity {
             transaction.replace(R.id.body, siteswapFragment);
             transaction.commit();
         }
+
+
+    }
+
+    @Override
+    protected void onStart() {
+        super.onStart();
+        getBluetoothService().addHandler(mHandler);
+
+    }
+
+    @Override
+    protected void onStop() {
+        getBluetoothService().removeHandler(mHandler);
+        super.onStop();
+
     }
 
     @Override
@@ -45,4 +74,14 @@ public class RunSiteswapClientActivity extends ActionBarActivity {
 
         return super.onOptionsItemSelected(item);
     }
+
+    private BluetoothService getBluetoothService() {
+        return getApp().getBluetoothService();
+    }
+
+    private PassingSyncApplication getApp() {
+        return (PassingSyncApplication) getApplicationContext();
+    }
+
+
 }
