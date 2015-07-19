@@ -1,5 +1,7 @@
 package com.example.android.passingsync.pattern;
 
+import android.util.Pair;
+
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.HashSet;
@@ -67,24 +69,25 @@ public class SiteswapGenerator extends AbstractPatternGenerator {
             Character c = siteswap.charAt(i % siteswap.length());
             if (i % 2 == 0) {
                 seqA.add(c);
-                seqB.add('-');
+                seqB.add(' ');
             } else {
-                seqA.add('-');
+                seqA.add(' ');
                 seqB.add(c);
             }
         }
 
-        return new Display(seqA, seqB, startPos);
+        return new Display(seqA, seqB, (startPos + Math.max(0,pos))%(siteswap.length()*2));
     }
 
     @Override
-    public Map<Passer, Character> step() {
+    public Map<Passer, Pair<Side,Character>> step() {
         pos++;
         Passer who = (pos + startPos) % 2 == 0 ? Passer.A : Passer.B;
         Character p;
-        if (pos < 0) p = '4';
+        if (pos < 0) p = '0';
         else p = siteswap.charAt((pos + startPos) % siteswap.length());
+        Side side=(pos+startPos)%4<2?Side.RIGHT:Side.LEFT;
 
-        return Collections.singletonMap(who, p);
+        return Collections.singletonMap(who, new Pair<>(side,p));
     }
 }

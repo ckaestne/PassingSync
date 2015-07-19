@@ -7,7 +7,25 @@
     tools:context="com.example.android.passingsync.SiteswapFragment">
 
 
-        <TextView
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/patternDisplayLayout"
+        android:layout_gravity="center_horizontal">
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_horizontal|top"
+            android:id="@+id/passerARow"></TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/passerBRow"></TableRow>
+    </TableLayout>
+
+    <TextView
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:textAppearance="?android:attr/textAppearanceLarge"
@@ -28,8 +46,17 @@
             android:orientation="vertical"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_gravity="center"></LinearLayout>
+            android:layout_gravity="center">
 
+        </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="start"
+        android:id="@+id/startText"
+        android:layout_gravity="center_horizontal|bottom" />
 
 
 </FrameLayout>

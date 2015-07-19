@@ -6,6 +6,7 @@ import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.ActionBarActivity;
 import android.text.Editable;
 import android.text.TextWatcher;
+import android.util.Pair;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -13,6 +14,10 @@ import android.widget.EditText;
 import android.widget.SeekBar;
 import android.widget.TextView;
 
+import com.example.android.passingsync.pattern.AbstractPatternGenerator;
+import com.example.android.passingsync.pattern.SiteswapGenerator;
+
+import java.util.Map;
 import java.util.Timer;
 import java.util.TimerTask;
 
@@ -23,10 +28,9 @@ public class RunSiteswapMasterActivity extends ActionBarActivity {
     private boolean skipUpdate = false;
     private Timer timer = new Timer("timer", true);
 
-    private int sw_position = 0;
-    private int sw_hand = 0;
     private String siteswap;
     private SiteswapFragment siteswapFragment;
+    private AbstractPatternGenerator pattern;
 
     @Override
     protected void onDestroy() {
@@ -60,7 +64,7 @@ public class RunSiteswapMasterActivity extends ActionBarActivity {
 
         final EditText speedEdit = (EditText) view.findViewById(R.id.speedEdit);
         final SeekBar speedSeekbar = (SeekBar) view.findViewById(R.id.speedSeekbar);
-     
+
 
         speedEdit.addTextChangedListener(new TextWatcher() {
             @Override
@@ -113,6 +117,19 @@ public class RunSiteswapMasterActivity extends ActionBarActivity {
 
     }
 
+    private void createPattern() {
+        pattern = new SiteswapGenerator(siteswap, 0);
+        siteswapFragment.setStart(pattern.getStart(AbstractPatternGenerator.Passer.A));
+        siteswapFragment.setDisplay(pattern.getDisplay(AbstractPatternGenerator.Passer.A), AbstractPatternGenerator.Passer.A);
+        siteswapFragment.resetSiteswap();
+
+    }
+
+    @Override
+    protected void onStart() {
+        super.onStart();
+        createPattern();
+    }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -139,9 +156,7 @@ public class RunSiteswapMasterActivity extends ActionBarActivity {
     public void startPassing(View v) {
         timer.cancel();
 
-        sw_hand = 0;
-        sw_position = 0;
-        siteswapFragment.resetSiteswap();
+        createPattern();
 
         timer = new Timer("timer", true);
         timer.schedule(new TimerTask() {
@@ -158,24 +173,30 @@ public class RunSiteswapMasterActivity extends ActionBarActivity {
     }
 
     private synchronized void performPassingStep() {
-        sw_position = (sw_position + 1) % siteswap.length();
-        sw_hand = (sw_hand + 1) % 4;
-        final int pos = sw_position;
-        final int hand = sw_hand;
-        final Character pass=siteswap.charAt(pos);
+        Map<AbstractPatternGenerator.Passer, Pair<AbstractPatternGenerator.Side,Character>> actions = pattern.step();
+        for (final Map.Entry<AbstractPatternGenerator.Passer, Pair<AbstractPatternGenerator.Side,Character>> action : actions.entrySet()) {
+            final Character pass = action.getValue().second;
+            final AbstractPatternGenerator.Side side = action.getValue().first;
+            final AbstractPatternGenerator.Passer passer = action.getKey();
 
-        runOnUiThread(new Runnable() {
-            @Override
-            public void run() {
-                siteswapFragment.setThrow(pass,hand);
+            runOnUiThread(new Runnable() {
+                @Override
+                public void run() {
+                    if (passer== AbstractPatternGenerator.Passer.A)
+                        siteswapFragment.setThrow(pass, side);
+                    siteswapFragment.setDisplay(pattern.getDisplay(AbstractPatternGenerator.Passer.A), AbstractPatternGenerator.Passer.A);
+                }
+            });
 
-            }
-        });
+            if (action.getKey() == AbstractPatternGenerator.Passer.A)
+                playSound(pass);
+            else
+                getBluetoothService().pass(pass);
 
-        if (sw_hand % 2 == 0)
-            playSound(pass);
-        if (sw_hand % 2 == 1)
-            getBluetoothService().pass(pass);
+
+        }
+
+
     }
 
     private BluetoothService getBluetoothService() {
@@ -183,7 +204,7 @@ public class RunSiteswapMasterActivity extends ActionBarActivity {
     }
 
     private void playSound(Character pass) {
-        ((PassingSyncApplication)getApplicationContext()).speech(pass);
+        ((PassingSyncApplication) getApplicationContext()).speech(pass);
     }
 
 

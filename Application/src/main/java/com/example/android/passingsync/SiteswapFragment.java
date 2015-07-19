@@ -9,12 +9,25 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TableLayout;
+import android.widget.TableRow;
 import android.widget.TextView;
+
+import com.example.android.passingsync.pattern.AbstractPatternGenerator;
+
+import org.w3c.dom.Text;
+
+import java.util.ArrayList;
+import java.util.List;
 
 
 public class SiteswapFragment extends Fragment {
     private TextView mRHLabel;
     private TextView mLHLabel;
+    private TableLayout patternDisplay;
+    private TableRow passerBRow;
+    private TableRow passerARow;
+    private TextView startText;
 
 //    private OnFragmentInteractionListener mListener;
 
@@ -35,14 +48,19 @@ public class SiteswapFragment extends Fragment {
 //        if (getArguments() != null) {
 //            mParam1 = getArguments().getString(ARG_PARAM1);
 //            mParam2 = getArguments().getString(ARG_PARAM2);
+
 //        }
     }
 
+
     @Override
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
-
         mRHLabel = (TextView) view.findViewById(R.id.fr_rhLabel);
         mLHLabel = (TextView) view.findViewById(R.id.fr_lhLabel);
+        patternDisplay = (TableLayout) view.findViewById(R.id.patternDisplayLayout);
+        passerARow = (TableRow) view.findViewById(R.id.passerARow);
+        passerBRow = (TableRow) view.findViewById(R.id.passerBRow);
+        startText = (TextView) view.findViewById(R.id.startText);
     }
 
     @Override
@@ -66,6 +84,56 @@ public class SiteswapFragment extends Fragment {
 
     }
 
+    private int displaySize = -1;
+    private final List<TextView> textViewsA = new ArrayList<>();
+    private final List<TextView> textViewsB = new ArrayList<>();
+
+    public void setDisplay(AbstractPatternGenerator.Display display, AbstractPatternGenerator.Passer who) {
+        if (displaySize != display.seqA.size())
+            initDisplay(display);
+
+        for (int i = 0; i < displaySize; i++) {
+            textViewsA.get(i).setText("" + display.seqA.get(i));
+            textViewsB.get(i).setText("" + display.seqB.get(i));
+
+            int color = Color.BLACK;
+            if (i == display.highlight)
+                color = Color.RED;
+
+            textViewsA.get(i).setTextColor(color);
+            textViewsB.get(i).setTextColor(color);
+        }
+
+        if (who == AbstractPatternGenerator.Passer.A) {
+            passerARow.setBackgroundColor(Color.GRAY);
+            passerBRow.setBackgroundColor(Color.WHITE);
+        } else {
+            passerARow.setBackgroundColor(Color.WHITE);
+            passerBRow.setBackgroundColor(Color.GRAY);
+        }
+
+    }
+
+    public void setStart(AbstractPatternGenerator.StartPos start) {
+        startText.setText(start.toString());
+    }
+
+    private void initDisplay(AbstractPatternGenerator.Display display) {
+        displaySize = display.seqA.size();
+        passerARow.removeAllViews();
+        passerBRow.removeAllViews();
+        textViewsA.clear();
+        textViewsB.clear();
+        for (Character a : display.seqA) {
+            TextView t = new TextView(getActivity());
+            textViewsA.add(t);
+            passerARow.addView(t);
+            t = new TextView(getActivity());
+            textViewsB.add(t);
+            passerBRow.addView(t);
+        }
+    }
+
     public void resetSiteswap() {
         mRHLabel.setTextColor(Color.BLACK);
         mLHLabel.setTextColor(Color.BLACK);
@@ -74,14 +142,14 @@ public class SiteswapFragment extends Fragment {
 
     }
 
-    public void setThrow(Character pass, int hand) {
+    public void setThrow(Character pass, AbstractPatternGenerator.Side hand) {
         mRHLabel.setTextColor(Color.BLACK);
         mLHLabel.setTextColor(Color.BLACK);
-        if (hand == 0) {
+        if (hand == AbstractPatternGenerator.Side.RIGHT) {
             mRHLabel.setText("" + pass);
             mRHLabel.setTextColor(Color.RED);
         }
-        if (hand == 2) {
+        if (hand == AbstractPatternGenerator.Side.LEFT) {
             mLHLabel.setText("" + pass);
             mLHLabel.setTextColor(Color.RED);
         }

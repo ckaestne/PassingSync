@@ -1,5 +1,7 @@
 package com.example.android.passingsync.pattern;
 
+import android.util.Pair;
+
 import java.util.List;
 import java.util.Map;
 
@@ -17,16 +19,16 @@ public abstract class AbstractPatternGenerator {
     /**
      * returns actions for zero to all both passers
      */
-    public abstract Map<Passer, Character> step();
+    public abstract Map<Passer, Pair<Side,Character>> step();
 
-    enum Passer {
+    public enum Passer {
         A,//A has straight singles
         B//B has crossing singles
     }
 
-    enum Side {LEFT, RIGHT}
+    public enum Side {LEFT, RIGHT}
 
-    static class StartPos {
+    public static class StartPos {
         final int leftHand;
         final int rightHand;
         final Side firstHand;
@@ -45,11 +47,11 @@ public abstract class AbstractPatternGenerator {
         }
     }
 
-    static class Display {
+    public static class Display {
 
-        final List<Character> seqA;
-        final List<Character> seqB;
-        final int highlight;//index in first+second list (between zero and (seqA++seqB).length
+        public final List<Character> seqA;
+        public final List<Character> seqB;
+        public final int highlight;//index in first+second list (between zero and (seqA++seqB).length
 
         Display(List<Character> seqA,
                 List<Character> seqB,
