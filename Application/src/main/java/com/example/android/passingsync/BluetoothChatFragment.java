@@ -237,6 +237,7 @@ public class BluetoothChatFragment extends Fragment {
         mSiteswapListProvider.add("567");
         mSiteswapListProvider.add("75666");
         mSiteswapListProvider.add("7747746677466");
+        mSiteswapListProvider.add("777928892296626");
 
         mSiteswapList.setAdapter(mSiteswapListProvider);
         mSiteswapList.setChoiceMode(ListView.CHOICE_MODE_SINGLE);
