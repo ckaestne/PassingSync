@@ -15,31 +15,33 @@ import android.widget.TextView;
 
 import com.example.android.passingsync.pattern.AbstractPatternGenerator;
 
-import org.w3c.dom.Text;
-
 import java.util.ArrayList;
 import java.util.List;
 
 
 public class SiteswapFragment extends Fragment {
+    private final List<TextView> textViewsA = new ArrayList<>();
+    private final List<TextView> textViewsB = new ArrayList<>();
     private TextView mRHLabel;
     private TextView mLHLabel;
     private TableLayout patternDisplay;
     private TableRow passerBRow;
-    private TableRow passerARow;
-    private TextView startText;
 
 //    private OnFragmentInteractionListener mListener;
+private TableRow passerARow;
+    private TextView startText;
+    private int displaySize = -1;
+
+
+    public SiteswapFragment() {
+        // Required empty public constructor
+    }
 
     public static SiteswapFragment newInstance() {
         SiteswapFragment fragment = new SiteswapFragment();
         Bundle args = new Bundle();
         fragment.setArguments(args);
         return fragment;
-    }
-
-    public SiteswapFragment() {
-        // Required empty public constructor
     }
 
     @Override
@@ -51,7 +53,6 @@ public class SiteswapFragment extends Fragment {
 
 //        }
     }
-
 
     @Override
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
@@ -71,7 +72,6 @@ public class SiteswapFragment extends Fragment {
         return inflater.inflate(R.layout.fragment_siteswap, container, false);
     }
 
-
     @Override
     public void onAttach(Activity activity) {
         super.onAttach(activity);
@@ -83,10 +83,6 @@ public class SiteswapFragment extends Fragment {
         super.onDetach();
 
     }
-
-    private int displaySize = -1;
-    private final List<TextView> textViewsA = new ArrayList<>();
-    private final List<TextView> textViewsB = new ArrayList<>();
 
     public void setDisplay(AbstractPatternGenerator.Display display, AbstractPatternGenerator.Passer who) {
         if (displaySize != display.seqA.size())
@@ -116,6 +112,10 @@ public class SiteswapFragment extends Fragment {
 
     public void setStart(AbstractPatternGenerator.StartPos start) {
         startText.setText(start.toString());
+    }
+
+    public void setStart(String start) {
+        startText.setText(start);
     }
 
     private void initDisplay(AbstractPatternGenerator.Display display) {

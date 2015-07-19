@@ -8,9 +8,12 @@ import android.support.v7.app.ActionBarActivity;
 import android.view.Menu;
 import android.view.MenuItem;
 
+import com.example.android.passingsync.pattern.AbstractPatternGenerator;
+
 
 public class RunSiteswapClientActivity extends ActionBarActivity {
 
+    private SiteswapFragment siteswapFragment;
     private final Handler mHandler = new Handler() {
         @Override
         public void handleMessage(Message msg) {
@@ -19,10 +22,17 @@ public class RunSiteswapClientActivity extends ActionBarActivity {
                     Character p = (char) msg.arg1;
                     getApp().speech(p);
                     break;
+                case Constants.MESSAGE_DISPLAYUPDATE:
+                    AbstractPatternGenerator.Display d = (AbstractPatternGenerator.Display) msg.obj;
+                    siteswapFragment.setDisplay(d, AbstractPatternGenerator.Passer.B);
+                    break;
+                case Constants.MESSAGE_UPDATE_START:
+                    String v = (String) msg.obj;
+                    siteswapFragment.setStart(v);
+                    break;
             }
         }
     };
-    private SiteswapFragment siteswapFragment;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

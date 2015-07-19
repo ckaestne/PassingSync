@@ -2,6 +2,7 @@ package com.example.android.passingsync.pattern;
 
 import android.util.Pair;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
@@ -19,7 +20,7 @@ public abstract class AbstractPatternGenerator {
     /**
      * returns actions for zero to all both passers
      */
-    public abstract Map<Passer, Pair<Side,Character>> step();
+    public abstract Map<Passer, Pair<Side, Character>> step();
 
     public enum Passer {
         A,//A has straight singles
@@ -62,6 +63,18 @@ public abstract class AbstractPatternGenerator {
             this.highlight = highlight;
         }
 
+        public static Display parse(String s) {
+            String[] parts = s.split(";");
+            final List<Character> seqA = new ArrayList<>();
+            final List<Character> seqB = new ArrayList<>();
+            assert parts.length == 3;
+            for (char c : parts[0].toCharArray())
+                seqA.add(c);
+            for (char c : parts[1].toCharArray())
+                seqB.add(c);
+            return new Display(seqA, seqB, Integer.valueOf(parts[2]));
+        }
+
         @Override
         public String toString() {
             StringBuffer out = new StringBuffer();
@@ -84,6 +97,18 @@ public abstract class AbstractPatternGenerator {
                 out.append(" ");
             }
             out.append("\n");
+            return out.toString();
+        }
+
+        public String serialize() {
+            StringBuffer out = new StringBuffer();
+            for (Character a : seqA)
+                out.append(a);
+            out.append(';');
+            for (Character a : seqB)
+                out.append(a);
+            out.append(';');
+            out.append(highlight);
             return out.toString();
         }
     }

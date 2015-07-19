@@ -25,6 +25,8 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
 
+import com.example.android.passingsync.pattern.AbstractPatternGenerator;
+
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
@@ -251,6 +253,15 @@ public class BluetoothService {
         write("PASS :" + pass);
     }
 
+    public void updateDisplay(AbstractPatternGenerator.Display display) {
+        write("DISPL:" + display.serialize());
+    }
+
+    public void updateStart(AbstractPatternGenerator.StartPos start) {
+        write("INITS:" + start.toString());
+    }
+
+
     /**
      * Indicate that the connection attempt failed and notify the UI Activity.
      */
@@ -290,6 +301,7 @@ public class BluetoothService {
     public void removeHandler(Handler mHandler) {
         mHandlers.remove(mHandler);
     }
+
 
     static class StartSiteswapMsg {
         private final String siteswap;
@@ -501,6 +513,12 @@ public class BluetoothService {
                                     .sendToTarget();
                         if (msg.startsWith("PASS :"))
                             mHandler.obtainMessage(Constants.MESSAGE_PASS, msg.charAt(6), -1, null)
+                                    .sendToTarget();
+                        if (msg.startsWith("DISPL:"))
+                            mHandler.obtainMessage(Constants.MESSAGE_DISPLAYUPDATE, -1, -1, AbstractPatternGenerator.Display.parse(msg.substring(6)))
+                                    .sendToTarget();
+                        if (msg.startsWith("INITS:"))
+                            mHandler.obtainMessage(Constants.MESSAGE_UPDATE_START, -1, -1, msg.substring(6))
                                     .sendToTarget();
                     }
                 } catch (IOException e) {

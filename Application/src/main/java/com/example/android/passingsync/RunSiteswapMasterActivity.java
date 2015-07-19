@@ -121,9 +121,13 @@ public class RunSiteswapMasterActivity extends ActionBarActivity {
         pattern = new SiteswapGenerator(siteswap, 0);
         siteswapFragment.setStart(pattern.getStart(AbstractPatternGenerator.Passer.A));
         siteswapFragment.setDisplay(pattern.getDisplay(AbstractPatternGenerator.Passer.A), AbstractPatternGenerator.Passer.A);
+        updateRemoteDisplay(pattern.getDisplay(AbstractPatternGenerator.Passer.B));
+        updateRemoteStart(pattern.getStart(AbstractPatternGenerator.Passer.B));
+
         siteswapFragment.resetSiteswap();
 
     }
+
 
     @Override
     protected void onStart() {
@@ -179,6 +183,9 @@ public class RunSiteswapMasterActivity extends ActionBarActivity {
             final AbstractPatternGenerator.Side side = action.getValue().first;
             final AbstractPatternGenerator.Passer passer = action.getKey();
 
+
+            updateRemoteDisplay(pattern.getDisplay(AbstractPatternGenerator.Passer.B));
+
             runOnUiThread(new Runnable() {
                 @Override
                 public void run() {
@@ -197,6 +204,15 @@ public class RunSiteswapMasterActivity extends ActionBarActivity {
         }
 
 
+    }
+
+    private void updateRemoteDisplay(AbstractPatternGenerator.Display display) {
+        getBluetoothService().updateDisplay(display);
+    }
+
+
+    private void updateRemoteStart(AbstractPatternGenerator.StartPos start) {
+        getBluetoothService().updateStart(start);
     }
 
     private BluetoothService getBluetoothService() {
