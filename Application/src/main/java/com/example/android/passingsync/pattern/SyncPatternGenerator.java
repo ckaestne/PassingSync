@@ -13,7 +13,7 @@ public class SyncPatternGenerator extends AbstractPatternGenerator {
 
     private final String sequence;
     boolean everyOther = false;
-    private int pos = -4 - 1;
+    private int pos = -2 - 1;
 
 
     /**

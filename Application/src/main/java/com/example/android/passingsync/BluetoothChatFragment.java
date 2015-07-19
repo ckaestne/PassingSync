@@ -278,19 +278,13 @@ public class BluetoothChatFragment extends Fragment {
         });
 
         // Initialize the send button with a listener that for click events
-        mStartButton.setOnClickListener(new View.OnClickListener() {
+        mStartRandomButton.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 // Send a message using content of the edit text widget
-                View view = getView();
-                if (null != view) {
-                    TextView textView = (TextView) view.findViewById(R.id.siteswapeditor);
-                    String message = textView.getText().toString();
-                    startSiteswap('R', message);
-                }
+                startSiteswap('R', "random");
 
             }
         });
-
 
 
         mSiteswapList.setOnItemClickListener(new AdapterView.OnItemClickListener() {

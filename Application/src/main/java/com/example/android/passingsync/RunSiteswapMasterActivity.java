@@ -15,6 +15,7 @@ import android.widget.SeekBar;
 import android.widget.TextView;
 
 import com.example.android.passingsync.pattern.AbstractPatternGenerator;
+import com.example.android.passingsync.pattern.RandomSyncGenerator;
 import com.example.android.passingsync.pattern.SiteswapGenerator;
 import com.example.android.passingsync.pattern.SyncPatternGenerator;
 
@@ -35,12 +36,11 @@ public class RunSiteswapMasterActivity extends ActionBarActivity {
     private char siteswapkind;
 
     @Override
-    protected void onDestroy() {
+    protected void onStop() {
+        super.onStop();
         timer.cancel();
-//        for (MediaPlayer m: mediaPlayer.values())
-//            m.release();
-        super.onDestroy();
     }
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -123,6 +123,8 @@ public class RunSiteswapMasterActivity extends ActionBarActivity {
     private void createPattern() {
         if (siteswapkind == 'S')
             pattern = new SyncPatternGenerator(siteswap);
+        else if (siteswapkind == 'R')
+            pattern = new RandomSyncGenerator();
         else
             pattern = new SiteswapGenerator(siteswap, 0);
         siteswapFragment.setStart(pattern.getStart(AbstractPatternGenerator.Passer.A));
