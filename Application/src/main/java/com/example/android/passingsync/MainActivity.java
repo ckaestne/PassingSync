@@ -18,13 +18,8 @@
 package com.example.android.passingsync;
 
 import android.os.Bundle;
-import android.speech.tts.TextToSpeech;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
-import android.util.Log;
-
-import java.io.File;
-import java.util.HashMap;
 
 
 /**
@@ -37,6 +32,7 @@ import java.util.HashMap;
 public class MainActivity extends AppCompatActivity {
 
     public final static String EXTRA_SITESWAP = "edu.cmu.passingsync.SITESWAP";
+    public final static String EXTRA_SITESWAP_KIND = "edu.cmu.passingsync.SITESWAP_KIND";
 
 
     // Whether the Log Fragment is currently shown

@@ -16,6 +16,7 @@ import android.widget.TextView;
 
 import com.example.android.passingsync.pattern.AbstractPatternGenerator;
 import com.example.android.passingsync.pattern.SiteswapGenerator;
+import com.example.android.passingsync.pattern.SyncPatternGenerator;
 
 import java.util.Map;
 import java.util.Timer;
@@ -31,6 +32,7 @@ public class RunSiteswapMasterActivity extends ActionBarActivity {
     private String siteswap;
     private SiteswapFragment siteswapFragment;
     private AbstractPatternGenerator pattern;
+    private char siteswapkind;
 
     @Override
     protected void onDestroy() {
@@ -47,6 +49,7 @@ public class RunSiteswapMasterActivity extends ActionBarActivity {
         setContentView(R.layout.activity_run_siteswap);
         Intent intent = getIntent();
         siteswap = intent.getStringExtra(MainActivity.EXTRA_SITESWAP);
+        siteswapkind = intent.getCharExtra(MainActivity.EXTRA_SITESWAP_KIND, 'W');
 
 
         if (savedInstanceState == null) {
@@ -118,7 +121,10 @@ public class RunSiteswapMasterActivity extends ActionBarActivity {
     }
 
     private void createPattern() {
-        pattern = new SiteswapGenerator(siteswap, 0);
+        if (siteswapkind == 'S')
+            pattern = new SyncPatternGenerator(siteswap);
+        else
+            pattern = new SiteswapGenerator(siteswap, 0);
         siteswapFragment.setStart(pattern.getStart(AbstractPatternGenerator.Passer.A));
         siteswapFragment.setDisplay(pattern.getDisplay(AbstractPatternGenerator.Passer.A), AbstractPatternGenerator.Passer.A);
         updateRemoteDisplay(pattern.getDisplay(AbstractPatternGenerator.Passer.B));
@@ -177,8 +183,8 @@ public class RunSiteswapMasterActivity extends ActionBarActivity {
     }
 
     private synchronized void performPassingStep() {
-        Map<AbstractPatternGenerator.Passer, Pair<AbstractPatternGenerator.Side,Character>> actions = pattern.step();
-        for (final Map.Entry<AbstractPatternGenerator.Passer, Pair<AbstractPatternGenerator.Side,Character>> action : actions.entrySet()) {
+        Map<AbstractPatternGenerator.Passer, Pair<AbstractPatternGenerator.Side, Character>> actions = pattern.step();
+        for (final Map.Entry<AbstractPatternGenerator.Passer, Pair<AbstractPatternGenerator.Side, Character>> action : actions.entrySet()) {
             final Character pass = action.getValue().second;
             final AbstractPatternGenerator.Side side = action.getValue().first;
             final AbstractPatternGenerator.Passer passer = action.getKey();
@@ -189,7 +195,7 @@ public class RunSiteswapMasterActivity extends ActionBarActivity {
             runOnUiThread(new Runnable() {
                 @Override
                 public void run() {
-                    if (passer== AbstractPatternGenerator.Passer.A)
+                    if (passer == AbstractPatternGenerator.Passer.A)
                         siteswapFragment.setThrow(pass, side);
                     siteswapFragment.setDisplay(pattern.getDisplay(AbstractPatternGenerator.Passer.A), AbstractPatternGenerator.Passer.A);
                 }

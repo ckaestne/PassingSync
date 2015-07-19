@@ -277,7 +277,7 @@ public class BluetoothService {
         // Start the service over to restart listening mode
         BluetoothService.this.start();
     }
-    
+
     /**
      * Indicate that the connection was lost and notify the UI Activity.
      */
@@ -498,28 +498,34 @@ public class BluetoothService {
 //            Log.i(TAG, "BEGIN mConnectedThread");
             byte[] buffer = new byte[1024];
             int bytes;
+            String received = "";
 
             // Keep listening to the InputStream while connected
             while (true) {
                 try {
                     // Read from the InputStream
                     bytes = mmInStream.read(buffer);
-                    String msg = new String(buffer, 0, bytes);
-
-                    // Send the obtained bytes to the UI Activity
-                    for (Handler mHandler : mHandlers) {
-                        if (msg.startsWith("START:"))
-                            mHandler.obtainMessage(Constants.MESSAGE_STARTSITESWAP, -1, -1, msg.substring(6))
-                                    .sendToTarget();
-                        if (msg.startsWith("PASS :"))
-                            mHandler.obtainMessage(Constants.MESSAGE_PASS, msg.charAt(6), -1, null)
-                                    .sendToTarget();
-                        if (msg.startsWith("DISPL:"))
-                            mHandler.obtainMessage(Constants.MESSAGE_DISPLAYUPDATE, -1, -1, AbstractPatternGenerator.Display.parse(msg.substring(6)))
-                                    .sendToTarget();
-                        if (msg.startsWith("INITS:"))
-                            mHandler.obtainMessage(Constants.MESSAGE_UPDATE_START, -1, -1, msg.substring(6))
-                                    .sendToTarget();
+//                    String msg =
+                    received += new String(buffer, 0, bytes);
+                    String[] msgs = received.split("!", Integer.MAX_VALUE);
+                    for (int i = 0; i < msgs.length - 1; i++) {
+                        String msg = msgs[i];
+                        // Send the obtained bytes to the UI Activity
+                        for (Handler mHandler : mHandlers) {
+                            if (msg.startsWith("START:"))
+                                mHandler.obtainMessage(Constants.MESSAGE_STARTSITESWAP, -1, -1, msg.substring(6))
+                                        .sendToTarget();
+                            if (msg.startsWith("PASS :"))
+                                mHandler.obtainMessage(Constants.MESSAGE_PASS, msg.charAt(6), -1, null)
+                                        .sendToTarget();
+                            if (msg.startsWith("DISPL:"))
+                                mHandler.obtainMessage(Constants.MESSAGE_DISPLAYUPDATE, -1, -1, AbstractPatternGenerator.Display.parse(msg.substring(6)))
+                                        .sendToTarget();
+                            if (msg.startsWith("INITS:"))
+                                mHandler.obtainMessage(Constants.MESSAGE_UPDATE_START, -1, -1, msg.substring(6))
+                                        .sendToTarget();
+                        }
+                        received = msgs[msgs.length - 1];
                     }
                 } catch (IOException e) {
 //                    Log.e(TAG, "disconnected", e);
@@ -538,7 +544,7 @@ public class BluetoothService {
          */
         public void write(String buffer) {
             try {
-                mmOutStream.write(buffer.getBytes());
+                mmOutStream.write((buffer + "!").getBytes());
 
                 // Share the sent message back to the UI Activity
 //                for (Handler mHandler : mHandlers)

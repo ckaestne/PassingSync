@@ -60,6 +60,8 @@ public class BluetoothChatFragment extends Fragment {
     private ListView mSiteswapList;
     private EditText mSiteswapEditor;
     private Button mStartButton;
+    private Button mStartSyncButton;
+    private Button mStartRandomButton;
 
     /**
      * Name of the connected device
@@ -137,7 +139,7 @@ public class BluetoothChatFragment extends Fragment {
             // If the action is a key-up event on the return key, send the message
             if (actionId == EditorInfo.IME_NULL && event.getAction() == KeyEvent.ACTION_UP) {
                 String message = view.getText().toString();
-                startSiteswap(message);
+                startSiteswap('W', message);
             }
             return true;
         }
@@ -219,6 +221,8 @@ public class BluetoothChatFragment extends Fragment {
         mSiteswapList = (ListView) view.findViewById(R.id.siteswaplist);
         mSiteswapEditor = (EditText) view.findViewById(R.id.siteswapeditor);
         mStartButton = (Button) view.findViewById(R.id.button_send);
+        mStartSyncButton = (Button) view.findViewById(R.id.button_sync);
+        mStartRandomButton = (Button) view.findViewById(R.id.button_random);
     }
 
     /**
@@ -253,11 +257,41 @@ public class BluetoothChatFragment extends Fragment {
                 if (null != view) {
                     TextView textView = (TextView) view.findViewById(R.id.siteswapeditor);
                     String message = textView.getText().toString();
-                    startSiteswap(message);
+                    startSiteswap('W', message);
                 }
 
             }
         });
+
+        // Initialize the send button with a listener that for click events
+        mStartSyncButton.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                // Send a message using content of the edit text widget
+                View view = getView();
+                if (null != view) {
+                    TextView textView = (TextView) view.findViewById(R.id.siteswapeditor);
+                    String message = textView.getText().toString();
+                    startSiteswap('S', message);
+                }
+
+            }
+        });
+
+        // Initialize the send button with a listener that for click events
+        mStartButton.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                // Send a message using content of the edit text widget
+                View view = getView();
+                if (null != view) {
+                    TextView textView = (TextView) view.findViewById(R.id.siteswapeditor);
+                    String message = textView.getText().toString();
+                    startSiteswap('R', message);
+                }
+
+            }
+        });
+
+
 
         mSiteswapList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
@@ -287,7 +321,7 @@ public class BluetoothChatFragment extends Fragment {
      *
      * @param siteswap A string of text to send.
      */
-    private void startSiteswap(String siteswap) {
+    private void startSiteswap(Character kind, String siteswap) {
         // Check that we're actually connected before trying anything
         if (getBluetoothService().getState() != BluetoothService.STATE_CONNECTED) {
             Toast.makeText(getActivity(), "Warning, starting siteswap without connection!", Toast.LENGTH_LONG).show();
@@ -297,6 +331,7 @@ public class BluetoothChatFragment extends Fragment {
         if (siteswap.length() > 0) {
             Intent intent = new Intent(getActivity(), RunSiteswapMasterActivity.class);
             intent.putExtra(MainActivity.EXTRA_SITESWAP, siteswap);
+            intent.putExtra(MainActivity.EXTRA_SITESWAP_KIND, kind);
             startActivity(intent);
 
             getBluetoothService().startSiteswap(siteswap);
