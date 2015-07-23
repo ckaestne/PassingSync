@@ -13,6 +13,8 @@ import android.util.Pair;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.CheckBox;
+import android.widget.CompoundButton;
 import android.widget.EditText;
 import android.widget.SeekBar;
 import android.widget.TextView;
@@ -67,7 +69,7 @@ public class RunSiteswapMasterActivity extends ActionBarActivity {
 
 
 //        mSiteswapList = (ListView) view.findViewById(R.id.siteswaplist);
-        View view = findViewById(R.id.runsiteswaplayout);
+        final View view = findViewById(R.id.runsiteswaplayout);
         TextView siteswapName = (TextView) view.findViewById(R.id.siteswapName);
         siteswapName.setText(siteswap);
 
@@ -121,9 +123,50 @@ public class RunSiteswapMasterActivity extends ActionBarActivity {
 
         );
 
+        final SeekBar metronomeDelaySeekBar = (SeekBar) view.findViewById(R.id.metronomeOffsetSeekBar);
+        metronomeDelaySeekBar.setOnSeekBarChangeListener(
+                new SeekBar.OnSeekBarChangeListener() {
+                    @Override
+                    public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
+                        updateMetronomeSettings(view);
+                    }
+
+                    @Override
+                    public void onStartTrackingTouch(SeekBar seekBar) {
+
+                    }
+
+                    @Override
+                    public void onStopTrackingTouch(SeekBar seekBar) {
+
+                    }
+                }
+        );
+
+        final CheckBox metronomeEnabledCheckBox = (CheckBox) view.findViewById((R.id.enableMetronomeCheckBox));
+        metronomeEnabledCheckBox.setOnCheckedChangeListener(
+                new CompoundButton.OnCheckedChangeListener() {
+                    @Override
+                    public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                        updateMetronomeSettings(view);
+                    }
+                }
+        );
 
         speedEdit.setText("80");
+        updateMetronomeSettings(view);
+    }
 
+    private void updateMetronomeSettings(View view) {
+        final CheckBox metronomeEnabledCheckBox = (CheckBox) view.findViewById(R.id.enableMetronomeCheckBox);
+        final SeekBar metronomeDelaySeekBar = (SeekBar) view.findViewById(R.id.metronomeOffsetSeekBar);
+
+        if (metronomeEnabledCheckBox.isChecked()) {
+            metronomeDelay = (int) ((metronomeDelaySeekBar.getProgress() / 100.0) * (60000.0 / speed));
+        } else {
+            metronomeDelay = -1;
+        }
+        updateRemoteMetronomeDelay(metronomeDelay);
     }
 
     private void createPattern() {
@@ -249,7 +292,7 @@ public class RunSiteswapMasterActivity extends ActionBarActivity {
 
     private void playSound(Character pass) {
         getApp().speech(pass);
-        if (metronomeDelay>0)
+        if (metronomeDelay >= 0)
             handler.postDelayed(new Runnable() {
                 @Override
                 public void run() {

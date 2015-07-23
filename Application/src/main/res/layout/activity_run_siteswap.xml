@@ -41,7 +41,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/speedSeekbar"
-            android:layout_weight="1" />
+            android:layout_weight="1"
+            android:max="100" />
     </LinearLayout>
 
     <LinearLayout
@@ -53,7 +54,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Metronome"
-            android:id="@+id/enableMetronomeCheckBox" />
+            android:id="@+id/enableMetronomeCheckBox"
+            android:enabled="true"
+            android:checked="true" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -66,7 +69,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/metronomeOffsetSeekBar"
-            android:layout_weight="1" />
+            android:layout_weight="1"
+            android:progress="50" />
     </LinearLayout>
 
     <LinearLayout

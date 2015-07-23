@@ -25,7 +25,7 @@ public class RunSiteswapClientActivity extends ActionBarActivity {
                 case Constants.MESSAGE_PASS:
                     Character p = (char) msg.arg1;
                     getApp().speech(p);
-                    if (metronomeDelay>0)
+                    if (metronomeDelay>=0)
                         this.postDelayed(new Runnable() {
                             @Override
                             public void run() {
