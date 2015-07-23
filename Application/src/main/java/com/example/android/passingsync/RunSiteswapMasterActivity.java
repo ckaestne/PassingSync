@@ -2,6 +2,7 @@ package com.example.android.passingsync;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.Handler;
 import android.os.PowerManager;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.ActionBarActivity;
@@ -37,6 +38,7 @@ public class RunSiteswapMasterActivity extends ActionBarActivity {
     private AbstractPatternGenerator pattern;
     private char siteswapkind;
     private PowerManager.WakeLock wakeLock;
+    int metronomeDelay = 500;
 
     @Override
     protected void onStop() {
@@ -135,6 +137,7 @@ public class RunSiteswapMasterActivity extends ActionBarActivity {
         siteswapFragment.setDisplay(pattern.getDisplay(AbstractPatternGenerator.Passer.A), AbstractPatternGenerator.Passer.A);
         updateRemoteDisplay(pattern.getDisplay(AbstractPatternGenerator.Passer.B));
         updateRemoteStart(pattern.getStart(AbstractPatternGenerator.Passer.B));
+        updateRemoteMetronomeDelay(metronomeDelay);
 
         siteswapFragment.resetSiteswap();
 
@@ -144,7 +147,7 @@ public class RunSiteswapMasterActivity extends ActionBarActivity {
     @Override
     protected void onStart() {
         super.onStart();
-        Log.w("PASS","onStart");
+        Log.w("PASS", "onStart");
 
         PowerManager powerManager = (PowerManager) getSystemService(POWER_SERVICE);
         wakeLock = powerManager.newWakeLock(PowerManager.PARTIAL_WAKE_LOCK,
@@ -234,12 +237,29 @@ public class RunSiteswapMasterActivity extends ActionBarActivity {
         getBluetoothService().updateStart(start);
     }
 
+    private void updateRemoteMetronomeDelay(int delay) {
+        getBluetoothService().updateMetronomeDelay(delay);
+    }
+
     private BluetoothService getBluetoothService() {
         return ((PassingSyncApplication) getApplicationContext()).getBluetoothService();
     }
 
+    private final Handler handler = new Handler();
+
     private void playSound(Character pass) {
-        ((PassingSyncApplication) getApplicationContext()).speech(pass);
+        getApp().speech(pass);
+        if (metronomeDelay>0)
+            handler.postDelayed(new Runnable() {
+                @Override
+                public void run() {
+                    getApp().speech('b');
+                }
+            }, metronomeDelay);
+    }
+
+    private PassingSyncApplication getApp() {
+        return (PassingSyncApplication) getApplicationContext();
     }
 
 

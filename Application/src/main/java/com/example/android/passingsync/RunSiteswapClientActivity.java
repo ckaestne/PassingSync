@@ -10,9 +10,13 @@ import android.view.MenuItem;
 
 import com.example.android.passingsync.pattern.AbstractPatternGenerator;
 
+import java.util.Timer;
+import java.util.TimerTask;
+
 
 public class RunSiteswapClientActivity extends ActionBarActivity {
 
+    int metronomeDelay = 500;
     private SiteswapFragment siteswapFragment;
     private final Handler mHandler = new Handler() {
         @Override
@@ -21,6 +25,13 @@ public class RunSiteswapClientActivity extends ActionBarActivity {
                 case Constants.MESSAGE_PASS:
                     Character p = (char) msg.arg1;
                     getApp().speech(p);
+                    if (metronomeDelay>0)
+                        this.postDelayed(new Runnable() {
+                            @Override
+                            public void run() {
+                                getApp().speech('b');
+                            }
+                        }, metronomeDelay);
                     break;
                 case Constants.MESSAGE_DISPLAYUPDATE:
                     AbstractPatternGenerator.Display d = (AbstractPatternGenerator.Display) msg.obj;

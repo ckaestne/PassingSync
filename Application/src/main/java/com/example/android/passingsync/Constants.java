@@ -29,6 +29,7 @@ public interface Constants {
     public static final int MESSAGE_TOAST = 5;
     public static final int MESSAGE_DISPLAYUPDATE = 6;
     public static final int MESSAGE_UPDATE_START = 7;
+    public static final int MESSAGE_UPDATE_METRONOMEDELAY = 8;
 
     // Key names received from the BluetoothService Handler
     public static final String DEVICE_NAME = "device_name";

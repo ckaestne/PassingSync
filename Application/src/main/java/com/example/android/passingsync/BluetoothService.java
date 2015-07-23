@@ -261,6 +261,9 @@ public class BluetoothService {
         write("INITS:" + start.toString());
     }
 
+    public void updateMetronomeDelay(int delay) {
+        write("DELAY:" + delay);
+    }
 
     /**
      * Indicate that the connection attempt failed and notify the UI Activity.
@@ -301,6 +304,8 @@ public class BluetoothService {
     public void removeHandler(Handler mHandler) {
         mHandlers.remove(mHandler);
     }
+
+
 
 
     static class StartSiteswapMsg {
@@ -523,6 +528,9 @@ public class BluetoothService {
                                         .sendToTarget();
                             if (msg.startsWith("INITS:"))
                                 mHandler.obtainMessage(Constants.MESSAGE_UPDATE_START, -1, -1, msg.substring(6))
+                                        .sendToTarget();
+                            if (msg.startsWith("DELAY:"))
+                                mHandler.obtainMessage(Constants.MESSAGE_UPDATE_METRONOMEDELAY, Integer.parseInt(msg.substring(6)), -1, null)
                                         .sendToTarget();
                         }
                         received = msgs[msgs.length - 1];

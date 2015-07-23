@@ -5,6 +5,7 @@ import android.bluetooth.BluetoothAdapter;
 import android.media.AudioManager;
 import android.media.MediaPlayer;
 import android.media.SoundPool;
+import android.media.ToneGenerator;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -51,7 +52,7 @@ private final SoundPool soundPool = new SoundPool(5, AudioManager.STREAM_MUSIC,0
         speechText.put('u', "up");
         speechText.put('d', "down");
 
-        soundIds.put('0',soundPool.load(this, R.raw.p0, 1));
+//        soundIds.put('0',soundPool.load(this, R.raw.p0, 1));
         soundIds.put('2',soundPool.load(this, R.raw.p2, 1));
         soundIds.put('4',soundPool.load(this, R.raw.p4, 1));
         soundIds.put('5',soundPool.load(this, R.raw.p5, 1));
@@ -60,9 +61,9 @@ private final SoundPool soundPool = new SoundPool(5, AudioManager.STREAM_MUSIC,0
         soundIds.put('8',soundPool.load(this, R.raw.p8, 1));
         soundIds.put('9',soundPool.load(this, R.raw.p9, 1));
         soundIds.put('a',soundPool.load(this, R.raw.pa, 1));
-        soundIds.put('u',soundPool.load(this, R.raw.p4, 1));
-        soundIds.put('d',soundPool.load(this, R.raw.p4, 1));
-        soundIds.put('b',soundPool.load(this, R.raw.p0, 1));
+//        soundIds.put('u',soundPool.load(this, R.raw.p4, 1));
+//        soundIds.put('d',soundPool.load(this, R.raw.p4, 1));
+        soundIds.put('b',soundPool.load(this, R.raw.click, 1));
 //        players.put('0', MediaPlayer.create(this, R.raw.p0));
 //        players.put('2', MediaPlayer.create(this, R.raw.p2));
 //        players.put('4', MediaPlayer.create(this, R.raw.p4));
@@ -111,11 +112,20 @@ private final SoundPool soundPool = new SoundPool(5, AudioManager.STREAM_MUSIC,0
 
         if (soundIds.containsKey(p)) {
             int soundId = soundIds.get(p);
-            soundPool.play(soundId,1,1,0,0,1);
+            float volume=1;
+            if (p=='b')
+                volume=.5f;
+            soundPool.play(soundId,volume,volume,0,0,1);
+//            soundPool.play(soundIds.get('b'),0.5f,0.5f,0,0,1);
 //            player.seekTo(0);
 //            player.start();
-        }
+        } else beep();
 
+    }
+
+    public void beep(){
+        ToneGenerator toneG = new ToneGenerator(AudioManager.STREAM_MUSIC, 100);
+        toneG.startTone(ToneGenerator.TONE_PROP_BEEP, 100);
     }
 
     @Override

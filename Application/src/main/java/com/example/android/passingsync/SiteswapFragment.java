@@ -27,8 +27,10 @@ public class SiteswapFragment extends Fragment {
     private TableLayout patternDisplay;
     private TableRow passerBRow;
 
-//    private OnFragmentInteractionListener mListener;
-private TableRow passerARow;
+
+
+    //    private OnFragmentInteractionListener mListener;
+    private TableRow passerARow;
     private TextView startText;
     private int displaySize = -1;
 
