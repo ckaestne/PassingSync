@@ -2,7 +2,9 @@ package com.example.android.passingsync;
 
 import android.app.Application;
 import android.bluetooth.BluetoothAdapter;
+import android.media.AudioManager;
 import android.media.MediaPlayer;
+import android.media.SoundPool;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -16,8 +18,9 @@ public class PassingSyncApplication extends Application {
 
 //    private final Map<Character, File> speechFiles = new HashMap<>();
     private final Map<Character, String> speechText = new HashMap<>();
-    private final Map<Character, MediaPlayer> players = new HashMap<>();
-
+//    private final Map<Character, MediaPlayer> players = new HashMap<>();
+    private final Map<Character, Integer> soundIds = new HashMap<>();
+private final SoundPool soundPool = new SoundPool(5, AudioManager.STREAM_MUSIC,0);
 
     /**
      * Local Bluetooth adapter
@@ -35,6 +38,7 @@ public class PassingSyncApplication extends Application {
         super.onCreate();
 
         speechText.clear();
+
         speechText.put('0', "wait");
         speechText.put('2', "zip");
         speechText.put('4', "flip");
@@ -47,17 +51,29 @@ public class PassingSyncApplication extends Application {
         speechText.put('u', "up");
         speechText.put('d', "down");
 
-        players.put('0', MediaPlayer.create(this, R.raw.p0));
-        players.put('2', MediaPlayer.create(this, R.raw.p2));
-        players.put('4', MediaPlayer.create(this, R.raw.p4));
-        players.put('5', MediaPlayer.create(this, R.raw.p5));
-        players.put('6', MediaPlayer.create(this, R.raw.p6));
-        players.put('7', MediaPlayer.create(this, R.raw.p7));
-        players.put('8', MediaPlayer.create(this, R.raw.p8));
-        players.put('9', MediaPlayer.create(this, R.raw.p9));
-        players.put('a', MediaPlayer.create(this, R.raw.pa));
-        players.put('u', MediaPlayer.create(this, R.raw.p4));
-        players.put('d', MediaPlayer.create(this, R.raw.p4));
+        soundIds.put('0',soundPool.load(this, R.raw.p0, 1));
+        soundIds.put('2',soundPool.load(this, R.raw.p2, 1));
+        soundIds.put('4',soundPool.load(this, R.raw.p4, 1));
+        soundIds.put('5',soundPool.load(this, R.raw.p5, 1));
+        soundIds.put('6',soundPool.load(this, R.raw.p6, 1));
+        soundIds.put('7',soundPool.load(this, R.raw.p7, 1));
+        soundIds.put('8',soundPool.load(this, R.raw.p8, 1));
+        soundIds.put('9',soundPool.load(this, R.raw.p9, 1));
+        soundIds.put('a',soundPool.load(this, R.raw.pa, 1));
+        soundIds.put('u',soundPool.load(this, R.raw.p4, 1));
+        soundIds.put('d',soundPool.load(this, R.raw.p4, 1));
+        soundIds.put('b',soundPool.load(this, R.raw.p0, 1));
+//        players.put('0', MediaPlayer.create(this, R.raw.p0));
+//        players.put('2', MediaPlayer.create(this, R.raw.p2));
+//        players.put('4', MediaPlayer.create(this, R.raw.p4));
+//        players.put('5', MediaPlayer.create(this, R.raw.p5));
+//        players.put('6', MediaPlayer.create(this, R.raw.p6));
+//        players.put('7', MediaPlayer.create(this, R.raw.p7));
+//        players.put('8', MediaPlayer.create(this, R.raw.p8));
+//        players.put('9', MediaPlayer.create(this, R.raw.p9));
+//        players.put('a', MediaPlayer.create(this, R.raw.pa));
+//        players.put('u', MediaPlayer.create(this, R.raw.p4));
+//        players.put('d', MediaPlayer.create(this, R.raw.p4));
 
 //        mTts = new TextToSpeech(getBaseContext(), new TextToSpeech.OnInitListener() {
 //            @Override
@@ -93,10 +109,11 @@ public class PassingSyncApplication extends Application {
 //            players.put(p, MediaPlayer.create(this, Uri.fromFile(f)));
 //        }
 
-        if (players.containsKey(p)) {
-            MediaPlayer player = players.get(p);
-            player.seekTo(0);
-            player.start();
+        if (soundIds.containsKey(p)) {
+            int soundId = soundIds.get(p);
+            soundPool.play(soundId,1,1,0,0,1);
+//            player.seekTo(0);
+//            player.start();
         }
 
     }

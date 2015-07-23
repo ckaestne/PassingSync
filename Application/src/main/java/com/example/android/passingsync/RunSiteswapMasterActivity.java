@@ -2,10 +2,12 @@ package com.example.android.passingsync;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.PowerManager;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.ActionBarActivity;
 import android.text.Editable;
 import android.text.TextWatcher;
+import android.util.Log;
 import android.util.Pair;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -34,10 +36,12 @@ public class RunSiteswapMasterActivity extends ActionBarActivity {
     private SiteswapFragment siteswapFragment;
     private AbstractPatternGenerator pattern;
     private char siteswapkind;
+    private PowerManager.WakeLock wakeLock;
 
     @Override
     protected void onStop() {
         super.onStop();
+        wakeLock.release();
         timer.cancel();
     }
 
@@ -140,6 +144,13 @@ public class RunSiteswapMasterActivity extends ActionBarActivity {
     @Override
     protected void onStart() {
         super.onStart();
+        Log.w("PASS","onStart");
+
+        PowerManager powerManager = (PowerManager) getSystemService(POWER_SERVICE);
+        wakeLock = powerManager.newWakeLock(PowerManager.PARTIAL_WAKE_LOCK,
+                "MyWakelockTag");
+        wakeLock.acquire();
+
         createPattern();
     }
 
