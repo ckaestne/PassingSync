@@ -41,6 +41,9 @@ public class RunSiteswapClientActivity extends ActionBarActivity {
                     String v = (String) msg.obj;
                     siteswapFragment.setStart(v);
                     break;
+                case Constants.MESSAGE_UPDATE_METRONOMEDELAY:
+                    metronomeDelay=msg.arg1;
+                    break;
             }
         }
     };
