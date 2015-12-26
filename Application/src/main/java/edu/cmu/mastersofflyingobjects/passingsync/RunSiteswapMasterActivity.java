@@ -1,4 +1,4 @@
-package com.example.android.passingsync;
+package edu.cmu.mastersofflyingobjects.passingsync;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -19,10 +19,10 @@ import android.widget.EditText;
 import android.widget.SeekBar;
 import android.widget.TextView;
 
-import com.example.android.passingsync.pattern.AbstractPatternGenerator;
-import com.example.android.passingsync.pattern.RandomSyncGenerator;
-import com.example.android.passingsync.pattern.SiteswapGenerator;
-import com.example.android.passingsync.pattern.SyncPatternGenerator;
+import edu.cmu.mastersofflyingobjects.passingsync.pattern.AbstractPatternGenerator;
+import edu.cmu.mastersofflyingobjects.passingsync.pattern.RandomSyncGenerator;
+import edu.cmu.mastersofflyingobjects.passingsync.pattern.SiteswapGenerator;
+import edu.cmu.mastersofflyingobjects.passingsync.pattern.SyncPatternGenerator;
 
 import java.util.Map;
 import java.util.Timer;

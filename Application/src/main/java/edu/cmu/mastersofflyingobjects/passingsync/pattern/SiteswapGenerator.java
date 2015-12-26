@@ -1,4 +1,4 @@
-package com.example.android.passingsync.pattern;
+package edu.cmu.mastersofflyingobjects.passingsync.pattern;
 
 import android.util.Pair;
 

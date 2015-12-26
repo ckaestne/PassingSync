@@ -2,7 +2,7 @@
     xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="com.example.android.passingsync.RunSiteswapClientActivity">
+    tools:context="edu.cmu.mastersofflyingobjects.passingsync.RunSiteswapClientActivity">
 
     <FrameLayout
         android:layout_width="match_parent"

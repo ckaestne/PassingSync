@@ -4,7 +4,7 @@
     android:layout_gravity="center_horizontal"
 
     android:layout_weight="1"
-    tools:context="com.example.android.passingsync.SiteswapFragment">
+    tools:context="edu.cmu.mastersofflyingobjects.passingsync.SiteswapFragment">
 
 
     <TableLayout

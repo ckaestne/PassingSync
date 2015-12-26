@@ -15,7 +15,7 @@
 */
 
 
-package com.example.android.passingsync;
+package edu.cmu.mastersofflyingobjects.passingsync;
 
 import android.os.Bundle;
 import android.support.v4.app.FragmentTransaction;

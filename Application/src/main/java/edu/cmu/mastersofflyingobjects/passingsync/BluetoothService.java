@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.example.android.passingsync;
+package edu.cmu.mastersofflyingobjects.passingsync;
 
 import android.bluetooth.BluetoothAdapter;
 import android.bluetooth.BluetoothDevice;
@@ -25,7 +25,7 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
 
-import com.example.android.passingsync.pattern.AbstractPatternGenerator;
+import edu.cmu.mastersofflyingobjects.passingsync.pattern.AbstractPatternGenerator;
 
 import java.io.IOException;
 import java.io.InputStream;

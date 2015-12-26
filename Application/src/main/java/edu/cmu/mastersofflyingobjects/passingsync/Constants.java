@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.example.android.passingsync;
+package edu.cmu.mastersofflyingobjects.passingsync;
 
 /**
  * Defines several constants used between {@link BluetoothService} and the UI.

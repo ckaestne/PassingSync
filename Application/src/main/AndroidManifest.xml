@@ -15,7 +15,7 @@
  limitations under the License.
 -->
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.android.passingsync"
+    package="edu.cmu.mastersofflyingobjects.passingsync"
     android:versionCode="1"
     android:versionName="1.0" >
 
@@ -30,11 +30,11 @@
     <application
         android:allowBackup="true"
         android:icon="@drawable/ic_launcher"
-        android:name=".PassingSyncApplication"
+        android:name="edu.cmu.mastersofflyingobjects.passingsync.PassingSyncApplication"
         android:label="@string/app_name"
         android:theme="@style/Theme.AppCompat.Light" >
         <activity
-            android:name=".MainActivity"
+            android:name="edu.cmu.mastersofflyingobjects.passingsync.MainActivity"
             android:configChanges="orientation|keyboardHidden"
             android:label="@string/app_name" >
             <intent-filter>
@@ -44,22 +44,22 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".DeviceListActivity"
+            android:name="edu.cmu.mastersofflyingobjects.passingsync.DeviceListActivity"
             android:configChanges="orientation|keyboardHidden"
             android:label="@string/select_device"
             android:theme="@android:style/Theme.Dialog" />
         <activity
-            android:name=".RunSiteswapMasterActivity"
+            android:name="edu.cmu.mastersofflyingobjects.passingsync.RunSiteswapMasterActivity"
             android:label="@string/title_activity_run_siteswap"
-            android:parentActivityName=".MainActivity" >
+            android:parentActivityName="edu.cmu.mastersofflyingobjects.passingsync.MainActivity" >
         </activity>
         <activity
-            android:name=".RunSiteswapClientActivity"
+            android:name="edu.cmu.mastersofflyingobjects.passingsync.RunSiteswapClientActivity"
             android:label="@string/title_activity_run_siteswap_client"
-            android:parentActivityName=".MainActivity" >
+            android:parentActivityName="edu.cmu.mastersofflyingobjects.passingsync.MainActivity" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.example.android.passingsync.MainActivity" />
+                android:value="edu.cmu.mastersofflyingobjects.passingsync.MainActivity" />
         </activity>
     </application>
 

@@ -2,7 +2,7 @@
     xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="com.example.android.passingsync.RunSiteswapMasterActivity"
+    tools:context="edu.cmu.mastersofflyingobjects.passingsync.RunSiteswapMasterActivity"
     android:id="@+id/runsiteswaplayout"
     android:weightSum="1"
     android:gravity="fill_horizontal|fill_vertical">

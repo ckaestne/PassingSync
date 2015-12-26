@@ -1,4 +1,4 @@
-package com.example.android.passingsync;
+package edu.cmu.mastersofflyingobjects.passingsync;
 
 import android.os.Bundle;
 import android.os.Handler;
@@ -8,10 +8,7 @@ import android.support.v7.app.ActionBarActivity;
 import android.view.Menu;
 import android.view.MenuItem;
 
-import com.example.android.passingsync.pattern.AbstractPatternGenerator;
-
-import java.util.Timer;
-import java.util.TimerTask;
+import edu.cmu.mastersofflyingobjects.passingsync.pattern.AbstractPatternGenerator;
 
 
 public class RunSiteswapClientActivity extends ActionBarActivity {

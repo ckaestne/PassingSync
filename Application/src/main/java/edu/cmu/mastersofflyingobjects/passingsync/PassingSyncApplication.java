@@ -1,9 +1,8 @@
-package com.example.android.passingsync;
+package edu.cmu.mastersofflyingobjects.passingsync;
 
 import android.app.Application;
 import android.bluetooth.BluetoothAdapter;
 import android.media.AudioManager;
-import android.media.MediaPlayer;
 import android.media.SoundPool;
 import android.media.ToneGenerator;
 
