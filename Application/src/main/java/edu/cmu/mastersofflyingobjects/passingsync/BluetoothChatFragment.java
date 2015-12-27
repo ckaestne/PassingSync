@@ -62,6 +62,7 @@ public class BluetoothChatFragment extends Fragment {
     private Button mStartButton;
     private Button mStartSyncButton;
     private Button mStartRandomButton;
+    private Button mStartRandomSwButton;
 
     /**
      * Name of the connected device
@@ -224,6 +225,7 @@ public class BluetoothChatFragment extends Fragment {
         mStartButton = (Button) view.findViewById(R.id.button_send);
         mStartSyncButton = (Button) view.findViewById(R.id.button_sync);
         mStartRandomButton = (Button) view.findViewById(R.id.button_random);
+        mStartRandomSwButton = (Button) view.findViewById(R.id.button_randomsw);
     }
 
     /**
@@ -283,6 +285,15 @@ public class BluetoothChatFragment extends Fragment {
             public void onClick(View v) {
                 // Send a message using content of the edit text widget
                 startSiteswap('R', "random");
+
+            }
+        });
+
+        // Initialize the send button with a listener that for click events
+        mStartRandomSwButton.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                // Send a message using content of the edit text widget
+                startSiteswap('T', "random siteswap");
 
             }
         });

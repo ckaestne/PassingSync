@@ -6,11 +6,19 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.HashMap;
 import java.util.HashSet;
+import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
+import java.util.Random;
 
 
 public class RandomSiteswapGenerator extends AbstractPatternGenerator {
+
+    public RandomSiteswapGenerator(int seed) {
+        r = new Random(seed);
+        initRandomSiteswapSeq(seed);
+    }
+
 
     //    static byte[2047,2047]
     static final Map<Integer, SiteswapState> stateCache = new HashMap<>();
@@ -44,14 +52,14 @@ public class RandomSiteswapGenerator extends AbstractPatternGenerator {
         while (!stable) {
             stable = true;
 
-            for (SiteswapState s : new HashSet<>( result.keySet()))
+            for (SiteswapState s : new HashSet<>(result.keySet()))
                 if (result.get(s).isEmpty()) {
                     result.remove(s);
                     stable = false;
                 }
             for (SiteswapState s : result.keySet()) {
                 Map<SiteswapState, Integer> transitions = result.get(s);
-                for (SiteswapState target: new HashSet<>(transitions.keySet()))
+                for (SiteswapState target : new HashSet<>(transitions.keySet()))
                     if (!result.containsKey(target)) {
                         transitions.remove(target);
                         stable = false;
@@ -96,7 +104,7 @@ public class RandomSiteswapGenerator extends AbstractPatternGenerator {
             } else {
                 assert state % 2 == 1 : "cannot throw now";
 
-                return SiteswapState.create((state >> 1) | (int) Math.pow(2, athrow-1));
+                return SiteswapState.create((state >> 1) | (int) Math.pow(2, athrow - 1));
             }
 
         }
@@ -157,8 +165,27 @@ public class RandomSiteswapGenerator extends AbstractPatternGenerator {
         }
     }
 
+    private final Random r;
+    //always stores the next 30 steps; new random steps added to the end, current passes removed from the beginning
+    private final LinkedList<Integer> siteswapSeq = new LinkedList<>();
+    private RandomSiteswapGenerator.SiteswapState lastState;
 
-    boolean everyOther = false;
+    private void initRandomSiteswapSeq(int seed) {
+        lastState = RandomSiteswapGenerator.SiteswapState.create(31);
+        for (int i = 0; i < 60; i++) {
+            addRandomSiteswapStep();
+        }
+    }
+
+    private void addRandomSiteswapStep() {
+        Map<RandomSiteswapGenerator.SiteswapState, Integer> transitions = RandomSiteswapGenerator.graph.get(lastState);
+        Map.Entry<RandomSiteswapGenerator.SiteswapState, Integer> rand =
+                (Map.Entry<RandomSiteswapGenerator.SiteswapState, Integer>) transitions.entrySet().toArray()[r.nextInt(transitions.size())];
+        siteswapSeq.add(rand.getValue());
+        lastState = rand.getKey();
+    }
+
+
     private int pos = -2 - 1;
 
 
@@ -170,37 +197,41 @@ public class RandomSiteswapGenerator extends AbstractPatternGenerator {
 
     @Override
     public Display getDisplay(Passer p) {
-        final List<Character> seqA = new ArrayList<>();
-        seqA.add('r');
-        seqA.add('a');
-        seqA.add('n');
-        seqA.add('d');
-        seqA.add('o');
-        seqA.add('m');
 
-        return new Display(seqA, seqA, (Math.max(0, pos)) % 6);
+        final List<Character> seqA = new ArrayList<>();
+        final List<Character> seqB = new ArrayList<>();
+        for (int i = 0; i < siteswapSeq.size(); i++) {
+            Integer c = siteswapSeq.get(i);
+            boolean evenPass = (Math.max(pos,0) + i) % 2 == 0;
+            if (evenPass) {
+                seqA.add(c.toString().charAt(0));
+                seqB.add(' ');
+            } else {
+                seqA.add(' ');
+                seqB.add(c.toString().charAt(0));
+            }
+        }
+        return new Display(seqA, seqB, 0);
+
     }
 
     @Override
     public Map<Passer, Pair<Side, Character>> step() {
-        everyOther = !everyOther;
-        if (everyOther) {
-            pos++;
-            Character p;
-            if (pos < 0)
-                p = '0';
-            else if (pos == 0)
-                p = '7';
-            else if (Math.random() > 0.66)
-                p = '7';
-            else p = '6';
+        pos++;
+        Character p;
+        if (pos >= 0) {
+            if (pos>0)
+                siteswapSeq.pop();//discard old head
+            addRandomSiteswapStep();
+            p = siteswapSeq.peek().toString().charAt(0);
+        } else
+            p = '0';
 
-            Side side = pos % 2 == 0 ? Side.RIGHT : Side.LEFT;
 
-            Map<Passer, Pair<Side, Character>> r = new HashMap<>();
-            r.put(Passer.A, new Pair<>(side, p));
-            r.put(Passer.B, new Pair<>(side, p));
-            return r;
-        } else return Collections.EMPTY_MAP;
+        Side side = pos % 4 < 2 ? Side.RIGHT : Side.LEFT;
+        Passer who = pos % 2 == 0 ? Passer.A : Passer.B;
+        Map<Passer, Pair<Side, Character>> r = new HashMap<>();
+        r.put(who, new Pair<>(side, p));
+        return r;
     }
 }

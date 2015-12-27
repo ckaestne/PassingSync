@@ -20,11 +20,13 @@ import android.widget.SeekBar;
 import android.widget.TextView;
 
 import edu.cmu.mastersofflyingobjects.passingsync.pattern.AbstractPatternGenerator;
+import edu.cmu.mastersofflyingobjects.passingsync.pattern.RandomSiteswapGenerator;
 import edu.cmu.mastersofflyingobjects.passingsync.pattern.RandomSyncGenerator;
 import edu.cmu.mastersofflyingobjects.passingsync.pattern.SiteswapGenerator;
 import edu.cmu.mastersofflyingobjects.passingsync.pattern.SyncPatternGenerator;
 
 import java.util.Map;
+import java.util.Random;
 import java.util.Timer;
 import java.util.TimerTask;
 
@@ -50,9 +52,12 @@ public class RunSiteswapMasterActivity extends ActionBarActivity {
     }
 
 
+    int seed;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        seed = new Random().nextInt();
 
         setContentView(R.layout.activity_run_siteswap);
         Intent intent = getIntent();
@@ -170,10 +175,13 @@ public class RunSiteswapMasterActivity extends ActionBarActivity {
     }
 
     private void createPattern() {
+
         if (siteswapkind == 'S')
             pattern = new SyncPatternGenerator(siteswap);
         else if (siteswapkind == 'R')
             pattern = new RandomSyncGenerator();
+        else if (siteswapkind == 'T')
+            pattern = new RandomSiteswapGenerator(seed);
         else
             pattern = new SiteswapGenerator(siteswap, 0);
         siteswapFragment.setStart(pattern.getStart(AbstractPatternGenerator.Passer.A));
