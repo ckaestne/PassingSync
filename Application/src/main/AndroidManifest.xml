@@ -24,21 +24,20 @@
     <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
     <uses-permission android:name="android.permission.BLUETOOTH" />
     <uses-permission android:name="android.permission.WAKE_LOCK" />
-    <!--<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />-->
-    <!--<uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />-->
 
+    <!-- <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" /> -->
+    <!-- <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" /> -->
     <application
+        android:name=".PassingSyncApplication"
         android:allowBackup="true"
         android:icon="@drawable/ic_launcher"
-        android:name="edu.cmu.mastersofflyingobjects.passingsync.PassingSyncApplication"
         android:label="@string/app_name"
         android:theme="@style/Theme.AppCompat.Light" >
         <activity
-            android:name="edu.cmu.mastersofflyingobjects.passingsync.MainActivity"
+            android:name=".MainActivity"
             android:configChanges="orientation|keyboardHidden"
             android:label="@string/app_name"
-            android:screenOrientation="portrait">
-
+            android:screenOrientation="portrait" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -46,22 +45,31 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="edu.cmu.mastersofflyingobjects.passingsync.DeviceListActivity"
+            android:name=".DeviceListActivity"
             android:configChanges="orientation|keyboardHidden"
             android:label="@string/select_device"
-            android:theme="@android:style/Theme.Dialog"
-            android:screenOrientation="portrait"/>
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Dialog" />
         <activity
-            android:name="edu.cmu.mastersofflyingobjects.passingsync.RunSiteswapMasterActivity"
+            android:name=".RunSiteswapMasterActivity"
             android:label="@string/title_activity_run_siteswap"
-            android:parentActivityName="edu.cmu.mastersofflyingobjects.passingsync.MainActivity"
-            android:screenOrientation="portrait">
+            android:parentActivityName=".MainActivity"
+            android:screenOrientation="portrait" >
         </activity>
         <activity
-            android:name="edu.cmu.mastersofflyingobjects.passingsync.RunSiteswapClientActivity"
+            android:name=".RunSiteswapClientActivity"
             android:label="@string/title_activity_run_siteswap_client"
-            android:parentActivityName="edu.cmu.mastersofflyingobjects.passingsync.MainActivity"
-            android:screenOrientation="portrait">
+            android:parentActivityName=".MainActivity"
+            android:screenOrientation="portrait" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="edu.cmu.mastersofflyingobjects.passingsync.MainActivity" />
+        </activity>
+        <activity
+            android:name=".RandomSettingActivity"
+            android:label="@string/title_activity_random_setting"
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="edu.cmu.mastersofflyingobjects.passingsync.MainActivity" />

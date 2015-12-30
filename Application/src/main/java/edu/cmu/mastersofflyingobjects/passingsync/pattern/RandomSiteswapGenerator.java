@@ -14,7 +14,7 @@ import java.util.Random;
 
 public class RandomSiteswapGenerator extends AbstractPatternGenerator {
 
-    public RandomSiteswapGenerator(int seed) {
+    public RandomSiteswapGenerator(int seed, String config) {
         r = new Random(seed);
         initRandomSiteswapSeq(seed);
     }

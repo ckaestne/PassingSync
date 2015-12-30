@@ -62,7 +62,6 @@ public class BluetoothChatFragment extends Fragment {
     private Button mStartButton;
     private Button mStartSyncButton;
     private Button mStartRandomButton;
-    private Button mStartRandomSwButton;
 
     /**
      * Name of the connected device
@@ -140,7 +139,7 @@ public class BluetoothChatFragment extends Fragment {
             // If the action is a key-up event on the return key, send the message
             if (actionId == EditorInfo.IME_NULL && event.getAction() == KeyEvent.ACTION_UP) {
                 String message = view.getText().toString();
-                startSiteswap('W', message);
+                MainActivity.startSiteswap(getBluetoothService(), getActivity(), 'W', message, message);
             }
             return true;
         }
@@ -183,7 +182,7 @@ public class BluetoothChatFragment extends Fragment {
     }
 
     private BluetoothAdapter getBluetoothAdapter() {
-        assert app!=null;
+        assert app != null;
         return app.getBluetoothAdapter();
     }
 
@@ -225,7 +224,6 @@ public class BluetoothChatFragment extends Fragment {
         mStartButton = (Button) view.findViewById(R.id.button_send);
         mStartSyncButton = (Button) view.findViewById(R.id.button_sync);
         mStartRandomButton = (Button) view.findViewById(R.id.button_random);
-        mStartRandomSwButton = (Button) view.findViewById(R.id.button_randomsw);
     }
 
     /**
@@ -259,8 +257,8 @@ public class BluetoothChatFragment extends Fragment {
                 View view = getView();
                 if (null != view) {
                     TextView textView = (TextView) view.findViewById(R.id.siteswapeditor);
-                    String message = textView.getText().toString();
-                    startSiteswap('W', message);
+                    String siteswap = textView.getText().toString();
+                    MainActivity.startSiteswap(getBluetoothService(), getActivity(), 'W', siteswap, siteswap);
                 }
 
             }
@@ -273,8 +271,8 @@ public class BluetoothChatFragment extends Fragment {
                 View view = getView();
                 if (null != view) {
                     TextView textView = (TextView) view.findViewById(R.id.siteswapeditor);
-                    String message = textView.getText().toString();
-                    startSiteswap('S', message);
+                    String sequence = textView.getText().toString();
+                    MainActivity.startSiteswap(getBluetoothService(), getActivity(), 'S', sequence, sequence);
                 }
 
             }
@@ -284,19 +282,21 @@ public class BluetoothChatFragment extends Fragment {
         mStartRandomButton.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 // Send a message using content of the edit text widget
-                startSiteswap('R', "random");
+//                startSiteswap('R', "random");
+                Intent intent = new Intent(getActivity(), RandomSettingActivity.class);
+                startActivity(intent);
 
             }
         });
 
-        // Initialize the send button with a listener that for click events
-        mStartRandomSwButton.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View v) {
-                // Send a message using content of the edit text widget
-                startSiteswap('T', "random siteswap");
-
-            }
-        });
+//        // Initialize the send button with a listener that for click events
+//        mStartRandomSwButton.setOnClickListener(new View.OnClickListener() {
+//            public void onClick(View v) {
+//                // Send a message using content of the edit text widget
+//                startSiteswap('T', "random siteswap");
+//
+//            }
+//        });
 
 
         mSiteswapList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
@@ -322,27 +322,6 @@ public class BluetoothChatFragment extends Fragment {
         }
     }
 
-    /**
-     * Sends a message.
-     *
-     * @param siteswap A string of text to send.
-     */
-    private void startSiteswap(Character kind, String siteswap) {
-        // Check that we're actually connected before trying anything
-        if (getBluetoothService().getState() != BluetoothService.STATE_CONNECTED) {
-            Toast.makeText(getActivity(), "Warning, starting siteswap without connection!", Toast.LENGTH_LONG).show();
-        }
-
-        // Check that there's actually something to send
-        if (siteswap.length() > 0) {
-            Intent intent = new Intent(getActivity(), RunSiteswapMasterActivity.class);
-            intent.putExtra(MainActivity.EXTRA_SITESWAP, siteswap);
-            intent.putExtra(MainActivity.EXTRA_SITESWAP_KIND, kind);
-            startActivity(intent);
-
-            getBluetoothService().startSiteswap(siteswap);
-        }
-    }
 
     /**
      * Updates the status on the action bar.

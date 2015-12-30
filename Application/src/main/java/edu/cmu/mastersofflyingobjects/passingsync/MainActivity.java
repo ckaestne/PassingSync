@@ -17,9 +17,12 @@
 
 package edu.cmu.mastersofflyingobjects.passingsync;
 
+import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
+import android.widget.Toast;
 
 
 /**
@@ -32,6 +35,7 @@ import android.support.v7.app.AppCompatActivity;
 public class MainActivity extends AppCompatActivity {
 
     public final static String EXTRA_SITESWAP = "edu.cmu.passingsync.SITESWAP";
+    public final static String EXTRA_TITLE = "edu.cmu.passingsync.TITLE";
     public final static String EXTRA_SITESWAP_KIND = "edu.cmu.passingsync.SITESWAP_KIND";
 
 
@@ -51,6 +55,25 @@ public class MainActivity extends AppCompatActivity {
             transaction.commit();
         }
 
+    }
+
+
+    public static void startSiteswap(BluetoothService bluetooth, Activity activity, Character kind, String config, String title) {
+        // Check that we're actually connected before trying anything
+        if (bluetooth.getState() != BluetoothService.STATE_CONNECTED) {
+            Toast.makeText(activity, "Warning, starting siteswap without connection!", Toast.LENGTH_LONG).show();
+        }
+
+        // Check that there's actually something to send
+        if (config.length() > 0) {
+            Intent intent = new Intent(activity, RunSiteswapMasterActivity.class);
+            intent.putExtra(MainActivity.EXTRA_SITESWAP, config);
+            intent.putExtra(MainActivity.EXTRA_TITLE, title);
+            intent.putExtra(MainActivity.EXTRA_SITESWAP_KIND, kind);
+            activity.startActivity(intent);
+
+            bluetooth.startSiteswap(config);
+        }
     }
 
 }

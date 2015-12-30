@@ -7,12 +7,29 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.Random;
 
 
 public class RandomSyncGenerator extends AbstractPatternGenerator {
 
+    private final int c6;
+    private final int c9;
+    private final int c7;
+    private final int cSum;
     boolean everyOther = false;
     private int pos = -2 - 1;
+    private boolean nextWait = false;
+    private Random r = new Random();
+
+    public RandomSyncGenerator(String config) {
+        String[] c = config.split(";");
+        c6 = Integer.parseInt(c[0]);
+        c7 = Integer.parseInt(c[1]);
+        c9 = Integer.parseInt(c[2]);
+        cSum = c6 + c7 + c9;
+
+        assert (cSum > 0);
+    }
 
 
     @Override
@@ -44,9 +61,11 @@ public class RandomSyncGenerator extends AbstractPatternGenerator {
                 p = '0';
             else if (pos == 0)
                 p = '7';
-            else if (Math.random() > 0.66)
-                p = '7';
-            else p = '6';
+            else if (nextWait) {
+                p = '4';
+                nextWait = false;
+            } else p = getRandomPass();
+
 
             Side side = pos % 2 == 0 ? Side.RIGHT : Side.LEFT;
 
@@ -56,4 +75,16 @@ public class RandomSyncGenerator extends AbstractPatternGenerator {
             return r;
         } else return Collections.EMPTY_MAP;
     }
+
+    private Character getRandomPass() {
+        int rr = r.nextInt(cSum);
+        if (rr < c6)
+            return '6';
+        if (rr < c6 + c7)
+            return '7';
+        nextWait = true;
+        return '9';
+    }
+
+
 }
