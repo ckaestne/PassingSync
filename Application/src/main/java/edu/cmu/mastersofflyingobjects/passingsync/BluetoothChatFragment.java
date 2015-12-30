@@ -183,6 +183,7 @@ public class BluetoothChatFragment extends Fragment {
 
     private BluetoothAdapter getBluetoothAdapter() {
         assert app != null;
+        if (app == null) return null;
         return app.getBluetoothAdapter();
     }
 

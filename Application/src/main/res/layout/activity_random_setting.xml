@@ -165,7 +165,7 @@
                 android:inputType="numberSigned"
                 android:ems="10"
                 android:id="@+id/nrObjects"
-                android:text="6" />
+                android:text="5" />
         </TableRow>
 
         <Button

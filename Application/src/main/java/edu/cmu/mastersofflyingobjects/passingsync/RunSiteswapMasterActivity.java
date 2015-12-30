@@ -38,6 +38,7 @@ public class RunSiteswapMasterActivity extends ActionBarActivity {
     private Timer timer = new Timer("timer", true);
 
     private String siteswap;
+    private String titleText;
     private SiteswapFragment siteswapFragment;
     private AbstractPatternGenerator pattern;
     private char siteswapkind;
@@ -62,6 +63,7 @@ public class RunSiteswapMasterActivity extends ActionBarActivity {
         setContentView(R.layout.activity_run_siteswap);
         Intent intent = getIntent();
         siteswap = intent.getStringExtra(MainActivity.EXTRA_SITESWAP);
+        titleText = intent.getStringExtra(MainActivity.EXTRA_TITLE);
         siteswapkind = intent.getCharExtra(MainActivity.EXTRA_SITESWAP_KIND, 'W');
 
 
@@ -76,7 +78,7 @@ public class RunSiteswapMasterActivity extends ActionBarActivity {
 //        mSiteswapList = (ListView) view.findViewById(R.id.siteswaplist);
         final View view = findViewById(R.id.runsiteswaplayout);
         TextView siteswapName = (TextView) view.findViewById(R.id.siteswapName);
-        siteswapName.setText(siteswap);
+        siteswapName.setText(titleText);
 
         final EditText speedEdit = (EditText) view.findViewById(R.id.speedEdit);
         final SeekBar speedSeekbar = (SeekBar) view.findViewById(R.id.speedSeekbar);

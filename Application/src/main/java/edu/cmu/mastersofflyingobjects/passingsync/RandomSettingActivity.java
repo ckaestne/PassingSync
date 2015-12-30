@@ -77,7 +77,7 @@ public class RandomSettingActivity extends AppCompatActivity {
                 if (config.isEmpty()) config = "2456789";
                 config = nrObjects.getText() + ";" + config;
 
-                MainActivity.startSiteswap(app.getBluetoothService(), RandomSettingActivity.this, 'T', "Random Siteswap", config);
+                MainActivity.startSiteswap(app.getBluetoothService(), RandomSettingActivity.this, 'T', config, "Random Siteswap");
 
             }
         });

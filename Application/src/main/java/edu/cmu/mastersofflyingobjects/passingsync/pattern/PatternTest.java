@@ -19,14 +19,15 @@ public class PatternTest {
 //        for (int i = 0; i < 20; i++)
 //            System.out.println(p.step());
 
-        RandomSiteswapGenerator.SiteswapState t =  RandomSiteswapGenerator.SiteswapState.create(31);
+        RandomSiteswapGenerator.SiteswapState t =  RandomSiteswapGenerator.SiteswapState.create(63);
 
         Random r=new Random();
 //        System.out.println(t.p(6));
+        RandomSiteswapGenerator gen = new RandomSiteswapGenerator(100, "6;2456789");
 
-        System.out.println(RandomSiteswapGenerator.graph);
+        System.out.println(gen.graph);
         for (int i=0;i<80;i++) {
-            Map<RandomSiteswapGenerator.SiteswapState, Integer> transitions = RandomSiteswapGenerator.graph.get(t);
+            Map<RandomSiteswapGenerator.SiteswapState, Integer> transitions = gen.graph.get(t);
 //            System.out.println(transitions);
             Map.Entry<RandomSiteswapGenerator.SiteswapState, Integer> rand =
                     (Map.Entry<RandomSiteswapGenerator.SiteswapState, Integer>) transitions.entrySet().toArray()[r.nextInt(transitions.size())];

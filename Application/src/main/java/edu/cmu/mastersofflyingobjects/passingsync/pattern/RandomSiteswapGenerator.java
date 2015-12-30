@@ -14,15 +14,26 @@ import java.util.Random;
 
 public class RandomSiteswapGenerator extends AbstractPatternGenerator {
 
+    private final int nrObjects;
+    private final int[] throws_;
+
     public RandomSiteswapGenerator(int seed, String config) {
         r = new Random(seed);
+        String[] parts = config.split(";");
+        nrObjects = Integer.parseInt(parts[0]);
+        String _throws_ = parts[1];
+        throws_ = new int[_throws_.length()];
+        for (int i = 0; i < _throws_.length(); i++)
+            throws_[i] = Integer.parseInt("" + _throws_.charAt(i));
+
+        graph = genSiteswapGraph(nrObjects, throws_);
         initRandomSiteswapSeq(seed);
     }
 
 
     //    static byte[2047,2047]
     static final Map<Integer, SiteswapState> stateCache = new HashMap<>();
-    static Map<SiteswapState, Map<SiteswapState, Integer>> graph = genSiteswapGraph(5, new int[]{2, 4, 6, 7, 8});
+    final Map<SiteswapState, Map<SiteswapState, Integer>> graph;
 
     private static int c(String x) {
         int r = 0;
@@ -35,7 +46,7 @@ public class RandomSiteswapGenerator extends AbstractPatternGenerator {
     private static Map<SiteswapState, Map<SiteswapState, Integer>> genSiteswapGraph(int objectCount, int[] allowedThrows) {
 
         Map<SiteswapState, Map<SiteswapState, Integer>> result = new HashMap<>();
-        for (int i = 0; i < 2048; i++)
+        for (int i = 0; i < 2048*4; i++)
             if (c(Integer.toBinaryString(i)) == objectCount) {
 
                 SiteswapState s = SiteswapState.create(i);
@@ -171,14 +182,16 @@ public class RandomSiteswapGenerator extends AbstractPatternGenerator {
     private RandomSiteswapGenerator.SiteswapState lastState;
 
     private void initRandomSiteswapSeq(int seed) {
-        lastState = RandomSiteswapGenerator.SiteswapState.create(31);
+        //start with an object in the next `nrObjects` hands each
+        lastState = RandomSiteswapGenerator.SiteswapState.create((1<<nrObjects) -1);
         for (int i = 0; i < 60; i++) {
             addRandomSiteswapStep();
         }
     }
 
     private void addRandomSiteswapStep() {
-        Map<RandomSiteswapGenerator.SiteswapState, Integer> transitions = RandomSiteswapGenerator.graph.get(lastState);
+        Map<RandomSiteswapGenerator.SiteswapState, Integer> transitions = graph.get(lastState);
+        assert ! transitions.isEmpty();
         Map.Entry<RandomSiteswapGenerator.SiteswapState, Integer> rand =
                 (Map.Entry<RandomSiteswapGenerator.SiteswapState, Integer>) transitions.entrySet().toArray()[r.nextInt(transitions.size())];
         siteswapSeq.add(rand.getValue());
@@ -202,7 +215,7 @@ public class RandomSiteswapGenerator extends AbstractPatternGenerator {
         final List<Character> seqB = new ArrayList<>();
         for (int i = 0; i < siteswapSeq.size(); i++) {
             Integer c = siteswapSeq.get(i);
-            boolean evenPass = (Math.max(pos,0) + i) % 2 == 0;
+            boolean evenPass = (Math.max(pos, 0) + i) % 2 == 0;
             if (evenPass) {
                 seqA.add(c.toString().charAt(0));
                 seqB.add(' ');
@@ -220,7 +233,7 @@ public class RandomSiteswapGenerator extends AbstractPatternGenerator {
         pos++;
         Character p;
         if (pos >= 0) {
-            if (pos>0)
+            if (pos > 0)
                 siteswapSeq.pop();//discard old head
             addRandomSiteswapStep();
             p = siteswapSeq.peek().toString().charAt(0);
